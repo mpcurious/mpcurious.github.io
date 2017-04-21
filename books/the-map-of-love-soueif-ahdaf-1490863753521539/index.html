@@ -1,0 +1,3441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="robots" content="NONE,NOARCHIVE">
+<title>ValueError at /books/the-map-of-love-soueif-ahdaf-1490863753521539</title>
+<style type="text/css">
+html * { padding:0; margin:0; }
+body * { padding:10px 20px; }
+body * * { padding:0; }
+body { font:small sans-serif; }
+body>div { border-bottom:1px solid #ddd; }
+h1 { font-weight:normal; }
+h2 { margin-bottom:.8em; }
+h2 span { font-size:80%; color:#666; font-weight:normal; }
+h3 { margin:1em 0 .5em 0; }
+h4 { margin:0 0 .5em 0; font-weight: normal; }
+code, pre { font-size: 100%; white-space: pre-wrap; }
+table { border:1px solid #ccc; border-collapse: collapse; width:100%; background:white; }
+tbody td, tbody th { vertical-align:top; padding:2px 3px; }
+thead th {
+padding:1px 6px 1px 3px; background:#fefefe; text-align:left;
+font-weight:normal; font-size:11px; border:1px solid #ddd;
+}
+tbody th { width:12em; text-align:right; color:#666; padding-right:.5em; }
+table.vars { margin:5px 0 2px 40px; }
+table.vars td, table.req td { font-family:monospace; }
+table td.code { width:100%; }
+table td.code pre { overflow:hidden; }
+table.source th { color:#666; }
+table.source td { font-family:monospace; white-space:pre; border-bottom:1px solid #eee; }
+ul.traceback { list-style-type:none; color: #222; }
+ul.traceback li.frame { padding-bottom:1em; color:#666; }
+ul.traceback li.user { background-color:#e0e0e0; color:#000 }
+div.context { padding:10px 0; overflow:hidden; }
+div.context ol { padding-left:30px; margin:0 10px; list-style-position: inside; }
+div.context ol li { font-family:monospace; white-space:pre; color:#777; cursor:pointer; padding-left: 2px; }
+div.context ol li pre { display:inline; }
+div.context ol.context-line li { color:#505050; background-color:#dfdfdf; padding: 3px 2px; }
+div.context ol.context-line li span { position:absolute; right:32px; }
+.user div.context ol.context-line li { background-color:#bbb; color:#000; }
+.user div.context ol li { color:#666; }
+div.commands { margin-left: 40px; }
+div.commands a { color:#555; text-decoration:none; }
+.user div.commands a { color: black; }
+#summary { background: #ffc; }
+#summary h2 { font-weight: normal; color: #666; }
+#explanation { background:#eee; }
+#template, #template-not-exist { background:#f6f6f6; }
+#template-not-exist ul { margin: 0 0 10px 20px; }
+#template-not-exist .postmortem-section { margin-bottom: 3px; }
+#unicode-hint { background:#eee; }
+#traceback { background:#eee; }
+#requestinfo { background:#f6f6f6; padding-left:120px; }
+#summary table { border:none; background:transparent; }
+#requestinfo h2, #requestinfo h3 { position:relative; margin-left:-100px; }
+#requestinfo h3 { margin-bottom:-1em; }
+.error { background: #ffc; }
+.specific { color:#cc3300; font-weight:bold; }
+h2 span.commands { font-size:.7em;}
+span.commands a:link {color:#5E5694;}
+pre.exception_value { font-family: sans-serif; color: #666; font-size: 1.5em; margin: 10px 0 10px 0; }
+.append-bottom { margin-bottom: 10px; }
+</style>
+<script type="text/javascript">
+//<!--
+function getElementsByClassName(oElm, strTagName, strClassName){
+// Written by Jonathan Snook, http://www.snook.ca/jon; Add-ons by Robert Nyman, http://www.robertnyman.com
+var arrElements = (strTagName == "*" && document.all)? document.all :
+oElm.getElementsByTagName(strTagName);
+var arrReturnElements = new Array();
+strClassName = strClassName.replace(/\-/g, "\-");
+var oRegExp = new RegExp("(^|\s)" + strClassName + "(\s|$)");
+var oElement;
+for(var i=0; i<arrElements.length; i++){
+oElement = arrElements[i];
+if(oRegExp.test(oElement.className)){
+arrReturnElements.push(oElement);
+}
+}
+return (arrReturnElements)
+}
+function hideAll(elems) {
+for (var e = 0; e < elems.length; e++) {
+elems[e].style.display = 'none';
+}
+}
+window.onload = function() {
+hideAll(getElementsByClassName(document, 'table', 'vars'));
+hideAll(getElementsByClassName(document, 'ol', 'pre-context'));
+hideAll(getElementsByClassName(document, 'ol', 'post-context'));
+hideAll(getElementsByClassName(document, 'div', 'pastebin'));
+}
+function toggle() {
+for (var i = 0; i < arguments.length; i++) {
+var e = document.getElementById(arguments[i]);
+if (e) {
+e.style.display = e.style.display == 'none' ? 'block': 'none';
+}
+}
+return false;
+}
+function varToggle(link, id) {
+toggle('v' + id);
+var s = link.getElementsByTagName('span')[0];
+var uarr = String.fromCharCode(0x25b6);
+var darr = String.fromCharCode(0x25bc);
+s.textContent = s.textContent == uarr ? darr : uarr;
+return false;
+}
+function switchPastebinFriendly(link) {
+s1 = "Switch to copy-and-paste view";
+s2 = "Switch back to interactive view";
+link.textContent = link.textContent.trim() == s1 ? s2: s1;
+toggle('browserTraceback', 'pastebinTraceback');
+return false;
+}
+//-->
+</script>
+</head>
+<body>
+<div id="summary">
+<h1>ValueError at /books/the-map-of-love-soueif-ahdaf-1490863753521539</h1>
+<pre class="exception_value">could not convert string to float: &#39;3,81&#39;</pre>
+<table class="meta">
+<tr>
+<th>Request Method:</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>Request URL:</th>
+<td>http://localhost:8000/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36</td>
+</tr>
+<tr>
+<th>Django Version:</th>
+<td>1.10.4</td>
+</tr>
+<tr>
+<th>Exception Type:</th>
+<td>ValueError</td>
+</tr>
+<tr>
+<th>Exception Value:</th>
+<td><pre>could not convert string to float: &#39;3,81&#39;</pre></td>
+</tr>
+<tr>
+<th>Exception Location:</th>
+<td>/Users/marvinmatias/AppDev/mpc/utils/templatetags/book_rating.py in render_book_rating, line 8</td>
+</tr>
+<tr>
+<th>Python Executable:</th>
+<td>/Users/marvinmatias/.virtualenvs/mpcurious/bin/python</td>
+</tr>
+<tr>
+<th>Python Version:</th>
+<td>3.5.1</td>
+</tr>
+<tr>
+<th>Python Path:</th>
+<td><pre>[&#39;/Users/marvinmatias/AppDev/mpc&#39;,
+&#39;/Library/Frameworks/Python.framework/Versions/3.5/lib/python35.zip&#39;,
+&#39;/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5&#39;,
+&#39;/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/plat-darwin&#39;,
+&#39;/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/lib-dynload&#39;,
+&#39;/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages&#39;]</pre></td>
+</tr>
+<tr>
+<th>Server time:</th>
+<td>Fri, 21 Apr 2017 14:46:30 +0800</td>
+</tr>
+</table>
+</div>
+<div id="template">
+<h2>Error during template rendering</h2>
+<p>In template <code>/Users/marvinmatias/AppDev/mpc/templates/books/book_details.html</code>, error at line <strong>44</strong></p>
+<h3>could not convert string to float: &#39;3,81&#39;</h3>
+<table class="source cut-top
+cut-bottom">
+<tr><th>34</th>
+<td>                &lt;div class=&quot;action&quot;&gt;
+</td></tr>
+<tr><th>35</th>
+<td>                    &lt;a title=&quot;{% if book.availability|lower == &#39;available&#39; %}Comment &#39;mine&#39; to buy book.{% endif %}&quot; class=&quot;btn font3&quot; href=&quot;{{ book.fb_link.url }}&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-external-link&quot;&gt;&lt;/i&gt;&amp;nbsp;&lt;span&gt;VIEW ON FACEBOOK&lt;/span&gt;&lt;/a&gt;
+</td></tr>
+<tr><th>36</th>
+<td>                &lt;/div&gt;
+</td></tr>
+<tr><th>37</th>
+<td>
+</td></tr>
+<tr><th>38</th>
+<td>                &lt;div class=&quot;community-links&quot;&gt;
+</td></tr>
+<tr><th>39</th>
+<td>                    {% for l in book.communitylinks %}
+</td></tr>
+<tr><th>40</th>
+<td>                        {% if l.rating %}
+</td></tr>
+<tr><th>41</th>
+<td>                            &lt;a href=&quot;{{ l.url }}&quot; class=&quot;font3&quot; target=&quot;_blank&quot; title=&quot;{{ l.rating }}&quot;&gt;
+</td></tr>
+<tr><th>42</th>
+<td>                                &lt;i class=&quot;fa fa-external-link&quot;&gt;&lt;/i&gt;
+</td></tr>
+<tr><th>43</th>
+<td>                                &lt;span&gt;{{ l.name }}: &lt;/span&gt;
+</td></tr>
+<tr class="error"><th>44</th>
+<td>                                &lt;span&gt;{% autoescape off %}<span class="specific">{% render_book_rating l.rating %}</span>{% endautoescape %}&lt;/span&gt;
+</td>
+</tr>
+<tr><th>45</th>
+<td>                            &lt;/a&gt;
+</td></tr>
+<tr><th>46</th>
+<td>                        {% endif %}
+</td></tr>
+<tr><th>47</th>
+<td>                    {% endfor %}
+</td></tr>
+<tr><th>48</th>
+<td>                &lt;/div&gt;
+</td></tr>
+<tr><th>49</th>
+<td>
+</td></tr>
+<tr><th>50</th>
+<td>                {% include &#39;books/_book_other_photos.html&#39; with images=book.fb_link.other_images %}
+</td></tr>
+<tr><th>51</th>
+<td>            &lt;/div&gt;
+</td></tr>
+<tr><th>52</th>
+<td>        &lt;/div&gt;
+</td></tr>
+<tr><th>53</th>
+<td>
+</td></tr>
+<tr><th>54</th>
+<td>        {% include &#39;books/_book_related_books.html&#39; with related_books=related_books %}
+</td></tr>
+</table>
+</div>
+<div id="traceback">
+<h2>Traceback <span class="commands"><a href="#" onclick="return switchPastebinFriendly(this);">
+Switch to copy-and-paste view</a></span>
+</h2>
+<div id="browserTraceback">
+<ul class="traceback">
+<li class="frame django">
+<code>/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/core/handlers/exception.py</code> in <code>inner</code>
+<div class="context" id="c4389610056">
+<ol start="32" class="pre-context" id="pre4389610056">
+<li onclick="toggle('pre4389610056', 'post4389610056')"><pre>    This decorator is automatically applied to all middleware to ensure that</pre></li>
+<li onclick="toggle('pre4389610056', 'post4389610056')"><pre>    no middleware leaks an exception and that the next middleware in the stack</pre></li>
+<li onclick="toggle('pre4389610056', 'post4389610056')"><pre>    can rely on getting a response instead of an exception.</pre></li>
+<li onclick="toggle('pre4389610056', 'post4389610056')"><pre>    &quot;&quot;&quot;</pre></li>
+<li onclick="toggle('pre4389610056', 'post4389610056')"><pre>    @wraps(get_response, assigned=available_attrs(get_response))</pre></li>
+<li onclick="toggle('pre4389610056', 'post4389610056')"><pre>    def inner(request):</pre></li>
+<li onclick="toggle('pre4389610056', 'post4389610056')"><pre>        try:</pre></li>
+</ol>
+<ol start="39" class="context-line">
+<li onclick="toggle('pre4389610056', 'post4389610056')"><pre>
+response = get_response(request)</pre> <span>...</span></li></ol>
+<ol start='40' class="post-context" id="post4389610056">
+<li onclick="toggle('pre4389610056', 'post4389610056')"><pre>        except Exception as exc:</pre></li>
+<li onclick="toggle('pre4389610056', 'post4389610056')"><pre>            response = response_for_exception(request, exc)</pre></li>
+<li onclick="toggle('pre4389610056', 'post4389610056')"><pre>        return response</pre></li>
+<li onclick="toggle('pre4389610056', 'post4389610056')"><pre>    return inner</pre></li>
+<li onclick="toggle('pre4389610056', 'post4389610056')"><pre></pre></li>
+<li onclick="toggle('pre4389610056', 'post4389610056')"><pre></pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4389610056')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4389610056">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>exc</td>
+<td class="code"><pre>ValueError(&quot;could not convert string to float: &#39;3,81&#39;&quot;,)</pre></td>
+</tr>
+<tr>
+<td>get_response</td>
+<td class="code"><pre>&lt;bound method BaseHandler._get_response of &lt;django.core.handlers.wsgi.WSGIHandler object at 0x1030e8c88&gt;&gt;</pre></td>
+</tr>
+<tr>
+<td>request</td>
+<td class="code"><pre>&lt;WSGIRequest: GET &#39;/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;&gt;</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="frame django">
+<code>/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/core/handlers/base.py</code> in <code>_get_response</code>
+<div class="context" id="c4391897928">
+<ol start="180" class="pre-context" id="pre4391897928">
+<li onclick="toggle('pre4391897928', 'post4391897928')"><pre>                break</pre></li>
+<li onclick="toggle('pre4391897928', 'post4391897928')"><pre></pre></li>
+<li onclick="toggle('pre4391897928', 'post4391897928')"><pre>        if response is None:</pre></li>
+<li onclick="toggle('pre4391897928', 'post4391897928')"><pre>            wrapped_callback = self.make_view_atomic(callback)</pre></li>
+<li onclick="toggle('pre4391897928', 'post4391897928')"><pre>            try:</pre></li>
+<li onclick="toggle('pre4391897928', 'post4391897928')"><pre>                response = wrapped_callback(request, *callback_args, **callback_kwargs)</pre></li>
+<li onclick="toggle('pre4391897928', 'post4391897928')"><pre>            except Exception as e:</pre></li>
+</ol>
+<ol start="187" class="context-line">
+<li onclick="toggle('pre4391897928', 'post4391897928')"><pre>
+response = self.process_exception_by_middleware(e, request)</pre> <span>...</span></li></ol>
+<ol start='188' class="post-context" id="post4391897928">
+<li onclick="toggle('pre4391897928', 'post4391897928')"><pre></pre></li>
+<li onclick="toggle('pre4391897928', 'post4391897928')"><pre>        # Complain if the view returned None (a common error).</pre></li>
+<li onclick="toggle('pre4391897928', 'post4391897928')"><pre>        if response is None:</pre></li>
+<li onclick="toggle('pre4391897928', 'post4391897928')"><pre>            if isinstance(callback, types.FunctionType):    # FBV</pre></li>
+<li onclick="toggle('pre4391897928', 'post4391897928')"><pre>                view_name = callback.__name__</pre></li>
+<li onclick="toggle('pre4391897928', 'post4391897928')"><pre>            else:                                           # CBV</pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4391897928')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4391897928">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>callback</td>
+<td class="code"><pre>&lt;function DetailView at 0x103f51e18&gt;</pre></td>
+</tr>
+<tr>
+<td>callback_args</td>
+<td class="code"><pre>()</pre></td>
+</tr>
+<tr>
+<td>callback_kwargs</td>
+<td class="code"><pre>{&#39;slug&#39;: &#39;the-map-of-love-soueif-ahdaf-1490863753521539&#39;}</pre></td>
+</tr>
+<tr>
+<td>middleware_method</td>
+<td class="code"><pre>&lt;bound method CsrfViewMiddleware.process_view of &lt;django.middleware.csrf.CsrfViewMiddleware object at 0x1052a5320&gt;&gt;</pre></td>
+</tr>
+<tr>
+<td>request</td>
+<td class="code"><pre>&lt;WSGIRequest: GET &#39;/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;&gt;</pre></td>
+</tr>
+<tr>
+<td>resolver</td>
+<td class="code"><pre>&lt;RegexURLResolver &#39;mpc.urls&#39; (None:None) ^/&gt;</pre></td>
+</tr>
+<tr>
+<td>resolver_match</td>
+<td class="code"><pre>ResolverMatch(func=books.views.DetailView, args=(), kwargs={&#39;slug&#39;: &#39;the-map-of-love-soueif-ahdaf-1490863753521539&#39;}, url_name=details, app_names=[&#39;books&#39;], namespaces=[&#39;books&#39;])</pre></td>
+</tr>
+<tr>
+<td>response</td>
+<td class="code"><pre>None</pre></td>
+</tr>
+<tr>
+<td>self</td>
+<td class="code"><pre>&lt;django.core.handlers.wsgi.WSGIHandler object at 0x1030e8c88&gt;</pre></td>
+</tr>
+<tr>
+<td>wrapped_callback</td>
+<td class="code"><pre>&lt;function DetailView at 0x103f51e18&gt;</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="frame django">
+<code>/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/core/handlers/base.py</code> in <code>_get_response</code>
+<div class="context" id="c4391898440">
+<ol start="178" class="pre-context" id="pre4391898440">
+<li onclick="toggle('pre4391898440', 'post4391898440')"><pre>            response = middleware_method(request, callback, callback_args, callback_kwargs)</pre></li>
+<li onclick="toggle('pre4391898440', 'post4391898440')"><pre>            if response:</pre></li>
+<li onclick="toggle('pre4391898440', 'post4391898440')"><pre>                break</pre></li>
+<li onclick="toggle('pre4391898440', 'post4391898440')"><pre></pre></li>
+<li onclick="toggle('pre4391898440', 'post4391898440')"><pre>        if response is None:</pre></li>
+<li onclick="toggle('pre4391898440', 'post4391898440')"><pre>            wrapped_callback = self.make_view_atomic(callback)</pre></li>
+<li onclick="toggle('pre4391898440', 'post4391898440')"><pre>            try:</pre></li>
+</ol>
+<ol start="185" class="context-line">
+<li onclick="toggle('pre4391898440', 'post4391898440')"><pre>
+response = wrapped_callback(request, *callback_args, **callback_kwargs)</pre> <span>...</span></li></ol>
+<ol start='186' class="post-context" id="post4391898440">
+<li onclick="toggle('pre4391898440', 'post4391898440')"><pre>            except Exception as e:</pre></li>
+<li onclick="toggle('pre4391898440', 'post4391898440')"><pre>                response = self.process_exception_by_middleware(e, request)</pre></li>
+<li onclick="toggle('pre4391898440', 'post4391898440')"><pre></pre></li>
+<li onclick="toggle('pre4391898440', 'post4391898440')"><pre>        # Complain if the view returned None (a common error).</pre></li>
+<li onclick="toggle('pre4391898440', 'post4391898440')"><pre>        if response is None:</pre></li>
+<li onclick="toggle('pre4391898440', 'post4391898440')"><pre>            if isinstance(callback, types.FunctionType):    # FBV</pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4391898440')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4391898440">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>callback</td>
+<td class="code"><pre>&lt;function DetailView at 0x103f51e18&gt;</pre></td>
+</tr>
+<tr>
+<td>callback_args</td>
+<td class="code"><pre>()</pre></td>
+</tr>
+<tr>
+<td>callback_kwargs</td>
+<td class="code"><pre>{&#39;slug&#39;: &#39;the-map-of-love-soueif-ahdaf-1490863753521539&#39;}</pre></td>
+</tr>
+<tr>
+<td>middleware_method</td>
+<td class="code"><pre>&lt;bound method CsrfViewMiddleware.process_view of &lt;django.middleware.csrf.CsrfViewMiddleware object at 0x1052a5320&gt;&gt;</pre></td>
+</tr>
+<tr>
+<td>request</td>
+<td class="code"><pre>&lt;WSGIRequest: GET &#39;/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;&gt;</pre></td>
+</tr>
+<tr>
+<td>resolver</td>
+<td class="code"><pre>&lt;RegexURLResolver &#39;mpc.urls&#39; (None:None) ^/&gt;</pre></td>
+</tr>
+<tr>
+<td>resolver_match</td>
+<td class="code"><pre>ResolverMatch(func=books.views.DetailView, args=(), kwargs={&#39;slug&#39;: &#39;the-map-of-love-soueif-ahdaf-1490863753521539&#39;}, url_name=details, app_names=[&#39;books&#39;], namespaces=[&#39;books&#39;])</pre></td>
+</tr>
+<tr>
+<td>response</td>
+<td class="code"><pre>None</pre></td>
+</tr>
+<tr>
+<td>self</td>
+<td class="code"><pre>&lt;django.core.handlers.wsgi.WSGIHandler object at 0x1030e8c88&gt;</pre></td>
+</tr>
+<tr>
+<td>wrapped_callback</td>
+<td class="code"><pre>&lt;function DetailView at 0x103f51e18&gt;</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="frame django">
+<code>/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/views/generic/base.py</code> in <code>view</code>
+<div class="context" id="c4391897224">
+<ol start="61" class="pre-context" id="pre4391897224">
+<li onclick="toggle('pre4391897224', 'post4391897224')"><pre>        def view(request, *args, **kwargs):</pre></li>
+<li onclick="toggle('pre4391897224', 'post4391897224')"><pre>            self = cls(**initkwargs)</pre></li>
+<li onclick="toggle('pre4391897224', 'post4391897224')"><pre>            if hasattr(self, &#39;get&#39;) and not hasattr(self, &#39;head&#39;):</pre></li>
+<li onclick="toggle('pre4391897224', 'post4391897224')"><pre>                self.head = self.get</pre></li>
+<li onclick="toggle('pre4391897224', 'post4391897224')"><pre>            self.request = request</pre></li>
+<li onclick="toggle('pre4391897224', 'post4391897224')"><pre>            self.args = args</pre></li>
+<li onclick="toggle('pre4391897224', 'post4391897224')"><pre>            self.kwargs = kwargs</pre></li>
+</ol>
+<ol start="68" class="context-line">
+<li onclick="toggle('pre4391897224', 'post4391897224')"><pre>
+return self.dispatch(request, *args, **kwargs)</pre> <span>...</span></li></ol>
+<ol start='69' class="post-context" id="post4391897224">
+<li onclick="toggle('pre4391897224', 'post4391897224')"><pre>        view.view_class = cls</pre></li>
+<li onclick="toggle('pre4391897224', 'post4391897224')"><pre>        view.view_initkwargs = initkwargs</pre></li>
+<li onclick="toggle('pre4391897224', 'post4391897224')"><pre></pre></li>
+<li onclick="toggle('pre4391897224', 'post4391897224')"><pre>        # take name and docstring from class</pre></li>
+<li onclick="toggle('pre4391897224', 'post4391897224')"><pre>        update_wrapper(view, cls, updated=())</pre></li>
+<li onclick="toggle('pre4391897224', 'post4391897224')"><pre></pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4391897224')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4391897224">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>args</td>
+<td class="code"><pre>()</pre></td>
+</tr>
+<tr>
+<td>cls</td>
+<td class="code"><pre>&lt;class &#39;books.views.DetailView&#39;&gt;</pre></td>
+</tr>
+<tr>
+<td>initkwargs</td>
+<td class="code"><pre>{}</pre></td>
+</tr>
+<tr>
+<td>kwargs</td>
+<td class="code"><pre>{&#39;slug&#39;: &#39;the-map-of-love-soueif-ahdaf-1490863753521539&#39;}</pre></td>
+</tr>
+<tr>
+<td>request</td>
+<td class="code"><pre>&lt;WSGIRequest: GET &#39;/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;&gt;</pre></td>
+</tr>
+<tr>
+<td>self</td>
+<td class="code"><pre>&lt;books.views.DetailView object at 0x105edd940&gt;</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="frame django">
+<code>/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/views/generic/base.py</code> in <code>dispatch</code>
+<div class="context" id="c4391895624">
+<ol start="81" class="pre-context" id="pre4391895624">
+<li onclick="toggle('pre4391895624', 'post4391895624')"><pre>        # Try to dispatch to the right method; if a method doesn&#39;t exist,</pre></li>
+<li onclick="toggle('pre4391895624', 'post4391895624')"><pre>        # defer to the error handler. Also defer to the error handler if the</pre></li>
+<li onclick="toggle('pre4391895624', 'post4391895624')"><pre>        # request method isn&#39;t on the approved list.</pre></li>
+<li onclick="toggle('pre4391895624', 'post4391895624')"><pre>        if request.method.lower() in self.http_method_names:</pre></li>
+<li onclick="toggle('pre4391895624', 'post4391895624')"><pre>            handler = getattr(self, request.method.lower(), self.http_method_not_allowed)</pre></li>
+<li onclick="toggle('pre4391895624', 'post4391895624')"><pre>        else:</pre></li>
+<li onclick="toggle('pre4391895624', 'post4391895624')"><pre>            handler = self.http_method_not_allowed</pre></li>
+</ol>
+<ol start="88" class="context-line">
+<li onclick="toggle('pre4391895624', 'post4391895624')"><pre>
+return handler(request, *args, **kwargs)</pre> <span>...</span></li></ol>
+<ol start='89' class="post-context" id="post4391895624">
+<li onclick="toggle('pre4391895624', 'post4391895624')"><pre></pre></li>
+<li onclick="toggle('pre4391895624', 'post4391895624')"><pre>    def http_method_not_allowed(self, request, *args, **kwargs):</pre></li>
+<li onclick="toggle('pre4391895624', 'post4391895624')"><pre>        logger.warning(</pre></li>
+<li onclick="toggle('pre4391895624', 'post4391895624')"><pre>            &#39;Method Not Allowed (%s): %s&#39;, request.method, request.path,</pre></li>
+<li onclick="toggle('pre4391895624', 'post4391895624')"><pre>            extra={&#39;status_code&#39;: 405, &#39;request&#39;: request}</pre></li>
+<li onclick="toggle('pre4391895624', 'post4391895624')"><pre>        )</pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4391895624')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4391895624">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>args</td>
+<td class="code"><pre>()</pre></td>
+</tr>
+<tr>
+<td>handler</td>
+<td class="code"><pre>&lt;bound method DetailView.get of &lt;books.views.DetailView object at 0x105edd940&gt;&gt;</pre></td>
+</tr>
+<tr>
+<td>kwargs</td>
+<td class="code"><pre>{&#39;slug&#39;: &#39;the-map-of-love-soueif-ahdaf-1490863753521539&#39;}</pre></td>
+</tr>
+<tr>
+<td>request</td>
+<td class="code"><pre>&lt;WSGIRequest: GET &#39;/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;&gt;</pre></td>
+</tr>
+<tr>
+<td>self</td>
+<td class="code"><pre>&lt;books.views.DetailView object at 0x105edd940&gt;</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="frame user">
+<code>/Users/marvinmatias/AppDev/mpc/books/views.py</code> in <code>get</code>
+<div class="context" id="c4389360776">
+<ol start="97" class="pre-context" id="pre4389360776">
+<li onclick="toggle('pre4389360776', 'post4389360776')"><pre></pre></li>
+<li onclick="toggle('pre4389360776', 'post4389360776')"><pre>class DetailView(View):</pre></li>
+<li onclick="toggle('pre4389360776', 'post4389360776')"><pre>    def get(self, request, *args, **kwargs):</pre></li>
+<li onclick="toggle('pre4389360776', 'post4389360776')"><pre>        book = book_details(kwargs.get(&#39;slug&#39;))</pre></li>
+<li onclick="toggle('pre4389360776', 'post4389360776')"><pre>        return render(</pre></li>
+<li onclick="toggle('pre4389360776', 'post4389360776')"><pre>            request,</pre></li>
+<li onclick="toggle('pre4389360776', 'post4389360776')"><pre>            &#39;books/book_details.html&#39;,</pre></li>
+</ol>
+<ol start="104" class="context-line">
+<li onclick="toggle('pre4389360776', 'post4389360776')"><pre>
+get_details_page_context(request, book)</pre> <span>...</span></li></ol>
+<ol start='105' class="post-context" id="post4389360776">
+<li onclick="toggle('pre4389360776', 'post4389360776')"><pre>        )</pre></li>
+<li onclick="toggle('pre4389360776', 'post4389360776')"><pre></pre></li>
+<li onclick="toggle('pre4389360776', 'post4389360776')"><pre></pre></li>
+<li onclick="toggle('pre4389360776', 'post4389360776')"><pre>class GenreGroupView(View):</pre></li>
+<li onclick="toggle('pre4389360776', 'post4389360776')"><pre>    def get(self, request, *args, **kwargs):</pre></li>
+<li onclick="toggle('pre4389360776', 'post4389360776')"><pre>        page = category_page(kwargs[&#39;genre_group_slug&#39;], vkwargs=kwargs)</pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4389360776')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4389360776">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>args</td>
+<td class="code"><pre>()</pre></td>
+</tr>
+<tr>
+<td>book</td>
+<td class="code"><pre>&lt;Book: The Map of Love&gt;</pre></td>
+</tr>
+<tr>
+<td>kwargs</td>
+<td class="code"><pre>{&#39;slug&#39;: &#39;the-map-of-love-soueif-ahdaf-1490863753521539&#39;}</pre></td>
+</tr>
+<tr>
+<td>request</td>
+<td class="code"><pre>&lt;WSGIRequest: GET &#39;/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;&gt;</pre></td>
+</tr>
+<tr>
+<td>self</td>
+<td class="code"><pre>&lt;books.views.DetailView object at 0x105edd940&gt;</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="frame django">
+<code>/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/shortcuts.py</code> in <code>render</code>
+<div class="context" id="c4394025608">
+<ol start="23" class="pre-context" id="pre4394025608">
+<li onclick="toggle('pre4394025608', 'post4394025608')"><pre></pre></li>
+<li onclick="toggle('pre4394025608', 'post4394025608')"><pre></pre></li>
+<li onclick="toggle('pre4394025608', 'post4394025608')"><pre>def render(request, template_name, context=None, content_type=None, status=None, using=None):</pre></li>
+<li onclick="toggle('pre4394025608', 'post4394025608')"><pre>    &quot;&quot;&quot;</pre></li>
+<li onclick="toggle('pre4394025608', 'post4394025608')"><pre>    Returns a HttpResponse whose content is filled with the result of calling</pre></li>
+<li onclick="toggle('pre4394025608', 'post4394025608')"><pre>    django.template.loader.render_to_string() with the passed arguments.</pre></li>
+<li onclick="toggle('pre4394025608', 'post4394025608')"><pre>    &quot;&quot;&quot;</pre></li>
+</ol>
+<ol start="30" class="context-line">
+<li onclick="toggle('pre4394025608', 'post4394025608')"><pre>
+content = loader.render_to_string(template_name, context, request, using=using)</pre> <span>...</span></li></ol>
+<ol start='31' class="post-context" id="post4394025608">
+<li onclick="toggle('pre4394025608', 'post4394025608')"><pre>    return HttpResponse(content, content_type, status)</pre></li>
+<li onclick="toggle('pre4394025608', 'post4394025608')"><pre></pre></li>
+<li onclick="toggle('pre4394025608', 'post4394025608')"><pre></pre></li>
+<li onclick="toggle('pre4394025608', 'post4394025608')"><pre>def redirect(to, *args, **kwargs):</pre></li>
+<li onclick="toggle('pre4394025608', 'post4394025608')"><pre>    &quot;&quot;&quot;</pre></li>
+<li onclick="toggle('pre4394025608', 'post4394025608')"><pre>    Returns an HttpResponseRedirect to the appropriate URL for the arguments</pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4394025608')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4394025608">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>content_type</td>
+<td class="code"><pre>None</pre></td>
+</tr>
+<tr>
+<td>context</td>
+<td class="code"><pre>{&#39;activenav&#39;: &#39;books&#39;,
+&#39;book&#39;: &lt;Book: The Map of Love&gt;,
+&#39;genre_groups_cols&#39;: [[&lt;GenreGroup: All Fiction&gt;,
+&lt;GenreGroup: All Non-fiction&gt;,
+&lt;GenreGroup: Biography, Memoir, Autobiography&gt;,
+&lt;GenreGroup: Business, Management, Leadership&gt;,
+&lt;GenreGroup: Classics&gt;,
+&lt;GenreGroup: Health, Food &amp; Drink&gt;,
+&lt;GenreGroup: History, Sociology, Politics, Economics&gt;,
+&lt;GenreGroup: Humor&gt;,
+&lt;GenreGroup: Inspirational, Spirituality, Self-help&gt;],
+[&lt;GenreGroup: Language, Media&gt;,
+&lt;GenreGroup: Mystery, Crime&gt;,
+&lt;GenreGroup: Philosophy, Science, Psychology&gt;,
+&lt;GenreGroup: Poetry, Play&gt;,
+&lt;GenreGroup: Romance, Chick Lit&gt;,
+&lt;GenreGroup: Science Fiction, Fantasy&gt;,
+&lt;GenreGroup: Travel, Adventure&gt;,
+&#39;sold&#39;]],
+&#39;meta&#39;: {&#39;canonical_url&#39;: &#39;www.mpcurious.com/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;,
+&#39;description&#39;: &#39;We sell affordable used books.&#39;,
+&#39;og_image&#39;: &#39;https://scontent.xx.fbcdn.net/v/t31.0-0/p480x480/14753945_1155190961214836_2357115047692261315_o.jpg?oh=f5b31e7d15d8b73f06bf89f842ef3447&amp;oe=596597E9&#39;,
+&#39;title&#39;: &#39;The Map of Love by Ahdaf Soueif - mpcurious&#39;},
+&#39;related_books&#39;: [&lt;Book: Like Water for Chocolate&gt;,
+&lt;Book: Harnessing Peacocks&gt;,
+&lt;Book: Intimacy&gt;,
+&lt;Book: Rest Area&gt;,
+&lt;Book: Specimen Days&gt;,
+&lt;Book: I Know This Much Is True&gt;,
+&lt;Book: The Eye in the Door&gt;,
+&lt;Book: Water for Elephants&gt;,
+&lt;Book: Machete Season: The Killers in Rwanda Speak&gt;,
+&lt;Book: Wool&gt;,
+&lt;Book: The Postmistress&gt;,
+&lt;Book: Messenger of Truth: A Maisie Dobbs Novel&gt;]}</pre></td>
+</tr>
+<tr>
+<td>request</td>
+<td class="code"><pre>&lt;WSGIRequest: GET &#39;/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;&gt;</pre></td>
+</tr>
+<tr>
+<td>status</td>
+<td class="code"><pre>None</pre></td>
+</tr>
+<tr>
+<td>template_name</td>
+<td class="code"><pre>&#39;books/book_details.html&#39;</pre></td>
+</tr>
+<tr>
+<td>using</td>
+<td class="code"><pre>None</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="frame django">
+<code>/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/loader.py</code> in <code>render_to_string</code>
+<div class="context" id="c4388765448">
+<ol start="61" class="pre-context" id="pre4388765448">
+<li onclick="toggle('pre4388765448', 'post4388765448')"><pre></pre></li>
+<li onclick="toggle('pre4388765448', 'post4388765448')"><pre>    template_name may be a string or a list of strings.</pre></li>
+<li onclick="toggle('pre4388765448', 'post4388765448')"><pre>    &quot;&quot;&quot;</pre></li>
+<li onclick="toggle('pre4388765448', 'post4388765448')"><pre>    if isinstance(template_name, (list, tuple)):</pre></li>
+<li onclick="toggle('pre4388765448', 'post4388765448')"><pre>        template = select_template(template_name, using=using)</pre></li>
+<li onclick="toggle('pre4388765448', 'post4388765448')"><pre>    else:</pre></li>
+<li onclick="toggle('pre4388765448', 'post4388765448')"><pre>        template = get_template(template_name, using=using)</pre></li>
+</ol>
+<ol start="68" class="context-line">
+<li onclick="toggle('pre4388765448', 'post4388765448')"><pre>
+return template.render(context, request)</pre> <span>...</span></li></ol>
+<ol start='69' class="post-context" id="post4388765448">
+<li onclick="toggle('pre4388765448', 'post4388765448')"><pre></pre></li>
+<li onclick="toggle('pre4388765448', 'post4388765448')"><pre></pre></li>
+<li onclick="toggle('pre4388765448', 'post4388765448')"><pre>def _engine_list(using=None):</pre></li>
+<li onclick="toggle('pre4388765448', 'post4388765448')"><pre>    return engines.all() if using is None else [engines[using]]</pre></li>
+<li onclick="toggle('pre4388765448', 'post4388765448')"><pre></pre></li>
+<li onclick="toggle('pre4388765448', 'post4388765448')"><pre></pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4388765448')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4388765448">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>context</td>
+<td class="code"><pre>{&#39;activenav&#39;: &#39;books&#39;,
+&#39;book&#39;: &lt;Book: The Map of Love&gt;,
+&#39;genre_groups_cols&#39;: [[&lt;GenreGroup: All Fiction&gt;,
+&lt;GenreGroup: All Non-fiction&gt;,
+&lt;GenreGroup: Biography, Memoir, Autobiography&gt;,
+&lt;GenreGroup: Business, Management, Leadership&gt;,
+&lt;GenreGroup: Classics&gt;,
+&lt;GenreGroup: Health, Food &amp; Drink&gt;,
+&lt;GenreGroup: History, Sociology, Politics, Economics&gt;,
+&lt;GenreGroup: Humor&gt;,
+&lt;GenreGroup: Inspirational, Spirituality, Self-help&gt;],
+[&lt;GenreGroup: Language, Media&gt;,
+&lt;GenreGroup: Mystery, Crime&gt;,
+&lt;GenreGroup: Philosophy, Science, Psychology&gt;,
+&lt;GenreGroup: Poetry, Play&gt;,
+&lt;GenreGroup: Romance, Chick Lit&gt;,
+&lt;GenreGroup: Science Fiction, Fantasy&gt;,
+&lt;GenreGroup: Travel, Adventure&gt;,
+&#39;sold&#39;]],
+&#39;meta&#39;: {&#39;canonical_url&#39;: &#39;www.mpcurious.com/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;,
+&#39;description&#39;: &#39;We sell affordable used books.&#39;,
+&#39;og_image&#39;: &#39;https://scontent.xx.fbcdn.net/v/t31.0-0/p480x480/14753945_1155190961214836_2357115047692261315_o.jpg?oh=f5b31e7d15d8b73f06bf89f842ef3447&amp;oe=596597E9&#39;,
+&#39;title&#39;: &#39;The Map of Love by Ahdaf Soueif - mpcurious&#39;},
+&#39;related_books&#39;: [&lt;Book: Like Water for Chocolate&gt;,
+&lt;Book: Harnessing Peacocks&gt;,
+&lt;Book: Intimacy&gt;,
+&lt;Book: Rest Area&gt;,
+&lt;Book: Specimen Days&gt;,
+&lt;Book: I Know This Much Is True&gt;,
+&lt;Book: The Eye in the Door&gt;,
+&lt;Book: Water for Elephants&gt;,
+&lt;Book: Machete Season: The Killers in Rwanda Speak&gt;,
+&lt;Book: Wool&gt;,
+&lt;Book: The Postmistress&gt;,
+&lt;Book: Messenger of Truth: A Maisie Dobbs Novel&gt;]}</pre></td>
+</tr>
+<tr>
+<td>request</td>
+<td class="code"><pre>&lt;WSGIRequest: GET &#39;/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;&gt;</pre></td>
+</tr>
+<tr>
+<td>template</td>
+<td class="code"><pre>&lt;django.template.backends.django.Template object at 0x105edd748&gt;</pre></td>
+</tr>
+<tr>
+<td>template_name</td>
+<td class="code"><pre>&#39;books/book_details.html&#39;</pre></td>
+</tr>
+<tr>
+<td>using</td>
+<td class="code"><pre>None</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="frame django">
+<code>/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/backends/django.py</code> in <code>render</code>
+<div class="context" id="c4393769736">
+<ol start="59" class="pre-context" id="pre4393769736">
+<li onclick="toggle('pre4393769736', 'post4393769736')"><pre>    @property</pre></li>
+<li onclick="toggle('pre4393769736', 'post4393769736')"><pre>    def origin(self):</pre></li>
+<li onclick="toggle('pre4393769736', 'post4393769736')"><pre>        return self.template.origin</pre></li>
+<li onclick="toggle('pre4393769736', 'post4393769736')"><pre></pre></li>
+<li onclick="toggle('pre4393769736', 'post4393769736')"><pre>    def render(self, context=None, request=None):</pre></li>
+<li onclick="toggle('pre4393769736', 'post4393769736')"><pre>        context = make_context(context, request, autoescape=self.backend.engine.autoescape)</pre></li>
+<li onclick="toggle('pre4393769736', 'post4393769736')"><pre>        try:</pre></li>
+</ol>
+<ol start="66" class="context-line">
+<li onclick="toggle('pre4393769736', 'post4393769736')"><pre>
+return self.template.render(context)</pre> <span>...</span></li></ol>
+<ol start='67' class="post-context" id="post4393769736">
+<li onclick="toggle('pre4393769736', 'post4393769736')"><pre>        except TemplateDoesNotExist as exc:</pre></li>
+<li onclick="toggle('pre4393769736', 'post4393769736')"><pre>            reraise(exc, self.backend)</pre></li>
+<li onclick="toggle('pre4393769736', 'post4393769736')"><pre></pre></li>
+<li onclick="toggle('pre4393769736', 'post4393769736')"><pre></pre></li>
+<li onclick="toggle('pre4393769736', 'post4393769736')"><pre>def copy_exception(exc, backend=None):</pre></li>
+<li onclick="toggle('pre4393769736', 'post4393769736')"><pre>    &quot;&quot;&quot;</pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4393769736')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4393769736">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>context</td>
+<td class="code"><pre>[{&#39;None&#39;: None, &#39;False&#39;: False, &#39;True&#39;: True}, {}, {}, {&#39;meta&#39;: {&#39;canonical_url&#39;: &#39;www.mpcurious.com/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;, &#39;og_image&#39;: &#39;https://scontent.xx.fbcdn.net/v/t31.0-0/p480x480/14753945_1155190961214836_2357115047692261315_o.jpg?oh=f5b31e7d15d8b73f06bf89f842ef3447&amp;oe=596597E9&#39;, &#39;description&#39;: &#39;We sell affordable used books.&#39;, &#39;title&#39;: &#39;The Map of Love by Ahdaf Soueif - mpcurious&#39;}, &#39;genre_groups_cols&#39;: [[&lt;GenreGroup: All Fiction&gt;, &lt;GenreGroup: All Non-fiction&gt;, &lt;GenreGroup: Biography, Memoir, Autobiography&gt;, &lt;GenreGroup: Business, Management, Leadership&gt;, &lt;GenreGroup: Classics&gt;, &lt;GenreGroup: Health, Food &amp; Drink&gt;, &lt;GenreGroup: History, Sociology, Politics, Economics&gt;, &lt;GenreGroup: Humor&gt;, &lt;GenreGroup: Inspirational, Spirituality, Self-help&gt;], [&lt;GenreGroup: Language, Media&gt;, &lt;GenreGroup: Mystery, Crime&gt;, &lt;GenreGroup: Philosophy, Science, Psychology&gt;, &lt;GenreGroup: Poetry, Play&gt;, &lt;GenreGroup: Romance, Chick Lit&gt;, &lt;GenreGroup: Science Fiction, Fantasy&gt;, &lt;GenreGroup: Travel, Adventure&gt;, &#39;sold&#39;]], &#39;book&#39;: &lt;Book: The Map of Love&gt;, &#39;related_books&#39;: [&lt;Book: Like Water for Chocolate&gt;, &lt;Book: Harnessing Peacocks&gt;, &lt;Book: Intimacy&gt;, &lt;Book: Rest Area&gt;, &lt;Book: Specimen Days&gt;, &lt;Book: I Know This Much Is True&gt;, &lt;Book: The Eye in the Door&gt;, &lt;Book: Water for Elephants&gt;, &lt;Book: Machete Season: The Killers in Rwanda Speak&gt;, &lt;Book: Wool&gt;, &lt;Book: The Postmistress&gt;, &lt;Book: Messenger of Truth: A Maisie Dobbs Novel&gt;], &#39;activenav&#39;: &#39;books&#39;}]</pre></td>
+</tr>
+<tr>
+<td>request</td>
+<td class="code"><pre>&lt;WSGIRequest: GET &#39;/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;&gt;</pre></td>
+</tr>
+<tr>
+<td>self</td>
+<td class="code"><pre>&lt;django.template.backends.django.Template object at 0x105edd748&gt;</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="frame django">
+<code>/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/base.py</code> in <code>render</code>
+<div class="context" id="c4392380552">
+<ol start="201" class="pre-context" id="pre4392380552">
+<li onclick="toggle('pre4392380552', 'post4392380552')"><pre>    def render(self, context):</pre></li>
+<li onclick="toggle('pre4392380552', 'post4392380552')"><pre>        &quot;Display stage -- can be called many times&quot;</pre></li>
+<li onclick="toggle('pre4392380552', 'post4392380552')"><pre>        context.render_context.push()</pre></li>
+<li onclick="toggle('pre4392380552', 'post4392380552')"><pre>        try:</pre></li>
+<li onclick="toggle('pre4392380552', 'post4392380552')"><pre>            if context.template is None:</pre></li>
+<li onclick="toggle('pre4392380552', 'post4392380552')"><pre>                with context.bind_template(self):</pre></li>
+<li onclick="toggle('pre4392380552', 'post4392380552')"><pre>                    context.template_name = self.name</pre></li>
+</ol>
+<ol start="208" class="context-line">
+<li onclick="toggle('pre4392380552', 'post4392380552')"><pre>
+return self._render(context)</pre> <span>...</span></li></ol>
+<ol start='209' class="post-context" id="post4392380552">
+<li onclick="toggle('pre4392380552', 'post4392380552')"><pre>            else:</pre></li>
+<li onclick="toggle('pre4392380552', 'post4392380552')"><pre>                return self._render(context)</pre></li>
+<li onclick="toggle('pre4392380552', 'post4392380552')"><pre>        finally:</pre></li>
+<li onclick="toggle('pre4392380552', 'post4392380552')"><pre>            context.render_context.pop()</pre></li>
+<li onclick="toggle('pre4392380552', 'post4392380552')"><pre></pre></li>
+<li onclick="toggle('pre4392380552', 'post4392380552')"><pre>    def compile_nodelist(self):</pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4392380552')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4392380552">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>context</td>
+<td class="code"><pre>[{&#39;None&#39;: None, &#39;False&#39;: False, &#39;True&#39;: True}, {}, {}, {&#39;meta&#39;: {&#39;canonical_url&#39;: &#39;www.mpcurious.com/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;, &#39;og_image&#39;: &#39;https://scontent.xx.fbcdn.net/v/t31.0-0/p480x480/14753945_1155190961214836_2357115047692261315_o.jpg?oh=f5b31e7d15d8b73f06bf89f842ef3447&amp;oe=596597E9&#39;, &#39;description&#39;: &#39;We sell affordable used books.&#39;, &#39;title&#39;: &#39;The Map of Love by Ahdaf Soueif - mpcurious&#39;}, &#39;genre_groups_cols&#39;: [[&lt;GenreGroup: All Fiction&gt;, &lt;GenreGroup: All Non-fiction&gt;, &lt;GenreGroup: Biography, Memoir, Autobiography&gt;, &lt;GenreGroup: Business, Management, Leadership&gt;, &lt;GenreGroup: Classics&gt;, &lt;GenreGroup: Health, Food &amp; Drink&gt;, &lt;GenreGroup: History, Sociology, Politics, Economics&gt;, &lt;GenreGroup: Humor&gt;, &lt;GenreGroup: Inspirational, Spirituality, Self-help&gt;], [&lt;GenreGroup: Language, Media&gt;, &lt;GenreGroup: Mystery, Crime&gt;, &lt;GenreGroup: Philosophy, Science, Psychology&gt;, &lt;GenreGroup: Poetry, Play&gt;, &lt;GenreGroup: Romance, Chick Lit&gt;, &lt;GenreGroup: Science Fiction, Fantasy&gt;, &lt;GenreGroup: Travel, Adventure&gt;, &#39;sold&#39;]], &#39;book&#39;: &lt;Book: The Map of Love&gt;, &#39;related_books&#39;: [&lt;Book: Like Water for Chocolate&gt;, &lt;Book: Harnessing Peacocks&gt;, &lt;Book: Intimacy&gt;, &lt;Book: Rest Area&gt;, &lt;Book: Specimen Days&gt;, &lt;Book: I Know This Much Is True&gt;, &lt;Book: The Eye in the Door&gt;, &lt;Book: Water for Elephants&gt;, &lt;Book: Machete Season: The Killers in Rwanda Speak&gt;, &lt;Book: Wool&gt;, &lt;Book: The Postmistress&gt;, &lt;Book: Messenger of Truth: A Maisie Dobbs Novel&gt;], &#39;activenav&#39;: &#39;books&#39;}]</pre></td>
+</tr>
+<tr>
+<td>self</td>
+<td class="code"><pre>&lt;django.template.base.Template object at 0x105e08550&gt;</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="frame django">
+<code>/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/test/utils.py</code> in <code>instrumented_test_render</code>
+<div class="context" id="c4392380296">
+<ol start="87" class="pre-context" id="pre4392380296">
+<li onclick="toggle('pre4392380296', 'post4392380296')"><pre></pre></li>
+<li onclick="toggle('pre4392380296', 'post4392380296')"><pre>def instrumented_test_render(self, context):</pre></li>
+<li onclick="toggle('pre4392380296', 'post4392380296')"><pre>    &quot;&quot;&quot;</pre></li>
+<li onclick="toggle('pre4392380296', 'post4392380296')"><pre>    An instrumented Template render method, providing a signal</pre></li>
+<li onclick="toggle('pre4392380296', 'post4392380296')"><pre>    that can be intercepted by the test system Client</pre></li>
+<li onclick="toggle('pre4392380296', 'post4392380296')"><pre>    &quot;&quot;&quot;</pre></li>
+<li onclick="toggle('pre4392380296', 'post4392380296')"><pre>    template_rendered.send(sender=self, template=self, context=context)</pre></li>
+</ol>
+<ol start="94" class="context-line">
+<li onclick="toggle('pre4392380296', 'post4392380296')"><pre>
+return self.nodelist.render(context)</pre> <span>...</span></li></ol>
+<ol start='95' class="post-context" id="post4392380296">
+<li onclick="toggle('pre4392380296', 'post4392380296')"><pre></pre></li>
+<li onclick="toggle('pre4392380296', 'post4392380296')"><pre></pre></li>
+<li onclick="toggle('pre4392380296', 'post4392380296')"><pre>def setup_test_environment():</pre></li>
+<li onclick="toggle('pre4392380296', 'post4392380296')"><pre>    &quot;&quot;&quot;</pre></li>
+<li onclick="toggle('pre4392380296', 'post4392380296')"><pre>    Perform global pre-test setup, such as installing the instrumented template</pre></li>
+<li onclick="toggle('pre4392380296', 'post4392380296')"><pre>    renderer and setting the email backend to the locmem email backend.</pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4392380296')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4392380296">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>context</td>
+<td class="code"><pre>[{&#39;None&#39;: None, &#39;False&#39;: False, &#39;True&#39;: True}, {}, {}, {&#39;meta&#39;: {&#39;canonical_url&#39;: &#39;www.mpcurious.com/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;, &#39;og_image&#39;: &#39;https://scontent.xx.fbcdn.net/v/t31.0-0/p480x480/14753945_1155190961214836_2357115047692261315_o.jpg?oh=f5b31e7d15d8b73f06bf89f842ef3447&amp;oe=596597E9&#39;, &#39;description&#39;: &#39;We sell affordable used books.&#39;, &#39;title&#39;: &#39;The Map of Love by Ahdaf Soueif - mpcurious&#39;}, &#39;genre_groups_cols&#39;: [[&lt;GenreGroup: All Fiction&gt;, &lt;GenreGroup: All Non-fiction&gt;, &lt;GenreGroup: Biography, Memoir, Autobiography&gt;, &lt;GenreGroup: Business, Management, Leadership&gt;, &lt;GenreGroup: Classics&gt;, &lt;GenreGroup: Health, Food &amp; Drink&gt;, &lt;GenreGroup: History, Sociology, Politics, Economics&gt;, &lt;GenreGroup: Humor&gt;, &lt;GenreGroup: Inspirational, Spirituality, Self-help&gt;], [&lt;GenreGroup: Language, Media&gt;, &lt;GenreGroup: Mystery, Crime&gt;, &lt;GenreGroup: Philosophy, Science, Psychology&gt;, &lt;GenreGroup: Poetry, Play&gt;, &lt;GenreGroup: Romance, Chick Lit&gt;, &lt;GenreGroup: Science Fiction, Fantasy&gt;, &lt;GenreGroup: Travel, Adventure&gt;, &#39;sold&#39;]], &#39;book&#39;: &lt;Book: The Map of Love&gt;, &#39;related_books&#39;: [&lt;Book: Like Water for Chocolate&gt;, &lt;Book: Harnessing Peacocks&gt;, &lt;Book: Intimacy&gt;, &lt;Book: Rest Area&gt;, &lt;Book: Specimen Days&gt;, &lt;Book: I Know This Much Is True&gt;, &lt;Book: The Eye in the Door&gt;, &lt;Book: Water for Elephants&gt;, &lt;Book: Machete Season: The Killers in Rwanda Speak&gt;, &lt;Book: Wool&gt;, &lt;Book: The Postmistress&gt;, &lt;Book: Messenger of Truth: A Maisie Dobbs Novel&gt;], &#39;activenav&#39;: &#39;books&#39;}]</pre></td>
+</tr>
+<tr>
+<td>self</td>
+<td class="code"><pre>&lt;django.template.base.Template object at 0x105e08550&gt;</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="frame django">
+<code>/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/base.py</code> in <code>render</code>
+<div class="context" id="c4392381832">
+<ol start="987" class="pre-context" id="pre4392381832">
+<li onclick="toggle('pre4392381832', 'post4392381832')"><pre>    # extend_nodelist().</pre></li>
+<li onclick="toggle('pre4392381832', 'post4392381832')"><pre>    contains_nontext = False</pre></li>
+<li onclick="toggle('pre4392381832', 'post4392381832')"><pre></pre></li>
+<li onclick="toggle('pre4392381832', 'post4392381832')"><pre>    def render(self, context):</pre></li>
+<li onclick="toggle('pre4392381832', 'post4392381832')"><pre>        bits = []</pre></li>
+<li onclick="toggle('pre4392381832', 'post4392381832')"><pre>        for node in self:</pre></li>
+<li onclick="toggle('pre4392381832', 'post4392381832')"><pre>            if isinstance(node, Node):</pre></li>
+</ol>
+<ol start="994" class="context-line">
+<li onclick="toggle('pre4392381832', 'post4392381832')"><pre>
+bit = node.render_annotated(context)</pre> <span>...</span></li></ol>
+<ol start='995' class="post-context" id="post4392381832">
+<li onclick="toggle('pre4392381832', 'post4392381832')"><pre>            else:</pre></li>
+<li onclick="toggle('pre4392381832', 'post4392381832')"><pre>                bit = node</pre></li>
+<li onclick="toggle('pre4392381832', 'post4392381832')"><pre>            bits.append(force_text(bit))</pre></li>
+<li onclick="toggle('pre4392381832', 'post4392381832')"><pre>        return mark_safe(&#39;&#39;.join(bits))</pre></li>
+<li onclick="toggle('pre4392381832', 'post4392381832')"><pre></pre></li>
+<li onclick="toggle('pre4392381832', 'post4392381832')"><pre>    def get_nodes_by_type(self, nodetype):</pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4392381832')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4392381832">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bits</td>
+<td class="code"><pre>[]</pre></td>
+</tr>
+<tr>
+<td>context</td>
+<td class="code"><pre>[{&#39;None&#39;: None, &#39;False&#39;: False, &#39;True&#39;: True}, {}, {}, {&#39;meta&#39;: {&#39;canonical_url&#39;: &#39;www.mpcurious.com/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;, &#39;og_image&#39;: &#39;https://scontent.xx.fbcdn.net/v/t31.0-0/p480x480/14753945_1155190961214836_2357115047692261315_o.jpg?oh=f5b31e7d15d8b73f06bf89f842ef3447&amp;oe=596597E9&#39;, &#39;description&#39;: &#39;We sell affordable used books.&#39;, &#39;title&#39;: &#39;The Map of Love by Ahdaf Soueif - mpcurious&#39;}, &#39;genre_groups_cols&#39;: [[&lt;GenreGroup: All Fiction&gt;, &lt;GenreGroup: All Non-fiction&gt;, &lt;GenreGroup: Biography, Memoir, Autobiography&gt;, &lt;GenreGroup: Business, Management, Leadership&gt;, &lt;GenreGroup: Classics&gt;, &lt;GenreGroup: Health, Food &amp; Drink&gt;, &lt;GenreGroup: History, Sociology, Politics, Economics&gt;, &lt;GenreGroup: Humor&gt;, &lt;GenreGroup: Inspirational, Spirituality, Self-help&gt;], [&lt;GenreGroup: Language, Media&gt;, &lt;GenreGroup: Mystery, Crime&gt;, &lt;GenreGroup: Philosophy, Science, Psychology&gt;, &lt;GenreGroup: Poetry, Play&gt;, &lt;GenreGroup: Romance, Chick Lit&gt;, &lt;GenreGroup: Science Fiction, Fantasy&gt;, &lt;GenreGroup: Travel, Adventure&gt;, &#39;sold&#39;]], &#39;book&#39;: &lt;Book: The Map of Love&gt;, &#39;related_books&#39;: [&lt;Book: Like Water for Chocolate&gt;, &lt;Book: Harnessing Peacocks&gt;, &lt;Book: Intimacy&gt;, &lt;Book: Rest Area&gt;, &lt;Book: Specimen Days&gt;, &lt;Book: I Know This Much Is True&gt;, &lt;Book: The Eye in the Door&gt;, &lt;Book: Water for Elephants&gt;, &lt;Book: Machete Season: The Killers in Rwanda Speak&gt;, &lt;Book: Wool&gt;, &lt;Book: The Postmistress&gt;, &lt;Book: Messenger of Truth: A Maisie Dobbs Novel&gt;], &#39;activenav&#39;: &#39;books&#39;}]</pre></td>
+</tr>
+<tr>
+<td>node</td>
+<td class="code"><pre>&lt;ExtendsNode: extends &#39;base_layout.html&#39;&gt;</pre></td>
+</tr>
+<tr>
+<td>self</td>
+<td class="code"><pre>[&lt;ExtendsNode: extends &#39;base_layout.html&#39;&gt;]</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="frame django">
+<code>/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/base.py</code> in <code>render_annotated</code>
+<div class="context" id="c4392381256">
+<ol start="954" class="pre-context" id="pre4392381256">
+<li onclick="toggle('pre4392381256', 'post4392381256')"><pre>        &quot;&quot;&quot;</pre></li>
+<li onclick="toggle('pre4392381256', 'post4392381256')"><pre>        Render the node. If debug is True and an exception occurs during</pre></li>
+<li onclick="toggle('pre4392381256', 'post4392381256')"><pre>        rendering, the exception is annotated with contextual line information</pre></li>
+<li onclick="toggle('pre4392381256', 'post4392381256')"><pre>        where it occurred in the template. For internal usage this method is</pre></li>
+<li onclick="toggle('pre4392381256', 'post4392381256')"><pre>        preferred over using the render method directly.</pre></li>
+<li onclick="toggle('pre4392381256', 'post4392381256')"><pre>        &quot;&quot;&quot;</pre></li>
+<li onclick="toggle('pre4392381256', 'post4392381256')"><pre>        try:</pre></li>
+</ol>
+<ol start="961" class="context-line">
+<li onclick="toggle('pre4392381256', 'post4392381256')"><pre>
+return self.render(context)</pre> <span>...</span></li></ol>
+<ol start='962' class="post-context" id="post4392381256">
+<li onclick="toggle('pre4392381256', 'post4392381256')"><pre>        except Exception as e:</pre></li>
+<li onclick="toggle('pre4392381256', 'post4392381256')"><pre>            if context.template.engine.debug and not hasattr(e, &#39;template_debug&#39;):</pre></li>
+<li onclick="toggle('pre4392381256', 'post4392381256')"><pre>                e.template_debug = context.template.get_exception_info(e, self.token)</pre></li>
+<li onclick="toggle('pre4392381256', 'post4392381256')"><pre>            raise</pre></li>
+<li onclick="toggle('pre4392381256', 'post4392381256')"><pre></pre></li>
+<li onclick="toggle('pre4392381256', 'post4392381256')"><pre>    def __iter__(self):</pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4392381256')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4392381256">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>context</td>
+<td class="code"><pre>[{&#39;None&#39;: None, &#39;False&#39;: False, &#39;True&#39;: True}, {}, {}, {&#39;meta&#39;: {&#39;canonical_url&#39;: &#39;www.mpcurious.com/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;, &#39;og_image&#39;: &#39;https://scontent.xx.fbcdn.net/v/t31.0-0/p480x480/14753945_1155190961214836_2357115047692261315_o.jpg?oh=f5b31e7d15d8b73f06bf89f842ef3447&amp;oe=596597E9&#39;, &#39;description&#39;: &#39;We sell affordable used books.&#39;, &#39;title&#39;: &#39;The Map of Love by Ahdaf Soueif - mpcurious&#39;}, &#39;genre_groups_cols&#39;: [[&lt;GenreGroup: All Fiction&gt;, &lt;GenreGroup: All Non-fiction&gt;, &lt;GenreGroup: Biography, Memoir, Autobiography&gt;, &lt;GenreGroup: Business, Management, Leadership&gt;, &lt;GenreGroup: Classics&gt;, &lt;GenreGroup: Health, Food &amp; Drink&gt;, &lt;GenreGroup: History, Sociology, Politics, Economics&gt;, &lt;GenreGroup: Humor&gt;, &lt;GenreGroup: Inspirational, Spirituality, Self-help&gt;], [&lt;GenreGroup: Language, Media&gt;, &lt;GenreGroup: Mystery, Crime&gt;, &lt;GenreGroup: Philosophy, Science, Psychology&gt;, &lt;GenreGroup: Poetry, Play&gt;, &lt;GenreGroup: Romance, Chick Lit&gt;, &lt;GenreGroup: Science Fiction, Fantasy&gt;, &lt;GenreGroup: Travel, Adventure&gt;, &#39;sold&#39;]], &#39;book&#39;: &lt;Book: The Map of Love&gt;, &#39;related_books&#39;: [&lt;Book: Like Water for Chocolate&gt;, &lt;Book: Harnessing Peacocks&gt;, &lt;Book: Intimacy&gt;, &lt;Book: Rest Area&gt;, &lt;Book: Specimen Days&gt;, &lt;Book: I Know This Much Is True&gt;, &lt;Book: The Eye in the Door&gt;, &lt;Book: Water for Elephants&gt;, &lt;Book: Machete Season: The Killers in Rwanda Speak&gt;, &lt;Book: Wool&gt;, &lt;Book: The Postmistress&gt;, &lt;Book: Messenger of Truth: A Maisie Dobbs Novel&gt;], &#39;activenav&#39;: &#39;books&#39;}]</pre></td>
+</tr>
+<tr>
+<td>self</td>
+<td class="code"><pre>&lt;ExtendsNode: extends &#39;base_layout.html&#39;&gt;</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="frame django">
+<code>/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/loader_tags.py</code> in <code>render</code>
+<div class="context" id="c4392381192">
+<ol start="167" class="pre-context" id="pre4392381192">
+<li onclick="toggle('pre4392381192', 'post4392381192')"><pre>                    blocks = {n.name: n for n in</pre></li>
+<li onclick="toggle('pre4392381192', 'post4392381192')"><pre>                              compiled_parent.nodelist.get_nodes_by_type(BlockNode)}</pre></li>
+<li onclick="toggle('pre4392381192', 'post4392381192')"><pre>                    block_context.add_blocks(blocks)</pre></li>
+<li onclick="toggle('pre4392381192', 'post4392381192')"><pre>                break</pre></li>
+<li onclick="toggle('pre4392381192', 'post4392381192')"><pre></pre></li>
+<li onclick="toggle('pre4392381192', 'post4392381192')"><pre>        # Call Template._render explicitly so the parser context stays</pre></li>
+<li onclick="toggle('pre4392381192', 'post4392381192')"><pre>        # the same.</pre></li>
+</ol>
+<ol start="174" class="context-line">
+<li onclick="toggle('pre4392381192', 'post4392381192')"><pre>
+return compiled_parent._render(context)</pre> <span>...</span></li></ol>
+<ol start='175' class="post-context" id="post4392381192">
+<li onclick="toggle('pre4392381192', 'post4392381192')"><pre></pre></li>
+<li onclick="toggle('pre4392381192', 'post4392381192')"><pre></pre></li>
+<li onclick="toggle('pre4392381192', 'post4392381192')"><pre>class IncludeNode(Node):</pre></li>
+<li onclick="toggle('pre4392381192', 'post4392381192')"><pre>    context_key = &#39;__include_context&#39;</pre></li>
+<li onclick="toggle('pre4392381192', 'post4392381192')"><pre></pre></li>
+<li onclick="toggle('pre4392381192', 'post4392381192')"><pre>    def __init__(self, template, *args, **kwargs):</pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4392381192')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4392381192">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>block_context</td>
+<td class="code"><pre>&lt;django.template.loader_tags.BlockContext object at 0x105cc3208&gt;</pre></td>
+</tr>
+<tr>
+<td>blocks</td>
+<td class="code"><pre>{&#39;content&#39;: &lt;Block Node: content. Contents: []&gt;,
+&#39;doc_end_js&#39;: &lt;Block Node: doc_end_js. Contents: []&gt;}</pre></td>
+</tr>
+<tr>
+<td>compiled_parent</td>
+<td class="code"><pre>&lt;django.template.base.Template object at 0x105ede0b8&gt;</pre></td>
+</tr>
+<tr>
+<td>context</td>
+<td class="code"><pre>[{&#39;None&#39;: None, &#39;False&#39;: False, &#39;True&#39;: True}, {}, {}, {&#39;meta&#39;: {&#39;canonical_url&#39;: &#39;www.mpcurious.com/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;, &#39;og_image&#39;: &#39;https://scontent.xx.fbcdn.net/v/t31.0-0/p480x480/14753945_1155190961214836_2357115047692261315_o.jpg?oh=f5b31e7d15d8b73f06bf89f842ef3447&amp;oe=596597E9&#39;, &#39;description&#39;: &#39;We sell affordable used books.&#39;, &#39;title&#39;: &#39;The Map of Love by Ahdaf Soueif - mpcurious&#39;}, &#39;genre_groups_cols&#39;: [[&lt;GenreGroup: All Fiction&gt;, &lt;GenreGroup: All Non-fiction&gt;, &lt;GenreGroup: Biography, Memoir, Autobiography&gt;, &lt;GenreGroup: Business, Management, Leadership&gt;, &lt;GenreGroup: Classics&gt;, &lt;GenreGroup: Health, Food &amp; Drink&gt;, &lt;GenreGroup: History, Sociology, Politics, Economics&gt;, &lt;GenreGroup: Humor&gt;, &lt;GenreGroup: Inspirational, Spirituality, Self-help&gt;], [&lt;GenreGroup: Language, Media&gt;, &lt;GenreGroup: Mystery, Crime&gt;, &lt;GenreGroup: Philosophy, Science, Psychology&gt;, &lt;GenreGroup: Poetry, Play&gt;, &lt;GenreGroup: Romance, Chick Lit&gt;, &lt;GenreGroup: Science Fiction, Fantasy&gt;, &lt;GenreGroup: Travel, Adventure&gt;, &#39;sold&#39;]], &#39;book&#39;: &lt;Book: The Map of Love&gt;, &#39;related_books&#39;: [&lt;Book: Like Water for Chocolate&gt;, &lt;Book: Harnessing Peacocks&gt;, &lt;Book: Intimacy&gt;, &lt;Book: Rest Area&gt;, &lt;Book: Specimen Days&gt;, &lt;Book: I Know This Much Is True&gt;, &lt;Book: The Eye in the Door&gt;, &lt;Book: Water for Elephants&gt;, &lt;Book: Machete Season: The Killers in Rwanda Speak&gt;, &lt;Book: Wool&gt;, &lt;Book: The Postmistress&gt;, &lt;Book: Messenger of Truth: A Maisie Dobbs Novel&gt;], &#39;activenav&#39;: &#39;books&#39;}]</pre></td>
+</tr>
+<tr>
+<td>node</td>
+<td class="code"><pre>&lt;django.template.defaulttags.LoadNode object at 0x105cc3a20&gt;</pre></td>
+</tr>
+<tr>
+<td>self</td>
+<td class="code"><pre>&lt;ExtendsNode: extends &#39;base_layout.html&#39;&gt;</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="frame django">
+<code>/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/test/utils.py</code> in <code>instrumented_test_render</code>
+<div class="context" id="c4392382216">
+<ol start="87" class="pre-context" id="pre4392382216">
+<li onclick="toggle('pre4392382216', 'post4392382216')"><pre></pre></li>
+<li onclick="toggle('pre4392382216', 'post4392382216')"><pre>def instrumented_test_render(self, context):</pre></li>
+<li onclick="toggle('pre4392382216', 'post4392382216')"><pre>    &quot;&quot;&quot;</pre></li>
+<li onclick="toggle('pre4392382216', 'post4392382216')"><pre>    An instrumented Template render method, providing a signal</pre></li>
+<li onclick="toggle('pre4392382216', 'post4392382216')"><pre>    that can be intercepted by the test system Client</pre></li>
+<li onclick="toggle('pre4392382216', 'post4392382216')"><pre>    &quot;&quot;&quot;</pre></li>
+<li onclick="toggle('pre4392382216', 'post4392382216')"><pre>    template_rendered.send(sender=self, template=self, context=context)</pre></li>
+</ol>
+<ol start="94" class="context-line">
+<li onclick="toggle('pre4392382216', 'post4392382216')"><pre>
+return self.nodelist.render(context)</pre> <span>...</span></li></ol>
+<ol start='95' class="post-context" id="post4392382216">
+<li onclick="toggle('pre4392382216', 'post4392382216')"><pre></pre></li>
+<li onclick="toggle('pre4392382216', 'post4392382216')"><pre></pre></li>
+<li onclick="toggle('pre4392382216', 'post4392382216')"><pre>def setup_test_environment():</pre></li>
+<li onclick="toggle('pre4392382216', 'post4392382216')"><pre>    &quot;&quot;&quot;</pre></li>
+<li onclick="toggle('pre4392382216', 'post4392382216')"><pre>    Perform global pre-test setup, such as installing the instrumented template</pre></li>
+<li onclick="toggle('pre4392382216', 'post4392382216')"><pre>    renderer and setting the email backend to the locmem email backend.</pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4392382216')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4392382216">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>context</td>
+<td class="code"><pre>[{&#39;None&#39;: None, &#39;False&#39;: False, &#39;True&#39;: True}, {}, {}, {&#39;meta&#39;: {&#39;canonical_url&#39;: &#39;www.mpcurious.com/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;, &#39;og_image&#39;: &#39;https://scontent.xx.fbcdn.net/v/t31.0-0/p480x480/14753945_1155190961214836_2357115047692261315_o.jpg?oh=f5b31e7d15d8b73f06bf89f842ef3447&amp;oe=596597E9&#39;, &#39;description&#39;: &#39;We sell affordable used books.&#39;, &#39;title&#39;: &#39;The Map of Love by Ahdaf Soueif - mpcurious&#39;}, &#39;genre_groups_cols&#39;: [[&lt;GenreGroup: All Fiction&gt;, &lt;GenreGroup: All Non-fiction&gt;, &lt;GenreGroup: Biography, Memoir, Autobiography&gt;, &lt;GenreGroup: Business, Management, Leadership&gt;, &lt;GenreGroup: Classics&gt;, &lt;GenreGroup: Health, Food &amp; Drink&gt;, &lt;GenreGroup: History, Sociology, Politics, Economics&gt;, &lt;GenreGroup: Humor&gt;, &lt;GenreGroup: Inspirational, Spirituality, Self-help&gt;], [&lt;GenreGroup: Language, Media&gt;, &lt;GenreGroup: Mystery, Crime&gt;, &lt;GenreGroup: Philosophy, Science, Psychology&gt;, &lt;GenreGroup: Poetry, Play&gt;, &lt;GenreGroup: Romance, Chick Lit&gt;, &lt;GenreGroup: Science Fiction, Fantasy&gt;, &lt;GenreGroup: Travel, Adventure&gt;, &#39;sold&#39;]], &#39;book&#39;: &lt;Book: The Map of Love&gt;, &#39;related_books&#39;: [&lt;Book: Like Water for Chocolate&gt;, &lt;Book: Harnessing Peacocks&gt;, &lt;Book: Intimacy&gt;, &lt;Book: Rest Area&gt;, &lt;Book: Specimen Days&gt;, &lt;Book: I Know This Much Is True&gt;, &lt;Book: The Eye in the Door&gt;, &lt;Book: Water for Elephants&gt;, &lt;Book: Machete Season: The Killers in Rwanda Speak&gt;, &lt;Book: Wool&gt;, &lt;Book: The Postmistress&gt;, &lt;Book: Messenger of Truth: A Maisie Dobbs Novel&gt;], &#39;activenav&#39;: &#39;books&#39;}]</pre></td>
+</tr>
+<tr>
+<td>self</td>
+<td class="code"><pre>&lt;django.template.base.Template object at 0x105ede0b8&gt;</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="frame django">
+<code>/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/base.py</code> in <code>render</code>
+<div class="context" id="c4392378696">
+<ol start="987" class="pre-context" id="pre4392378696">
+<li onclick="toggle('pre4392378696', 'post4392378696')"><pre>    # extend_nodelist().</pre></li>
+<li onclick="toggle('pre4392378696', 'post4392378696')"><pre>    contains_nontext = False</pre></li>
+<li onclick="toggle('pre4392378696', 'post4392378696')"><pre></pre></li>
+<li onclick="toggle('pre4392378696', 'post4392378696')"><pre>    def render(self, context):</pre></li>
+<li onclick="toggle('pre4392378696', 'post4392378696')"><pre>        bits = []</pre></li>
+<li onclick="toggle('pre4392378696', 'post4392378696')"><pre>        for node in self:</pre></li>
+<li onclick="toggle('pre4392378696', 'post4392378696')"><pre>            if isinstance(node, Node):</pre></li>
+</ol>
+<ol start="994" class="context-line">
+<li onclick="toggle('pre4392378696', 'post4392378696')"><pre>
+bit = node.render_annotated(context)</pre> <span>...</span></li></ol>
+<ol start='995' class="post-context" id="post4392378696">
+<li onclick="toggle('pre4392378696', 'post4392378696')"><pre>            else:</pre></li>
+<li onclick="toggle('pre4392378696', 'post4392378696')"><pre>                bit = node</pre></li>
+<li onclick="toggle('pre4392378696', 'post4392378696')"><pre>            bits.append(force_text(bit))</pre></li>
+<li onclick="toggle('pre4392378696', 'post4392378696')"><pre>        return mark_safe(&#39;&#39;.join(bits))</pre></li>
+<li onclick="toggle('pre4392378696', 'post4392378696')"><pre></pre></li>
+<li onclick="toggle('pre4392378696', 'post4392378696')"><pre>    def get_nodes_by_type(self, nodetype):</pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4392378696')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4392378696">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bit</td>
+<td class="code"><pre>&#39;\n        &lt;div class=&quot;main-section&quot;&gt;\n            &#39;</pre></td>
+</tr>
+<tr>
+<td>bits</td>
+<td class="code"><pre>[&#39;&#39;,
+&#39;\n&#39;,
+&#39;&#39;,
+&#39;\n&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n&lt;head&gt;\n    &lt;meta charset=&quot;utf-8&quot;&gt;\n    &lt;title&gt;&#39;,
+&#39;The Map of Love by Ahdaf Soueif - mpcurious&#39;,
+&#39;&lt;/title&gt;\n    &#39;,
+&#39;&lt;meta name=&quot;description&quot; content=&quot;We sell affordable used books.&quot;&gt;&lt;meta &#39;
+&#39;name=&quot;robots&quot; content=&quot;noarchive, noimageindex&quot;&gt;&lt;meta name=&quot;googlebot&quot; &#39;
+&#39;content=&quot;noarchive, noimageindex&quot;&gt;&lt;meta name=&quot;og:title&quot; content=&quot;The Map of &#39;
+&#39;Love by Ahdaf Soueif - mpcurious&quot;&gt;&lt;meta name=&quot;og:description&quot; content=&quot;We &#39;
+&#39;sell affordable used books.&quot;&gt;&lt;meta name=&quot;og:type&quot; content=&quot;website&quot;&gt;&lt;meta &#39;
+&#39;name=&quot;og:image&quot; &#39;
+&#39;content=&quot;https://scontent.xx.fbcdn.net/v/t31.0-0/p480x480/14753945_1155190961214836_2357115047692261315_o.jpg?oh=f5b31e7d15d8b73f06bf89f842ef3447&amp;amp;oe=596597E9&quot;&gt;&lt;meta &#39;
+&#39;name=&quot;og:url&quot; &#39;
+&#39;content=&quot;www.mpcurious.com/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&quot;&gt;&lt;link &#39;
+&#39;rel=&quot;canonical&quot; &#39;
+&#39;href=&quot;www.mpcurious.com/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&quot;&gt;\n&#39;,
+&#39;\n&#39;
+&#39;    &lt;meta http-equiv=&quot;Cache-Control&quot; content=&quot;no-cache&quot;&gt;\n&#39;
+&#39;    &lt;meta http-equiv=&quot;Pragma&quot; content=&quot;no-cache&quot;&gt;\n&#39;
+&#39;    &#39;,
+&#39;\n&#39;
+&#39;        &lt;link rel=&quot;stylesheet&quot; media=&quot;all&quot; &#39;
+&#39;href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&quot;&gt;\n&#39;
+&#39;        &lt;link rel=&quot;stylesheet&quot; media=&quot;all&quot; href=&quot;/static/css/app.min.css&quot;&gt;\n&#39;
+&#39;    &#39;,
+&#39;\n    &lt;link rel=&quot;shortcut icon&quot; type=&quot;image/x-icon&quot; href=&quot;&#39;,
+&#39;/static/img/favicon.png&#39;,
+&#39;&quot;&gt;\n&lt;/head&gt;\n&lt;body data-viewname=&quot;&#39;,
+&#39;books&#39;,
+&#39;&quot; data-urlname=&quot;&#39;,
+&#39;details&#39;,
+&#39;&quot;&gt;\n    &lt;div class=&quot;container&quot;&gt;\n        &#39;,
+&#39;&lt;header id=&quot;main-header&quot; class=&quot;u-cf borbot&quot;&gt;\n&#39;
+&#39;    &lt;div class=&quot;logo u-pull-left&quot;&gt;\n&#39;
+&#39;        &lt;a href=&quot;/&quot;&gt;mpcurious&lt;/a&gt;\n&#39;
+&#39;    &lt;/div&gt;\n&#39;
+&#39;\n&#39;
+&#39;    &lt;nav class=&quot;u-pull-right&quot;&gt;\n&#39;
+&#39;        &lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;\n&#39;
+&#39;        &lt;a href=&quot;/books/sort-date-desc/page-1&quot; class=&quot;active&quot;&gt;Books&lt;/a&gt;\n&#39;
+&#39;        &lt;a href=&quot;/books/sale/sort-date-desc/page-1&quot;&gt;Sale&lt;/a&gt;\n&#39;
+&#39;        &lt;a href=&quot;/books/below100/sort-date-desc/page-1&quot;&gt;Below â±100&lt;/a&gt;\n&#39;
+&#39;\n&#39;
+&#39;        &lt;a href=&quot;#how-to-order&quot;&gt;Ordering&lt;/a&gt;\n&#39;
+&#39;    &lt;/nav&gt;\n&#39;
+&#39;&lt;/header&gt;\n&#39;,
+&#39;\n        &lt;div class=&quot;main-section&quot;&gt;\n            &#39;]</pre></td>
+</tr>
+<tr>
+<td>context</td>
+<td class="code"><pre>[{&#39;None&#39;: None, &#39;False&#39;: False, &#39;True&#39;: True}, {}, {}, {&#39;meta&#39;: {&#39;canonical_url&#39;: &#39;www.mpcurious.com/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;, &#39;og_image&#39;: &#39;https://scontent.xx.fbcdn.net/v/t31.0-0/p480x480/14753945_1155190961214836_2357115047692261315_o.jpg?oh=f5b31e7d15d8b73f06bf89f842ef3447&amp;oe=596597E9&#39;, &#39;description&#39;: &#39;We sell affordable used books.&#39;, &#39;title&#39;: &#39;The Map of Love by Ahdaf Soueif - mpcurious&#39;}, &#39;genre_groups_cols&#39;: [[&lt;GenreGroup: All Fiction&gt;, &lt;GenreGroup: All Non-fiction&gt;, &lt;GenreGroup: Biography, Memoir, Autobiography&gt;, &lt;GenreGroup: Business, Management, Leadership&gt;, &lt;GenreGroup: Classics&gt;, &lt;GenreGroup: Health, Food &amp; Drink&gt;, &lt;GenreGroup: History, Sociology, Politics, Economics&gt;, &lt;GenreGroup: Humor&gt;, &lt;GenreGroup: Inspirational, Spirituality, Self-help&gt;], [&lt;GenreGroup: Language, Media&gt;, &lt;GenreGroup: Mystery, Crime&gt;, &lt;GenreGroup: Philosophy, Science, Psychology&gt;, &lt;GenreGroup: Poetry, Play&gt;, &lt;GenreGroup: Romance, Chick Lit&gt;, &lt;GenreGroup: Science Fiction, Fantasy&gt;, &lt;GenreGroup: Travel, Adventure&gt;, &#39;sold&#39;]], &#39;book&#39;: &lt;Book: The Map of Love&gt;, &#39;related_books&#39;: [&lt;Book: Like Water for Chocolate&gt;, &lt;Book: Harnessing Peacocks&gt;, &lt;Book: Intimacy&gt;, &lt;Book: Rest Area&gt;, &lt;Book: Specimen Days&gt;, &lt;Book: I Know This Much Is True&gt;, &lt;Book: The Eye in the Door&gt;, &lt;Book: Water for Elephants&gt;, &lt;Book: Machete Season: The Killers in Rwanda Speak&gt;, &lt;Book: Wool&gt;, &lt;Book: The Postmistress&gt;, &lt;Book: Messenger of Truth: A Maisie Dobbs Novel&gt;], &#39;activenav&#39;: &#39;books&#39;}]</pre></td>
+</tr>
+<tr>
+<td>node</td>
+<td class="code"><pre>&lt;Block Node: content. Contents: []&gt;</pre></td>
+</tr>
+<tr>
+<td>self</td>
+<td class="code"><pre>[&lt;django.template.defaulttags.LoadNode object at 0x105cc3a20&gt;,
+&lt;TextNode: &#39;\n&#39;&gt;,
+&lt;django.template.defaulttags.LoadNode object at 0x105cc3cf8&gt;,
+&lt;TextNode: &#39;\n&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n&lt;&#39;&gt;,
+&lt;Variable Node: meta.page_title|default:meta.title&gt;,
+&lt;TextNode: &#39;&lt;/title&gt;\n    &#39;&gt;,
+&lt;django.template.loader_tags.IncludeNode object at 0x105cc36d8&gt;,
+&lt;TextNode: &#39;\n    &lt;meta http-equiv=&quot;Ca&#39;&gt;,
+&lt;IfNode&gt;,
+&lt;TextNode: &#39;\n    &lt;link rel=&quot;shortcut &#39;&gt;,
+&lt;django.templatetags.static.StaticNode object at 0x105cc3ef0&gt;,
+&lt;TextNode: &#39;&quot;&gt;\n&lt;/head&gt;\n&lt;body data-vie&#39;&gt;,
+&lt;Variable Node: request.resolver_match.app_name&gt;,
+&lt;TextNode: &#39;&quot; data-urlname=&quot;&#39;&gt;,
+&lt;Variable Node: request.resolver_match.url_name&gt;,
+&lt;TextNode: &#39;&quot;&gt;\n    &lt;div class=&quot;contai&#39;&gt;,
+&lt;django.template.loader_tags.IncludeNode object at 0x105c94390&gt;,
+&lt;TextNode: &#39;\n        &lt;div class=&quot;main&#39;&gt;,
+&lt;Block Node: content. Contents: []&gt;,
+&lt;TextNode: &#39;\n        &lt;/div&gt;\n        &#39;&gt;,
+&lt;django.template.loader_tags.IncludeNode object at 0x105c94f28&gt;,
+&lt;TextNode: &#39;\n        &#39;&gt;,
+&lt;django.template.loader_tags.IncludeNode object at 0x105c947b8&gt;,
+&lt;TextNode: &#39;\n    &lt;/div&gt;\n    &#39;&gt;,
+&lt;IfNode&gt;,
+&lt;TextNode: &#39;\n    &#39;&gt;,
+&lt;Block Node: doc_end_js. Contents: []&gt;,
+&lt;TextNode: &#39;\n&lt;/body&gt;\n&lt;/html&gt;\n&#39;&gt;]</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="frame django">
+<code>/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/base.py</code> in <code>render_annotated</code>
+<div class="context" id="c4392378888">
+<ol start="954" class="pre-context" id="pre4392378888">
+<li onclick="toggle('pre4392378888', 'post4392378888')"><pre>        &quot;&quot;&quot;</pre></li>
+<li onclick="toggle('pre4392378888', 'post4392378888')"><pre>        Render the node. If debug is True and an exception occurs during</pre></li>
+<li onclick="toggle('pre4392378888', 'post4392378888')"><pre>        rendering, the exception is annotated with contextual line information</pre></li>
+<li onclick="toggle('pre4392378888', 'post4392378888')"><pre>        where it occurred in the template. For internal usage this method is</pre></li>
+<li onclick="toggle('pre4392378888', 'post4392378888')"><pre>        preferred over using the render method directly.</pre></li>
+<li onclick="toggle('pre4392378888', 'post4392378888')"><pre>        &quot;&quot;&quot;</pre></li>
+<li onclick="toggle('pre4392378888', 'post4392378888')"><pre>        try:</pre></li>
+</ol>
+<ol start="961" class="context-line">
+<li onclick="toggle('pre4392378888', 'post4392378888')"><pre>
+return self.render(context)</pre> <span>...</span></li></ol>
+<ol start='962' class="post-context" id="post4392378888">
+<li onclick="toggle('pre4392378888', 'post4392378888')"><pre>        except Exception as e:</pre></li>
+<li onclick="toggle('pre4392378888', 'post4392378888')"><pre>            if context.template.engine.debug and not hasattr(e, &#39;template_debug&#39;):</pre></li>
+<li onclick="toggle('pre4392378888', 'post4392378888')"><pre>                e.template_debug = context.template.get_exception_info(e, self.token)</pre></li>
+<li onclick="toggle('pre4392378888', 'post4392378888')"><pre>            raise</pre></li>
+<li onclick="toggle('pre4392378888', 'post4392378888')"><pre></pre></li>
+<li onclick="toggle('pre4392378888', 'post4392378888')"><pre>    def __iter__(self):</pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4392378888')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4392378888">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>context</td>
+<td class="code"><pre>[{&#39;None&#39;: None, &#39;False&#39;: False, &#39;True&#39;: True}, {}, {}, {&#39;meta&#39;: {&#39;canonical_url&#39;: &#39;www.mpcurious.com/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;, &#39;og_image&#39;: &#39;https://scontent.xx.fbcdn.net/v/t31.0-0/p480x480/14753945_1155190961214836_2357115047692261315_o.jpg?oh=f5b31e7d15d8b73f06bf89f842ef3447&amp;oe=596597E9&#39;, &#39;description&#39;: &#39;We sell affordable used books.&#39;, &#39;title&#39;: &#39;The Map of Love by Ahdaf Soueif - mpcurious&#39;}, &#39;genre_groups_cols&#39;: [[&lt;GenreGroup: All Fiction&gt;, &lt;GenreGroup: All Non-fiction&gt;, &lt;GenreGroup: Biography, Memoir, Autobiography&gt;, &lt;GenreGroup: Business, Management, Leadership&gt;, &lt;GenreGroup: Classics&gt;, &lt;GenreGroup: Health, Food &amp; Drink&gt;, &lt;GenreGroup: History, Sociology, Politics, Economics&gt;, &lt;GenreGroup: Humor&gt;, &lt;GenreGroup: Inspirational, Spirituality, Self-help&gt;], [&lt;GenreGroup: Language, Media&gt;, &lt;GenreGroup: Mystery, Crime&gt;, &lt;GenreGroup: Philosophy, Science, Psychology&gt;, &lt;GenreGroup: Poetry, Play&gt;, &lt;GenreGroup: Romance, Chick Lit&gt;, &lt;GenreGroup: Science Fiction, Fantasy&gt;, &lt;GenreGroup: Travel, Adventure&gt;, &#39;sold&#39;]], &#39;book&#39;: &lt;Book: The Map of Love&gt;, &#39;related_books&#39;: [&lt;Book: Like Water for Chocolate&gt;, &lt;Book: Harnessing Peacocks&gt;, &lt;Book: Intimacy&gt;, &lt;Book: Rest Area&gt;, &lt;Book: Specimen Days&gt;, &lt;Book: I Know This Much Is True&gt;, &lt;Book: The Eye in the Door&gt;, &lt;Book: Water for Elephants&gt;, &lt;Book: Machete Season: The Killers in Rwanda Speak&gt;, &lt;Book: Wool&gt;, &lt;Book: The Postmistress&gt;, &lt;Book: Messenger of Truth: A Maisie Dobbs Novel&gt;], &#39;activenav&#39;: &#39;books&#39;}]</pre></td>
+</tr>
+<tr>
+<td>self</td>
+<td class="code"><pre>&lt;Block Node: content. Contents: []&gt;</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="frame django">
+<code>/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/loader_tags.py</code> in <code>render</code>
+<div class="context" id="c4392379848">
+<ol start="63" class="pre-context" id="pre4392379848">
+<li onclick="toggle('pre4392379848', 'post4392379848')"><pre>                push = block = block_context.pop(self.name)</pre></li>
+<li onclick="toggle('pre4392379848', 'post4392379848')"><pre>                if block is None:</pre></li>
+<li onclick="toggle('pre4392379848', 'post4392379848')"><pre>                    block = self</pre></li>
+<li onclick="toggle('pre4392379848', 'post4392379848')"><pre>                # Create new block so we can store context without thread-safety issues.</pre></li>
+<li onclick="toggle('pre4392379848', 'post4392379848')"><pre>                block = type(self)(block.name, block.nodelist)</pre></li>
+<li onclick="toggle('pre4392379848', 'post4392379848')"><pre>                block.context = context</pre></li>
+<li onclick="toggle('pre4392379848', 'post4392379848')"><pre>                context[&#39;block&#39;] = block</pre></li>
+</ol>
+<ol start="70" class="context-line">
+<li onclick="toggle('pre4392379848', 'post4392379848')"><pre>
+result = block.nodelist.render(context)</pre> <span>...</span></li></ol>
+<ol start='71' class="post-context" id="post4392379848">
+<li onclick="toggle('pre4392379848', 'post4392379848')"><pre>                if push is not None:</pre></li>
+<li onclick="toggle('pre4392379848', 'post4392379848')"><pre>                    block_context.push(self.name, push)</pre></li>
+<li onclick="toggle('pre4392379848', 'post4392379848')"><pre>        return result</pre></li>
+<li onclick="toggle('pre4392379848', 'post4392379848')"><pre></pre></li>
+<li onclick="toggle('pre4392379848', 'post4392379848')"><pre>    def super(self):</pre></li>
+<li onclick="toggle('pre4392379848', 'post4392379848')"><pre>        if not hasattr(self, &#39;context&#39;):</pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4392379848')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4392379848">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>block</td>
+<td class="code"><pre>&lt;Block Node: content. Contents: [&lt;TextNode: &#39;\n    &lt;h1 class=&quot;heading p&#39;&gt;, &lt;Variable Node: book.fb_link.big_image.source&gt;, &lt;TextNode: &#39;&quot; /&gt;\n            &lt;/div&gt;\n\n&#39;&gt;, &lt;Variable Node: book.title&gt;, &lt;TextNode: &#39;&lt;/div&gt;\n                  &#39;&gt;, &lt;Variable Node: book.author&gt;, &lt;IfNode&gt;, &lt;TextNode: &#39;&lt;/div&gt;\n                  &#39;&gt;, &lt;Variable Node: book.price&gt;, &lt;TextNode: &#39;&lt;/div&gt;\n                &lt;/&#39;&gt;, &lt;Variable Node: book.book_format&gt;, &lt;TextNode: &#39;&lt;/div&gt;\n                  &#39;&gt;, &lt;Variable Node: book.condition&gt;, &lt;TextNode: &#39;&lt;/div&gt;\n                  &#39;&gt;, &lt;IfNode&gt;, &lt;TextNode: &#39;\n                    &#39;&gt;, &lt;IfNode&gt;, &lt;TextNode: &#39;\n                &lt;/div&gt;\n\n&#39;&gt;, &lt;IfNode&gt;, &lt;TextNode: &#39;&quot; class=&quot;btn font3&quot; href=&#39;&gt;, &lt;Variable Node: book.fb_link.url&gt;, &lt;TextNode: &#39;&quot; target=&quot;_blank&quot;&gt;&lt;i clas&#39;&gt;, &lt;For Node: for l in book.communitylinks, tail_len: 3&gt;, &lt;TextNode: &#39;\n                &lt;/div&gt;\n\n&#39;&gt;, &lt;django.template.loader_tags.IncludeNode object at 0x105ca3c88&gt;, &lt;TextNode: &#39;\n            &lt;/div&gt;\n     &#39;&gt;, &lt;django.template.loader_tags.IncludeNode object at 0x105ede7b8&gt;, &lt;TextNode: &#39;\n\n    &lt;/div&gt;\n&#39;&gt;]&gt;</pre></td>
+</tr>
+<tr>
+<td>block_context</td>
+<td class="code"><pre>&lt;django.template.loader_tags.BlockContext object at 0x105cc3208&gt;</pre></td>
+</tr>
+<tr>
+<td>context</td>
+<td class="code"><pre>[{&#39;None&#39;: None, &#39;False&#39;: False, &#39;True&#39;: True}, {}, {}, {&#39;meta&#39;: {&#39;canonical_url&#39;: &#39;www.mpcurious.com/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;, &#39;og_image&#39;: &#39;https://scontent.xx.fbcdn.net/v/t31.0-0/p480x480/14753945_1155190961214836_2357115047692261315_o.jpg?oh=f5b31e7d15d8b73f06bf89f842ef3447&amp;oe=596597E9&#39;, &#39;description&#39;: &#39;We sell affordable used books.&#39;, &#39;title&#39;: &#39;The Map of Love by Ahdaf Soueif - mpcurious&#39;}, &#39;genre_groups_cols&#39;: [[&lt;GenreGroup: All Fiction&gt;, &lt;GenreGroup: All Non-fiction&gt;, &lt;GenreGroup: Biography, Memoir, Autobiography&gt;, &lt;GenreGroup: Business, Management, Leadership&gt;, &lt;GenreGroup: Classics&gt;, &lt;GenreGroup: Health, Food &amp; Drink&gt;, &lt;GenreGroup: History, Sociology, Politics, Economics&gt;, &lt;GenreGroup: Humor&gt;, &lt;GenreGroup: Inspirational, Spirituality, Self-help&gt;], [&lt;GenreGroup: Language, Media&gt;, &lt;GenreGroup: Mystery, Crime&gt;, &lt;GenreGroup: Philosophy, Science, Psychology&gt;, &lt;GenreGroup: Poetry, Play&gt;, &lt;GenreGroup: Romance, Chick Lit&gt;, &lt;GenreGroup: Science Fiction, Fantasy&gt;, &lt;GenreGroup: Travel, Adventure&gt;, &#39;sold&#39;]], &#39;book&#39;: &lt;Book: The Map of Love&gt;, &#39;related_books&#39;: [&lt;Book: Like Water for Chocolate&gt;, &lt;Book: Harnessing Peacocks&gt;, &lt;Book: Intimacy&gt;, &lt;Book: Rest Area&gt;, &lt;Book: Specimen Days&gt;, &lt;Book: I Know This Much Is True&gt;, &lt;Book: The Eye in the Door&gt;, &lt;Book: Water for Elephants&gt;, &lt;Book: Machete Season: The Killers in Rwanda Speak&gt;, &lt;Book: Wool&gt;, &lt;Book: The Postmistress&gt;, &lt;Book: Messenger of Truth: A Maisie Dobbs Novel&gt;], &#39;activenav&#39;: &#39;books&#39;}]</pre></td>
+</tr>
+<tr>
+<td>push</td>
+<td class="code"><pre>&lt;Block Node: content. Contents: [&lt;TextNode: &#39;\n    &lt;h1 class=&quot;heading p&#39;&gt;, &lt;Variable Node: book.fb_link.big_image.source&gt;, &lt;TextNode: &#39;&quot; /&gt;\n            &lt;/div&gt;\n\n&#39;&gt;, &lt;Variable Node: book.title&gt;, &lt;TextNode: &#39;&lt;/div&gt;\n                  &#39;&gt;, &lt;Variable Node: book.author&gt;, &lt;IfNode&gt;, &lt;TextNode: &#39;&lt;/div&gt;\n                  &#39;&gt;, &lt;Variable Node: book.price&gt;, &lt;TextNode: &#39;&lt;/div&gt;\n                &lt;/&#39;&gt;, &lt;Variable Node: book.book_format&gt;, &lt;TextNode: &#39;&lt;/div&gt;\n                  &#39;&gt;, &lt;Variable Node: book.condition&gt;, &lt;TextNode: &#39;&lt;/div&gt;\n                  &#39;&gt;, &lt;IfNode&gt;, &lt;TextNode: &#39;\n                    &#39;&gt;, &lt;IfNode&gt;, &lt;TextNode: &#39;\n                &lt;/div&gt;\n\n&#39;&gt;, &lt;IfNode&gt;, &lt;TextNode: &#39;&quot; class=&quot;btn font3&quot; href=&#39;&gt;, &lt;Variable Node: book.fb_link.url&gt;, &lt;TextNode: &#39;&quot; target=&quot;_blank&quot;&gt;&lt;i clas&#39;&gt;, &lt;For Node: for l in book.communitylinks, tail_len: 3&gt;, &lt;TextNode: &#39;\n                &lt;/div&gt;\n\n&#39;&gt;, &lt;django.template.loader_tags.IncludeNode object at 0x105ca3c88&gt;, &lt;TextNode: &#39;\n            &lt;/div&gt;\n     &#39;&gt;, &lt;django.template.loader_tags.IncludeNode object at 0x105ede7b8&gt;, &lt;TextNode: &#39;\n\n    &lt;/div&gt;\n&#39;&gt;]&gt;</pre></td>
+</tr>
+<tr>
+<td>self</td>
+<td class="code"><pre>&lt;Block Node: content. Contents: []&gt;</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="frame django">
+<code>/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/base.py</code> in <code>render</code>
+<div class="context" id="c4392379912">
+<ol start="987" class="pre-context" id="pre4392379912">
+<li onclick="toggle('pre4392379912', 'post4392379912')"><pre>    # extend_nodelist().</pre></li>
+<li onclick="toggle('pre4392379912', 'post4392379912')"><pre>    contains_nontext = False</pre></li>
+<li onclick="toggle('pre4392379912', 'post4392379912')"><pre></pre></li>
+<li onclick="toggle('pre4392379912', 'post4392379912')"><pre>    def render(self, context):</pre></li>
+<li onclick="toggle('pre4392379912', 'post4392379912')"><pre>        bits = []</pre></li>
+<li onclick="toggle('pre4392379912', 'post4392379912')"><pre>        for node in self:</pre></li>
+<li onclick="toggle('pre4392379912', 'post4392379912')"><pre>            if isinstance(node, Node):</pre></li>
+</ol>
+<ol start="994" class="context-line">
+<li onclick="toggle('pre4392379912', 'post4392379912')"><pre>
+bit = node.render_annotated(context)</pre> <span>...</span></li></ol>
+<ol start='995' class="post-context" id="post4392379912">
+<li onclick="toggle('pre4392379912', 'post4392379912')"><pre>            else:</pre></li>
+<li onclick="toggle('pre4392379912', 'post4392379912')"><pre>                bit = node</pre></li>
+<li onclick="toggle('pre4392379912', 'post4392379912')"><pre>            bits.append(force_text(bit))</pre></li>
+<li onclick="toggle('pre4392379912', 'post4392379912')"><pre>        return mark_safe(&#39;&#39;.join(bits))</pre></li>
+<li onclick="toggle('pre4392379912', 'post4392379912')"><pre></pre></li>
+<li onclick="toggle('pre4392379912', 'post4392379912')"><pre>    def get_nodes_by_type(self, nodetype):</pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4392379912')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4392379912">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bit</td>
+<td class="code"><pre>(&#39;&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-external-link&quot;&gt;&lt;/i&gt;&amp;nbsp;&lt;span&gt;VIEW ON &#39;
+&#39;FACEBOOK&lt;/span&gt;&lt;/a&gt;\n&#39;
+&#39;                &lt;/div&gt;\n&#39;
+&#39;\n&#39;
+&#39;                &lt;div class=&quot;community-links&quot;&gt;\n&#39;
+&#39;                    &#39;)</pre></td>
+</tr>
+<tr>
+<td>bits</td>
+<td class="code"><pre>[&#39;\n&#39;
+&#39;    &lt;h1 class=&quot;heading page-title&quot;&gt;Details&lt;/h1&gt;\n&#39;
+&#39;\n&#39;
+&#39;    &lt;div id=&quot;book-details&quot;&gt;\n&#39;
+&#39;\n&#39;
+&#39;        &lt;div class=&quot;row primary borbot&quot;&gt;\n&#39;
+&#39;            &lt;div class=&quot;photo&quot;&gt;\n&#39;
+&#39;                &lt;img src=&quot;&#39;,
+&#39;https://scontent.xx.fbcdn.net/v/t31.0-0/p600x600/14753945_1155190961214836_2357115047692261315_o.jpg?oh=0a33d079e9bc8004f4f3957a72d4640c&amp;amp;oe=59635CC0&#39;,
+&#39;&quot; /&gt;\n&#39;
+&#39;            &lt;/div&gt;\n&#39;
+&#39;\n&#39;
+&#39;            &lt;div class=&quot;info&quot;&gt;\n&#39;
+&#39;                &lt;div class=&quot;primary&quot;&gt;\n&#39;
+&#39;                    &lt;div class=&quot;title&quot;&gt;&#39;,
+&#39;The Map of Love&#39;,
+&#39;&lt;/div&gt;\n                    &lt;div class=&quot;authors&quot;&gt;by &#39;,
+&#39;Ahdaf Soueif&#39;,
+&#39;&#39;,
+&#39;&lt;/div&gt;\n                    &lt;div class=&quot;price&quot;&gt;â±&#39;,
+&#39;235.00&#39;,
+&#39;&lt;/div&gt;\n&#39;
+&#39;                &lt;/div&gt;\n&#39;
+&#39;\n&#39;
+&#39;                &lt;div class=&quot;secondary&quot;&gt;\n&#39;
+&#39;                    &lt;div class=&quot;format font2&quot;&gt;*&#39;,
+&#39;Trade paperback&#39;,
+&#39;&lt;/div&gt;\n                    &lt;div class=&quot;condition font2&quot;&gt;*&#39;,
+&#39;Acceptable condition&#39;,
+&#39;&lt;/div&gt;\n                    &#39;,
+&#39;&#39;,
+&#39;\n                    &#39;,
+&#39;\n&#39;
+&#39;                        &lt;div class=&quot;description font2&quot;&gt;With her first novel, &#39;
+&#39;In the Eye of the Sun, Ahdaf Soueif garnered comparisons to Tolstoy, &#39;
+&#39;Flaubert, and George Eliot.  In her latest novel, which was shortlisted for &#39;
+&#39;Britain&amp;#39;s prestigious Booker Prize, she combines the romantic skill of &#39;
+&#39;the nineteenth-century novelists with a very modern sense of culture and &#39;
+&#39;politics--both sexual and international. \r\n&#39;
+&#39;\r\n&#39;
+&#39;At either end of the twentieth century, two women fall in love with men &#39;
+&#39;outside their familiar worlds. In 1901, Anna Winterbourne, recently widowed, &#39;
+&#39;leaves England for Egypt, an outpost of the Empire roiling with nationalist &#39;
+&#39;sentiment. Far from the comfort of the British colony, she finds herself &#39;
+&#39;enraptured by the real Egypt and in love with Sharif Pasha al-Baroudi. &#39;
+&#39;Nearly a hundred years later, Isabel Parkman, a divorced American journalist &#39;
+&#39;and descendant of Anna and Sharif has fallen in love with Omar al-Ghamrawi, &#39;
+&#39;a gifted and difficult Egyptian-American conductor with his own passionate &#39;
+&#39;politics. In an attempt to understand her conflicting emotions and to &#39;
+&#39;discover the truth behind her heritage, Isabel, too, travels to Egypt, and &#39;
+&#39;enlists Omar&amp;#39;s sister&amp;#39;s help in unravelling the story of Anna and &#39;
+&#39;Sharif&amp;#39;s love.\r\n&#39;
+&#39;\r\n&#39;
+&#39;Joining the romance and intricate storytelling of A.S. Byatt&amp;#39;s &#39;
+&#39;Possession and Michael Ondaatje&amp;#39;s The English Patient, Ahdaf Soueif has &#39;
+&#39;once again created a mesmerizing tale of genuine eloquence and lasting &#39;
+&#39;importance.&lt;/div&gt;\n&#39;
+&#39;                    &#39;,
+&#39;\n&#39;
+&#39;                &lt;/div&gt;\n&#39;
+&#39;\n&#39;
+&#39;                &lt;div class=&quot;action&quot;&gt;\n&#39;
+&#39;                    &lt;a title=&quot;&#39;,
+&quot;Comment &#39;mine&#39; to buy book.&quot;,
+&#39;&quot; class=&quot;btn font3&quot; href=&quot;&#39;,
+&#39;https://www.facebook.com/mpcurious/photos/1155190961214836&#39;,
+&#39;&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-external-link&quot;&gt;&lt;/i&gt;&amp;nbsp;&lt;span&gt;VIEW ON &#39;
+&#39;FACEBOOK&lt;/span&gt;&lt;/a&gt;\n&#39;
+&#39;                &lt;/div&gt;\n&#39;
+&#39;\n&#39;
+&#39;                &lt;div class=&quot;community-links&quot;&gt;\n&#39;
+&#39;                    &#39;]</pre></td>
+</tr>
+<tr>
+<td>context</td>
+<td class="code"><pre>[{&#39;None&#39;: None, &#39;False&#39;: False, &#39;True&#39;: True}, {}, {}, {&#39;meta&#39;: {&#39;canonical_url&#39;: &#39;www.mpcurious.com/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;, &#39;og_image&#39;: &#39;https://scontent.xx.fbcdn.net/v/t31.0-0/p480x480/14753945_1155190961214836_2357115047692261315_o.jpg?oh=f5b31e7d15d8b73f06bf89f842ef3447&amp;oe=596597E9&#39;, &#39;description&#39;: &#39;We sell affordable used books.&#39;, &#39;title&#39;: &#39;The Map of Love by Ahdaf Soueif - mpcurious&#39;}, &#39;genre_groups_cols&#39;: [[&lt;GenreGroup: All Fiction&gt;, &lt;GenreGroup: All Non-fiction&gt;, &lt;GenreGroup: Biography, Memoir, Autobiography&gt;, &lt;GenreGroup: Business, Management, Leadership&gt;, &lt;GenreGroup: Classics&gt;, &lt;GenreGroup: Health, Food &amp; Drink&gt;, &lt;GenreGroup: History, Sociology, Politics, Economics&gt;, &lt;GenreGroup: Humor&gt;, &lt;GenreGroup: Inspirational, Spirituality, Self-help&gt;], [&lt;GenreGroup: Language, Media&gt;, &lt;GenreGroup: Mystery, Crime&gt;, &lt;GenreGroup: Philosophy, Science, Psychology&gt;, &lt;GenreGroup: Poetry, Play&gt;, &lt;GenreGroup: Romance, Chick Lit&gt;, &lt;GenreGroup: Science Fiction, Fantasy&gt;, &lt;GenreGroup: Travel, Adventure&gt;, &#39;sold&#39;]], &#39;book&#39;: &lt;Book: The Map of Love&gt;, &#39;related_books&#39;: [&lt;Book: Like Water for Chocolate&gt;, &lt;Book: Harnessing Peacocks&gt;, &lt;Book: Intimacy&gt;, &lt;Book: Rest Area&gt;, &lt;Book: Specimen Days&gt;, &lt;Book: I Know This Much Is True&gt;, &lt;Book: The Eye in the Door&gt;, &lt;Book: Water for Elephants&gt;, &lt;Book: Machete Season: The Killers in Rwanda Speak&gt;, &lt;Book: Wool&gt;, &lt;Book: The Postmistress&gt;, &lt;Book: Messenger of Truth: A Maisie Dobbs Novel&gt;], &#39;activenav&#39;: &#39;books&#39;}]</pre></td>
+</tr>
+<tr>
+<td>node</td>
+<td class="code"><pre>&lt;For Node: for l in book.communitylinks, tail_len: 3&gt;</pre></td>
+</tr>
+<tr>
+<td>self</td>
+<td class="code"><pre>[&lt;TextNode: &#39;\n    &lt;h1 class=&quot;heading p&#39;&gt;,
+&lt;Variable Node: book.fb_link.big_image.source&gt;,
+&lt;TextNode: &#39;&quot; /&gt;\n            &lt;/div&gt;\n\n&#39;&gt;,
+&lt;Variable Node: book.title&gt;,
+&lt;TextNode: &#39;&lt;/div&gt;\n                  &#39;&gt;,
+&lt;Variable Node: book.author&gt;,
+&lt;IfNode&gt;,
+&lt;TextNode: &#39;&lt;/div&gt;\n                  &#39;&gt;,
+&lt;Variable Node: book.price&gt;,
+&lt;TextNode: &#39;&lt;/div&gt;\n                &lt;/&#39;&gt;,
+&lt;Variable Node: book.book_format&gt;,
+&lt;TextNode: &#39;&lt;/div&gt;\n                  &#39;&gt;,
+&lt;Variable Node: book.condition&gt;,
+&lt;TextNode: &#39;&lt;/div&gt;\n                  &#39;&gt;,
+&lt;IfNode&gt;,
+&lt;TextNode: &#39;\n                    &#39;&gt;,
+&lt;IfNode&gt;,
+&lt;TextNode: &#39;\n                &lt;/div&gt;\n\n&#39;&gt;,
+&lt;IfNode&gt;,
+&lt;TextNode: &#39;&quot; class=&quot;btn font3&quot; href=&#39;&gt;,
+&lt;Variable Node: book.fb_link.url&gt;,
+&lt;TextNode: &#39;&quot; target=&quot;_blank&quot;&gt;&lt;i clas&#39;&gt;,
+&lt;For Node: for l in book.communitylinks, tail_len: 3&gt;,
+&lt;TextNode: &#39;\n                &lt;/div&gt;\n\n&#39;&gt;,
+&lt;django.template.loader_tags.IncludeNode object at 0x105ca3c88&gt;,
+&lt;TextNode: &#39;\n            &lt;/div&gt;\n     &#39;&gt;,
+&lt;django.template.loader_tags.IncludeNode object at 0x105ede7b8&gt;,
+&lt;TextNode: &#39;\n\n    &lt;/div&gt;\n&#39;&gt;]</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="frame django">
+<code>/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/base.py</code> in <code>render_annotated</code>
+<div class="context" id="c4392381512">
+<ol start="954" class="pre-context" id="pre4392381512">
+<li onclick="toggle('pre4392381512', 'post4392381512')"><pre>        &quot;&quot;&quot;</pre></li>
+<li onclick="toggle('pre4392381512', 'post4392381512')"><pre>        Render the node. If debug is True and an exception occurs during</pre></li>
+<li onclick="toggle('pre4392381512', 'post4392381512')"><pre>        rendering, the exception is annotated with contextual line information</pre></li>
+<li onclick="toggle('pre4392381512', 'post4392381512')"><pre>        where it occurred in the template. For internal usage this method is</pre></li>
+<li onclick="toggle('pre4392381512', 'post4392381512')"><pre>        preferred over using the render method directly.</pre></li>
+<li onclick="toggle('pre4392381512', 'post4392381512')"><pre>        &quot;&quot;&quot;</pre></li>
+<li onclick="toggle('pre4392381512', 'post4392381512')"><pre>        try:</pre></li>
+</ol>
+<ol start="961" class="context-line">
+<li onclick="toggle('pre4392381512', 'post4392381512')"><pre>
+return self.render(context)</pre> <span>...</span></li></ol>
+<ol start='962' class="post-context" id="post4392381512">
+<li onclick="toggle('pre4392381512', 'post4392381512')"><pre>        except Exception as e:</pre></li>
+<li onclick="toggle('pre4392381512', 'post4392381512')"><pre>            if context.template.engine.debug and not hasattr(e, &#39;template_debug&#39;):</pre></li>
+<li onclick="toggle('pre4392381512', 'post4392381512')"><pre>                e.template_debug = context.template.get_exception_info(e, self.token)</pre></li>
+<li onclick="toggle('pre4392381512', 'post4392381512')"><pre>            raise</pre></li>
+<li onclick="toggle('pre4392381512', 'post4392381512')"><pre></pre></li>
+<li onclick="toggle('pre4392381512', 'post4392381512')"><pre>    def __iter__(self):</pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4392381512')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4392381512">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>context</td>
+<td class="code"><pre>[{&#39;None&#39;: None, &#39;False&#39;: False, &#39;True&#39;: True}, {}, {}, {&#39;meta&#39;: {&#39;canonical_url&#39;: &#39;www.mpcurious.com/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;, &#39;og_image&#39;: &#39;https://scontent.xx.fbcdn.net/v/t31.0-0/p480x480/14753945_1155190961214836_2357115047692261315_o.jpg?oh=f5b31e7d15d8b73f06bf89f842ef3447&amp;oe=596597E9&#39;, &#39;description&#39;: &#39;We sell affordable used books.&#39;, &#39;title&#39;: &#39;The Map of Love by Ahdaf Soueif - mpcurious&#39;}, &#39;genre_groups_cols&#39;: [[&lt;GenreGroup: All Fiction&gt;, &lt;GenreGroup: All Non-fiction&gt;, &lt;GenreGroup: Biography, Memoir, Autobiography&gt;, &lt;GenreGroup: Business, Management, Leadership&gt;, &lt;GenreGroup: Classics&gt;, &lt;GenreGroup: Health, Food &amp; Drink&gt;, &lt;GenreGroup: History, Sociology, Politics, Economics&gt;, &lt;GenreGroup: Humor&gt;, &lt;GenreGroup: Inspirational, Spirituality, Self-help&gt;], [&lt;GenreGroup: Language, Media&gt;, &lt;GenreGroup: Mystery, Crime&gt;, &lt;GenreGroup: Philosophy, Science, Psychology&gt;, &lt;GenreGroup: Poetry, Play&gt;, &lt;GenreGroup: Romance, Chick Lit&gt;, &lt;GenreGroup: Science Fiction, Fantasy&gt;, &lt;GenreGroup: Travel, Adventure&gt;, &#39;sold&#39;]], &#39;book&#39;: &lt;Book: The Map of Love&gt;, &#39;related_books&#39;: [&lt;Book: Like Water for Chocolate&gt;, &lt;Book: Harnessing Peacocks&gt;, &lt;Book: Intimacy&gt;, &lt;Book: Rest Area&gt;, &lt;Book: Specimen Days&gt;, &lt;Book: I Know This Much Is True&gt;, &lt;Book: The Eye in the Door&gt;, &lt;Book: Water for Elephants&gt;, &lt;Book: Machete Season: The Killers in Rwanda Speak&gt;, &lt;Book: Wool&gt;, &lt;Book: The Postmistress&gt;, &lt;Book: Messenger of Truth: A Maisie Dobbs Novel&gt;], &#39;activenav&#39;: &#39;books&#39;}]</pre></td>
+</tr>
+<tr>
+<td>self</td>
+<td class="code"><pre>&lt;For Node: for l in book.communitylinks, tail_len: 3&gt;</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="frame django">
+<code>/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/defaulttags.py</code> in <code>render</code>
+<div class="context" id="c4392378504">
+<ol start="202" class="pre-context" id="pre4392378504">
+<li onclick="toggle('pre4392378504', 'post4392378504')"><pre>                    unpacked_vars = dict(zip(self.loopvars, item))</pre></li>
+<li onclick="toggle('pre4392378504', 'post4392378504')"><pre>                    pop_context = True</pre></li>
+<li onclick="toggle('pre4392378504', 'post4392378504')"><pre>                    context.update(unpacked_vars)</pre></li>
+<li onclick="toggle('pre4392378504', 'post4392378504')"><pre>                else:</pre></li>
+<li onclick="toggle('pre4392378504', 'post4392378504')"><pre>                    context[self.loopvars[0]] = item</pre></li>
+<li onclick="toggle('pre4392378504', 'post4392378504')"><pre></pre></li>
+<li onclick="toggle('pre4392378504', 'post4392378504')"><pre>                for node in self.nodelist_loop:</pre></li>
+</ol>
+<ol start="209" class="context-line">
+<li onclick="toggle('pre4392378504', 'post4392378504')"><pre>
+nodelist.append(node.render_annotated(context))</pre> <span>...</span></li></ol>
+<ol start='210' class="post-context" id="post4392378504">
+<li onclick="toggle('pre4392378504', 'post4392378504')"><pre></pre></li>
+<li onclick="toggle('pre4392378504', 'post4392378504')"><pre>                if pop_context:</pre></li>
+<li onclick="toggle('pre4392378504', 'post4392378504')"><pre>                    # The loop variables were pushed on to the context so pop them</pre></li>
+<li onclick="toggle('pre4392378504', 'post4392378504')"><pre>                    # off again. This is necessary because the tag lets the length</pre></li>
+<li onclick="toggle('pre4392378504', 'post4392378504')"><pre>                    # of loopvars differ to the length of each set of items and we</pre></li>
+<li onclick="toggle('pre4392378504', 'post4392378504')"><pre>                    # don&#39;t want to leave any vars from the previous loop on the</pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4392378504')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4392378504">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>context</td>
+<td class="code"><pre>[{&#39;None&#39;: None, &#39;False&#39;: False, &#39;True&#39;: True}, {}, {}, {&#39;meta&#39;: {&#39;canonical_url&#39;: &#39;www.mpcurious.com/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;, &#39;og_image&#39;: &#39;https://scontent.xx.fbcdn.net/v/t31.0-0/p480x480/14753945_1155190961214836_2357115047692261315_o.jpg?oh=f5b31e7d15d8b73f06bf89f842ef3447&amp;oe=596597E9&#39;, &#39;description&#39;: &#39;We sell affordable used books.&#39;, &#39;title&#39;: &#39;The Map of Love by Ahdaf Soueif - mpcurious&#39;}, &#39;genre_groups_cols&#39;: [[&lt;GenreGroup: All Fiction&gt;, &lt;GenreGroup: All Non-fiction&gt;, &lt;GenreGroup: Biography, Memoir, Autobiography&gt;, &lt;GenreGroup: Business, Management, Leadership&gt;, &lt;GenreGroup: Classics&gt;, &lt;GenreGroup: Health, Food &amp; Drink&gt;, &lt;GenreGroup: History, Sociology, Politics, Economics&gt;, &lt;GenreGroup: Humor&gt;, &lt;GenreGroup: Inspirational, Spirituality, Self-help&gt;], [&lt;GenreGroup: Language, Media&gt;, &lt;GenreGroup: Mystery, Crime&gt;, &lt;GenreGroup: Philosophy, Science, Psychology&gt;, &lt;GenreGroup: Poetry, Play&gt;, &lt;GenreGroup: Romance, Chick Lit&gt;, &lt;GenreGroup: Science Fiction, Fantasy&gt;, &lt;GenreGroup: Travel, Adventure&gt;, &#39;sold&#39;]], &#39;book&#39;: &lt;Book: The Map of Love&gt;, &#39;related_books&#39;: [&lt;Book: Like Water for Chocolate&gt;, &lt;Book: Harnessing Peacocks&gt;, &lt;Book: Intimacy&gt;, &lt;Book: Rest Area&gt;, &lt;Book: Specimen Days&gt;, &lt;Book: I Know This Much Is True&gt;, &lt;Book: The Eye in the Door&gt;, &lt;Book: Water for Elephants&gt;, &lt;Book: Machete Season: The Killers in Rwanda Speak&gt;, &lt;Book: Wool&gt;, &lt;Book: The Postmistress&gt;, &lt;Book: Messenger of Truth: A Maisie Dobbs Novel&gt;], &#39;activenav&#39;: &#39;books&#39;}]</pre></td>
+</tr>
+<tr>
+<td>i</td>
+<td class="code"><pre>0</pre></td>
+</tr>
+<tr>
+<td>item</td>
+<td class="code"><pre>&lt;BookCommunityLink: Goodreads&gt;</pre></td>
+</tr>
+<tr>
+<td>len_values</td>
+<td class="code"><pre>2</pre></td>
+</tr>
+<tr>
+<td>loop_dict</td>
+<td class="code"><pre>{&#39;counter&#39;: 1,
+&#39;counter0&#39;: 0,
+&#39;first&#39;: True,
+&#39;last&#39;: False,
+&#39;parentloop&#39;: {},
+&#39;revcounter&#39;: 2,
+&#39;revcounter0&#39;: 1}</pre></td>
+</tr>
+<tr>
+<td>node</td>
+<td class="code"><pre>&lt;IfNode&gt;</pre></td>
+</tr>
+<tr>
+<td>nodelist</td>
+<td class="code"><pre>[&#39;\n                        &#39;]</pre></td>
+</tr>
+<tr>
+<td>num_loopvars</td>
+<td class="code"><pre>1</pre></td>
+</tr>
+<tr>
+<td>parentloop</td>
+<td class="code"><pre>{}</pre></td>
+</tr>
+<tr>
+<td>pop_context</td>
+<td class="code"><pre>False</pre></td>
+</tr>
+<tr>
+<td>self</td>
+<td class="code"><pre>&lt;For Node: for l in book.communitylinks, tail_len: 3&gt;</pre></td>
+</tr>
+<tr>
+<td>unpack</td>
+<td class="code"><pre>False</pre></td>
+</tr>
+<tr>
+<td>values</td>
+<td class="code"><pre>[&lt;BookCommunityLink: Goodreads&gt;, &lt;BookCommunityLink: Amazon&gt;]</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="frame django">
+<code>/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/base.py</code> in <code>render_annotated</code>
+<div class="context" id="c4392381960">
+<ol start="954" class="pre-context" id="pre4392381960">
+<li onclick="toggle('pre4392381960', 'post4392381960')"><pre>        &quot;&quot;&quot;</pre></li>
+<li onclick="toggle('pre4392381960', 'post4392381960')"><pre>        Render the node. If debug is True and an exception occurs during</pre></li>
+<li onclick="toggle('pre4392381960', 'post4392381960')"><pre>        rendering, the exception is annotated with contextual line information</pre></li>
+<li onclick="toggle('pre4392381960', 'post4392381960')"><pre>        where it occurred in the template. For internal usage this method is</pre></li>
+<li onclick="toggle('pre4392381960', 'post4392381960')"><pre>        preferred over using the render method directly.</pre></li>
+<li onclick="toggle('pre4392381960', 'post4392381960')"><pre>        &quot;&quot;&quot;</pre></li>
+<li onclick="toggle('pre4392381960', 'post4392381960')"><pre>        try:</pre></li>
+</ol>
+<ol start="961" class="context-line">
+<li onclick="toggle('pre4392381960', 'post4392381960')"><pre>
+return self.render(context)</pre> <span>...</span></li></ol>
+<ol start='962' class="post-context" id="post4392381960">
+<li onclick="toggle('pre4392381960', 'post4392381960')"><pre>        except Exception as e:</pre></li>
+<li onclick="toggle('pre4392381960', 'post4392381960')"><pre>            if context.template.engine.debug and not hasattr(e, &#39;template_debug&#39;):</pre></li>
+<li onclick="toggle('pre4392381960', 'post4392381960')"><pre>                e.template_debug = context.template.get_exception_info(e, self.token)</pre></li>
+<li onclick="toggle('pre4392381960', 'post4392381960')"><pre>            raise</pre></li>
+<li onclick="toggle('pre4392381960', 'post4392381960')"><pre></pre></li>
+<li onclick="toggle('pre4392381960', 'post4392381960')"><pre>    def __iter__(self):</pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4392381960')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4392381960">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>context</td>
+<td class="code"><pre>[{&#39;None&#39;: None, &#39;False&#39;: False, &#39;True&#39;: True}, {}, {}, {&#39;meta&#39;: {&#39;canonical_url&#39;: &#39;www.mpcurious.com/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;, &#39;og_image&#39;: &#39;https://scontent.xx.fbcdn.net/v/t31.0-0/p480x480/14753945_1155190961214836_2357115047692261315_o.jpg?oh=f5b31e7d15d8b73f06bf89f842ef3447&amp;oe=596597E9&#39;, &#39;description&#39;: &#39;We sell affordable used books.&#39;, &#39;title&#39;: &#39;The Map of Love by Ahdaf Soueif - mpcurious&#39;}, &#39;genre_groups_cols&#39;: [[&lt;GenreGroup: All Fiction&gt;, &lt;GenreGroup: All Non-fiction&gt;, &lt;GenreGroup: Biography, Memoir, Autobiography&gt;, &lt;GenreGroup: Business, Management, Leadership&gt;, &lt;GenreGroup: Classics&gt;, &lt;GenreGroup: Health, Food &amp; Drink&gt;, &lt;GenreGroup: History, Sociology, Politics, Economics&gt;, &lt;GenreGroup: Humor&gt;, &lt;GenreGroup: Inspirational, Spirituality, Self-help&gt;], [&lt;GenreGroup: Language, Media&gt;, &lt;GenreGroup: Mystery, Crime&gt;, &lt;GenreGroup: Philosophy, Science, Psychology&gt;, &lt;GenreGroup: Poetry, Play&gt;, &lt;GenreGroup: Romance, Chick Lit&gt;, &lt;GenreGroup: Science Fiction, Fantasy&gt;, &lt;GenreGroup: Travel, Adventure&gt;, &#39;sold&#39;]], &#39;book&#39;: &lt;Book: The Map of Love&gt;, &#39;related_books&#39;: [&lt;Book: Like Water for Chocolate&gt;, &lt;Book: Harnessing Peacocks&gt;, &lt;Book: Intimacy&gt;, &lt;Book: Rest Area&gt;, &lt;Book: Specimen Days&gt;, &lt;Book: I Know This Much Is True&gt;, &lt;Book: The Eye in the Door&gt;, &lt;Book: Water for Elephants&gt;, &lt;Book: Machete Season: The Killers in Rwanda Speak&gt;, &lt;Book: Wool&gt;, &lt;Book: The Postmistress&gt;, &lt;Book: Messenger of Truth: A Maisie Dobbs Novel&gt;], &#39;activenav&#39;: &#39;books&#39;}]</pre></td>
+</tr>
+<tr>
+<td>self</td>
+<td class="code"><pre>&lt;IfNode&gt;</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="frame django">
+<code>/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/defaulttags.py</code> in <code>render</code>
+<div class="context" id="c4392379784">
+<ol start="308" class="pre-context" id="pre4392379784">
+<li onclick="toggle('pre4392379784', 'post4392379784')"><pre>                    match = condition.eval(context)</pre></li>
+<li onclick="toggle('pre4392379784', 'post4392379784')"><pre>                except VariableDoesNotExist:</pre></li>
+<li onclick="toggle('pre4392379784', 'post4392379784')"><pre>                    match = None</pre></li>
+<li onclick="toggle('pre4392379784', 'post4392379784')"><pre>            else:                               # else clause</pre></li>
+<li onclick="toggle('pre4392379784', 'post4392379784')"><pre>                match = True</pre></li>
+<li onclick="toggle('pre4392379784', 'post4392379784')"><pre></pre></li>
+<li onclick="toggle('pre4392379784', 'post4392379784')"><pre>            if match:</pre></li>
+</ol>
+<ol start="315" class="context-line">
+<li onclick="toggle('pre4392379784', 'post4392379784')"><pre>
+return nodelist.render(context)</pre> <span>...</span></li></ol>
+<ol start='316' class="post-context" id="post4392379784">
+<li onclick="toggle('pre4392379784', 'post4392379784')"><pre></pre></li>
+<li onclick="toggle('pre4392379784', 'post4392379784')"><pre>        return &#39;&#39;</pre></li>
+<li onclick="toggle('pre4392379784', 'post4392379784')"><pre></pre></li>
+<li onclick="toggle('pre4392379784', 'post4392379784')"><pre></pre></li>
+<li onclick="toggle('pre4392379784', 'post4392379784')"><pre>class LoremNode(Node):</pre></li>
+<li onclick="toggle('pre4392379784', 'post4392379784')"><pre>    def __init__(self, count, method, common):</pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4392379784')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4392379784">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>condition</td>
+<td class="code"><pre>(literal &lt;django.template.base.FilterExpression object at 0x105ec2cc0&gt;)</pre></td>
+</tr>
+<tr>
+<td>context</td>
+<td class="code"><pre>[{&#39;None&#39;: None, &#39;False&#39;: False, &#39;True&#39;: True}, {}, {}, {&#39;meta&#39;: {&#39;canonical_url&#39;: &#39;www.mpcurious.com/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;, &#39;og_image&#39;: &#39;https://scontent.xx.fbcdn.net/v/t31.0-0/p480x480/14753945_1155190961214836_2357115047692261315_o.jpg?oh=f5b31e7d15d8b73f06bf89f842ef3447&amp;oe=596597E9&#39;, &#39;description&#39;: &#39;We sell affordable used books.&#39;, &#39;title&#39;: &#39;The Map of Love by Ahdaf Soueif - mpcurious&#39;}, &#39;genre_groups_cols&#39;: [[&lt;GenreGroup: All Fiction&gt;, &lt;GenreGroup: All Non-fiction&gt;, &lt;GenreGroup: Biography, Memoir, Autobiography&gt;, &lt;GenreGroup: Business, Management, Leadership&gt;, &lt;GenreGroup: Classics&gt;, &lt;GenreGroup: Health, Food &amp; Drink&gt;, &lt;GenreGroup: History, Sociology, Politics, Economics&gt;, &lt;GenreGroup: Humor&gt;, &lt;GenreGroup: Inspirational, Spirituality, Self-help&gt;], [&lt;GenreGroup: Language, Media&gt;, &lt;GenreGroup: Mystery, Crime&gt;, &lt;GenreGroup: Philosophy, Science, Psychology&gt;, &lt;GenreGroup: Poetry, Play&gt;, &lt;GenreGroup: Romance, Chick Lit&gt;, &lt;GenreGroup: Science Fiction, Fantasy&gt;, &lt;GenreGroup: Travel, Adventure&gt;, &#39;sold&#39;]], &#39;book&#39;: &lt;Book: The Map of Love&gt;, &#39;related_books&#39;: [&lt;Book: Like Water for Chocolate&gt;, &lt;Book: Harnessing Peacocks&gt;, &lt;Book: Intimacy&gt;, &lt;Book: Rest Area&gt;, &lt;Book: Specimen Days&gt;, &lt;Book: I Know This Much Is True&gt;, &lt;Book: The Eye in the Door&gt;, &lt;Book: Water for Elephants&gt;, &lt;Book: Machete Season: The Killers in Rwanda Speak&gt;, &lt;Book: Wool&gt;, &lt;Book: The Postmistress&gt;, &lt;Book: Messenger of Truth: A Maisie Dobbs Novel&gt;], &#39;activenav&#39;: &#39;books&#39;}]</pre></td>
+</tr>
+<tr>
+<td>match</td>
+<td class="code"><pre>&#39;3,81&#39;</pre></td>
+</tr>
+<tr>
+<td>nodelist</td>
+<td class="code"><pre>[&lt;TextNode: &#39;\n                        &#39;&gt;,
+&lt;Variable Node: l.url&gt;,
+&lt;TextNode: &#39;&quot; class=&quot;font3&quot; target=&quot;_&#39;&gt;,
+&lt;Variable Node: l.rating&gt;,
+&lt;TextNode: &#39;&quot;&gt;\n                      &#39;&gt;,
+&lt;Variable Node: l.name&gt;,
+&lt;TextNode: &#39;: &lt;/span&gt;\n               &#39;&gt;,
+&lt;django.template.defaulttags.AutoEscapeControlNode object at 0x105ee86a0&gt;,
+&lt;TextNode: &#39;&lt;/span&gt;\n                 &#39;&gt;]</pre></td>
+</tr>
+<tr>
+<td>self</td>
+<td class="code"><pre>&lt;IfNode&gt;</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="frame django">
+<code>/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/base.py</code> in <code>render</code>
+<div class="context" id="c4392380232">
+<ol start="987" class="pre-context" id="pre4392380232">
+<li onclick="toggle('pre4392380232', 'post4392380232')"><pre>    # extend_nodelist().</pre></li>
+<li onclick="toggle('pre4392380232', 'post4392380232')"><pre>    contains_nontext = False</pre></li>
+<li onclick="toggle('pre4392380232', 'post4392380232')"><pre></pre></li>
+<li onclick="toggle('pre4392380232', 'post4392380232')"><pre>    def render(self, context):</pre></li>
+<li onclick="toggle('pre4392380232', 'post4392380232')"><pre>        bits = []</pre></li>
+<li onclick="toggle('pre4392380232', 'post4392380232')"><pre>        for node in self:</pre></li>
+<li onclick="toggle('pre4392380232', 'post4392380232')"><pre>            if isinstance(node, Node):</pre></li>
+</ol>
+<ol start="994" class="context-line">
+<li onclick="toggle('pre4392380232', 'post4392380232')"><pre>
+bit = node.render_annotated(context)</pre> <span>...</span></li></ol>
+<ol start='995' class="post-context" id="post4392380232">
+<li onclick="toggle('pre4392380232', 'post4392380232')"><pre>            else:</pre></li>
+<li onclick="toggle('pre4392380232', 'post4392380232')"><pre>                bit = node</pre></li>
+<li onclick="toggle('pre4392380232', 'post4392380232')"><pre>            bits.append(force_text(bit))</pre></li>
+<li onclick="toggle('pre4392380232', 'post4392380232')"><pre>        return mark_safe(&#39;&#39;.join(bits))</pre></li>
+<li onclick="toggle('pre4392380232', 'post4392380232')"><pre></pre></li>
+<li onclick="toggle('pre4392380232', 'post4392380232')"><pre>    def get_nodes_by_type(self, nodetype):</pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4392380232')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4392380232">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bit</td>
+<td class="code"><pre>&#39;: &lt;/span&gt;\n                                &lt;span&gt;&#39;</pre></td>
+</tr>
+<tr>
+<td>bits</td>
+<td class="code"><pre>[&#39;\n                            &lt;a href=&quot;&#39;,
+&#39;https://www.goodreads.com/book/show/89821.The_Map_of_Love&#39;,
+&#39;&quot; class=&quot;font3&quot; target=&quot;_blank&quot; title=&quot;&#39;,
+&#39;3,81&#39;,
+&#39;&quot;&gt;\n&#39;
+&#39;                                &lt;i class=&quot;fa fa-external-link&quot;&gt;&lt;/i&gt;\n&#39;
+&#39;                                &lt;span&gt;&#39;,
+&#39;Goodreads&#39;,
+&#39;: &lt;/span&gt;\n                                &lt;span&gt;&#39;]</pre></td>
+</tr>
+<tr>
+<td>context</td>
+<td class="code"><pre>[{&#39;None&#39;: None, &#39;False&#39;: False, &#39;True&#39;: True}, {}, {}, {&#39;meta&#39;: {&#39;canonical_url&#39;: &#39;www.mpcurious.com/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;, &#39;og_image&#39;: &#39;https://scontent.xx.fbcdn.net/v/t31.0-0/p480x480/14753945_1155190961214836_2357115047692261315_o.jpg?oh=f5b31e7d15d8b73f06bf89f842ef3447&amp;oe=596597E9&#39;, &#39;description&#39;: &#39;We sell affordable used books.&#39;, &#39;title&#39;: &#39;The Map of Love by Ahdaf Soueif - mpcurious&#39;}, &#39;genre_groups_cols&#39;: [[&lt;GenreGroup: All Fiction&gt;, &lt;GenreGroup: All Non-fiction&gt;, &lt;GenreGroup: Biography, Memoir, Autobiography&gt;, &lt;GenreGroup: Business, Management, Leadership&gt;, &lt;GenreGroup: Classics&gt;, &lt;GenreGroup: Health, Food &amp; Drink&gt;, &lt;GenreGroup: History, Sociology, Politics, Economics&gt;, &lt;GenreGroup: Humor&gt;, &lt;GenreGroup: Inspirational, Spirituality, Self-help&gt;], [&lt;GenreGroup: Language, Media&gt;, &lt;GenreGroup: Mystery, Crime&gt;, &lt;GenreGroup: Philosophy, Science, Psychology&gt;, &lt;GenreGroup: Poetry, Play&gt;, &lt;GenreGroup: Romance, Chick Lit&gt;, &lt;GenreGroup: Science Fiction, Fantasy&gt;, &lt;GenreGroup: Travel, Adventure&gt;, &#39;sold&#39;]], &#39;book&#39;: &lt;Book: The Map of Love&gt;, &#39;related_books&#39;: [&lt;Book: Like Water for Chocolate&gt;, &lt;Book: Harnessing Peacocks&gt;, &lt;Book: Intimacy&gt;, &lt;Book: Rest Area&gt;, &lt;Book: Specimen Days&gt;, &lt;Book: I Know This Much Is True&gt;, &lt;Book: The Eye in the Door&gt;, &lt;Book: Water for Elephants&gt;, &lt;Book: Machete Season: The Killers in Rwanda Speak&gt;, &lt;Book: Wool&gt;, &lt;Book: The Postmistress&gt;, &lt;Book: Messenger of Truth: A Maisie Dobbs Novel&gt;], &#39;activenav&#39;: &#39;books&#39;}]</pre></td>
+</tr>
+<tr>
+<td>node</td>
+<td class="code"><pre>&lt;django.template.defaulttags.AutoEscapeControlNode object at 0x105ee86a0&gt;</pre></td>
+</tr>
+<tr>
+<td>self</td>
+<td class="code"><pre>[&lt;TextNode: &#39;\n                        &#39;&gt;,
+&lt;Variable Node: l.url&gt;,
+&lt;TextNode: &#39;&quot; class=&quot;font3&quot; target=&quot;_&#39;&gt;,
+&lt;Variable Node: l.rating&gt;,
+&lt;TextNode: &#39;&quot;&gt;\n                      &#39;&gt;,
+&lt;Variable Node: l.name&gt;,
+&lt;TextNode: &#39;: &lt;/span&gt;\n               &#39;&gt;,
+&lt;django.template.defaulttags.AutoEscapeControlNode object at 0x105ee86a0&gt;,
+&lt;TextNode: &#39;&lt;/span&gt;\n                 &#39;&gt;]</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="frame django">
+<code>/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/base.py</code> in <code>render_annotated</code>
+<div class="context" id="c4392381896">
+<ol start="954" class="pre-context" id="pre4392381896">
+<li onclick="toggle('pre4392381896', 'post4392381896')"><pre>        &quot;&quot;&quot;</pre></li>
+<li onclick="toggle('pre4392381896', 'post4392381896')"><pre>        Render the node. If debug is True and an exception occurs during</pre></li>
+<li onclick="toggle('pre4392381896', 'post4392381896')"><pre>        rendering, the exception is annotated with contextual line information</pre></li>
+<li onclick="toggle('pre4392381896', 'post4392381896')"><pre>        where it occurred in the template. For internal usage this method is</pre></li>
+<li onclick="toggle('pre4392381896', 'post4392381896')"><pre>        preferred over using the render method directly.</pre></li>
+<li onclick="toggle('pre4392381896', 'post4392381896')"><pre>        &quot;&quot;&quot;</pre></li>
+<li onclick="toggle('pre4392381896', 'post4392381896')"><pre>        try:</pre></li>
+</ol>
+<ol start="961" class="context-line">
+<li onclick="toggle('pre4392381896', 'post4392381896')"><pre>
+return self.render(context)</pre> <span>...</span></li></ol>
+<ol start='962' class="post-context" id="post4392381896">
+<li onclick="toggle('pre4392381896', 'post4392381896')"><pre>        except Exception as e:</pre></li>
+<li onclick="toggle('pre4392381896', 'post4392381896')"><pre>            if context.template.engine.debug and not hasattr(e, &#39;template_debug&#39;):</pre></li>
+<li onclick="toggle('pre4392381896', 'post4392381896')"><pre>                e.template_debug = context.template.get_exception_info(e, self.token)</pre></li>
+<li onclick="toggle('pre4392381896', 'post4392381896')"><pre>            raise</pre></li>
+<li onclick="toggle('pre4392381896', 'post4392381896')"><pre></pre></li>
+<li onclick="toggle('pre4392381896', 'post4392381896')"><pre>    def __iter__(self):</pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4392381896')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4392381896">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>context</td>
+<td class="code"><pre>[{&#39;None&#39;: None, &#39;False&#39;: False, &#39;True&#39;: True}, {}, {}, {&#39;meta&#39;: {&#39;canonical_url&#39;: &#39;www.mpcurious.com/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;, &#39;og_image&#39;: &#39;https://scontent.xx.fbcdn.net/v/t31.0-0/p480x480/14753945_1155190961214836_2357115047692261315_o.jpg?oh=f5b31e7d15d8b73f06bf89f842ef3447&amp;oe=596597E9&#39;, &#39;description&#39;: &#39;We sell affordable used books.&#39;, &#39;title&#39;: &#39;The Map of Love by Ahdaf Soueif - mpcurious&#39;}, &#39;genre_groups_cols&#39;: [[&lt;GenreGroup: All Fiction&gt;, &lt;GenreGroup: All Non-fiction&gt;, &lt;GenreGroup: Biography, Memoir, Autobiography&gt;, &lt;GenreGroup: Business, Management, Leadership&gt;, &lt;GenreGroup: Classics&gt;, &lt;GenreGroup: Health, Food &amp; Drink&gt;, &lt;GenreGroup: History, Sociology, Politics, Economics&gt;, &lt;GenreGroup: Humor&gt;, &lt;GenreGroup: Inspirational, Spirituality, Self-help&gt;], [&lt;GenreGroup: Language, Media&gt;, &lt;GenreGroup: Mystery, Crime&gt;, &lt;GenreGroup: Philosophy, Science, Psychology&gt;, &lt;GenreGroup: Poetry, Play&gt;, &lt;GenreGroup: Romance, Chick Lit&gt;, &lt;GenreGroup: Science Fiction, Fantasy&gt;, &lt;GenreGroup: Travel, Adventure&gt;, &#39;sold&#39;]], &#39;book&#39;: &lt;Book: The Map of Love&gt;, &#39;related_books&#39;: [&lt;Book: Like Water for Chocolate&gt;, &lt;Book: Harnessing Peacocks&gt;, &lt;Book: Intimacy&gt;, &lt;Book: Rest Area&gt;, &lt;Book: Specimen Days&gt;, &lt;Book: I Know This Much Is True&gt;, &lt;Book: The Eye in the Door&gt;, &lt;Book: Water for Elephants&gt;, &lt;Book: Machete Season: The Killers in Rwanda Speak&gt;, &lt;Book: Wool&gt;, &lt;Book: The Postmistress&gt;, &lt;Book: Messenger of Truth: A Maisie Dobbs Novel&gt;], &#39;activenav&#39;: &#39;books&#39;}]</pre></td>
+</tr>
+<tr>
+<td>self</td>
+<td class="code"><pre>&lt;django.template.defaulttags.AutoEscapeControlNode object at 0x105ee86a0&gt;</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="frame django">
+<code>/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/defaulttags.py</code> in <code>render</code>
+<div class="context" id="c4392382024">
+<ol start="32" class="pre-context" id="pre4392382024">
+<li onclick="toggle('pre4392382024', 'post4392382024')"><pre>    &quot;&quot;&quot;Implements the actions of the autoescape tag.&quot;&quot;&quot;</pre></li>
+<li onclick="toggle('pre4392382024', 'post4392382024')"><pre>    def __init__(self, setting, nodelist):</pre></li>
+<li onclick="toggle('pre4392382024', 'post4392382024')"><pre>        self.setting, self.nodelist = setting, nodelist</pre></li>
+<li onclick="toggle('pre4392382024', 'post4392382024')"><pre></pre></li>
+<li onclick="toggle('pre4392382024', 'post4392382024')"><pre>    def render(self, context):</pre></li>
+<li onclick="toggle('pre4392382024', 'post4392382024')"><pre>        old_setting = context.autoescape</pre></li>
+<li onclick="toggle('pre4392382024', 'post4392382024')"><pre>        context.autoescape = self.setting</pre></li>
+</ol>
+<ol start="39" class="context-line">
+<li onclick="toggle('pre4392382024', 'post4392382024')"><pre>
+output = self.nodelist.render(context)</pre> <span>...</span></li></ol>
+<ol start='40' class="post-context" id="post4392382024">
+<li onclick="toggle('pre4392382024', 'post4392382024')"><pre>        context.autoescape = old_setting</pre></li>
+<li onclick="toggle('pre4392382024', 'post4392382024')"><pre>        if self.setting:</pre></li>
+<li onclick="toggle('pre4392382024', 'post4392382024')"><pre>            return mark_safe(output)</pre></li>
+<li onclick="toggle('pre4392382024', 'post4392382024')"><pre>        else:</pre></li>
+<li onclick="toggle('pre4392382024', 'post4392382024')"><pre>            return output</pre></li>
+<li onclick="toggle('pre4392382024', 'post4392382024')"><pre></pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4392382024')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4392382024">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>context</td>
+<td class="code"><pre>[{&#39;None&#39;: None, &#39;False&#39;: False, &#39;True&#39;: True}, {}, {}, {&#39;meta&#39;: {&#39;canonical_url&#39;: &#39;www.mpcurious.com/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;, &#39;og_image&#39;: &#39;https://scontent.xx.fbcdn.net/v/t31.0-0/p480x480/14753945_1155190961214836_2357115047692261315_o.jpg?oh=f5b31e7d15d8b73f06bf89f842ef3447&amp;oe=596597E9&#39;, &#39;description&#39;: &#39;We sell affordable used books.&#39;, &#39;title&#39;: &#39;The Map of Love by Ahdaf Soueif - mpcurious&#39;}, &#39;genre_groups_cols&#39;: [[&lt;GenreGroup: All Fiction&gt;, &lt;GenreGroup: All Non-fiction&gt;, &lt;GenreGroup: Biography, Memoir, Autobiography&gt;, &lt;GenreGroup: Business, Management, Leadership&gt;, &lt;GenreGroup: Classics&gt;, &lt;GenreGroup: Health, Food &amp; Drink&gt;, &lt;GenreGroup: History, Sociology, Politics, Economics&gt;, &lt;GenreGroup: Humor&gt;, &lt;GenreGroup: Inspirational, Spirituality, Self-help&gt;], [&lt;GenreGroup: Language, Media&gt;, &lt;GenreGroup: Mystery, Crime&gt;, &lt;GenreGroup: Philosophy, Science, Psychology&gt;, &lt;GenreGroup: Poetry, Play&gt;, &lt;GenreGroup: Romance, Chick Lit&gt;, &lt;GenreGroup: Science Fiction, Fantasy&gt;, &lt;GenreGroup: Travel, Adventure&gt;, &#39;sold&#39;]], &#39;book&#39;: &lt;Book: The Map of Love&gt;, &#39;related_books&#39;: [&lt;Book: Like Water for Chocolate&gt;, &lt;Book: Harnessing Peacocks&gt;, &lt;Book: Intimacy&gt;, &lt;Book: Rest Area&gt;, &lt;Book: Specimen Days&gt;, &lt;Book: I Know This Much Is True&gt;, &lt;Book: The Eye in the Door&gt;, &lt;Book: Water for Elephants&gt;, &lt;Book: Machete Season: The Killers in Rwanda Speak&gt;, &lt;Book: Wool&gt;, &lt;Book: The Postmistress&gt;, &lt;Book: Messenger of Truth: A Maisie Dobbs Novel&gt;], &#39;activenav&#39;: &#39;books&#39;}]</pre></td>
+</tr>
+<tr>
+<td>old_setting</td>
+<td class="code"><pre>True</pre></td>
+</tr>
+<tr>
+<td>self</td>
+<td class="code"><pre>&lt;django.template.defaulttags.AutoEscapeControlNode object at 0x105ee86a0&gt;</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="frame django">
+<code>/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/base.py</code> in <code>render</code>
+<div class="context" id="c4392422600">
+<ol start="987" class="pre-context" id="pre4392422600">
+<li onclick="toggle('pre4392422600', 'post4392422600')"><pre>    # extend_nodelist().</pre></li>
+<li onclick="toggle('pre4392422600', 'post4392422600')"><pre>    contains_nontext = False</pre></li>
+<li onclick="toggle('pre4392422600', 'post4392422600')"><pre></pre></li>
+<li onclick="toggle('pre4392422600', 'post4392422600')"><pre>    def render(self, context):</pre></li>
+<li onclick="toggle('pre4392422600', 'post4392422600')"><pre>        bits = []</pre></li>
+<li onclick="toggle('pre4392422600', 'post4392422600')"><pre>        for node in self:</pre></li>
+<li onclick="toggle('pre4392422600', 'post4392422600')"><pre>            if isinstance(node, Node):</pre></li>
+</ol>
+<ol start="994" class="context-line">
+<li onclick="toggle('pre4392422600', 'post4392422600')"><pre>
+bit = node.render_annotated(context)</pre> <span>...</span></li></ol>
+<ol start='995' class="post-context" id="post4392422600">
+<li onclick="toggle('pre4392422600', 'post4392422600')"><pre>            else:</pre></li>
+<li onclick="toggle('pre4392422600', 'post4392422600')"><pre>                bit = node</pre></li>
+<li onclick="toggle('pre4392422600', 'post4392422600')"><pre>            bits.append(force_text(bit))</pre></li>
+<li onclick="toggle('pre4392422600', 'post4392422600')"><pre>        return mark_safe(&#39;&#39;.join(bits))</pre></li>
+<li onclick="toggle('pre4392422600', 'post4392422600')"><pre></pre></li>
+<li onclick="toggle('pre4392422600', 'post4392422600')"><pre>    def get_nodes_by_type(self, nodetype):</pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4392422600')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4392422600">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bits</td>
+<td class="code"><pre>[]</pre></td>
+</tr>
+<tr>
+<td>context</td>
+<td class="code"><pre>[{&#39;None&#39;: None, &#39;False&#39;: False, &#39;True&#39;: True}, {}, {}, {&#39;meta&#39;: {&#39;canonical_url&#39;: &#39;www.mpcurious.com/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;, &#39;og_image&#39;: &#39;https://scontent.xx.fbcdn.net/v/t31.0-0/p480x480/14753945_1155190961214836_2357115047692261315_o.jpg?oh=f5b31e7d15d8b73f06bf89f842ef3447&amp;oe=596597E9&#39;, &#39;description&#39;: &#39;We sell affordable used books.&#39;, &#39;title&#39;: &#39;The Map of Love by Ahdaf Soueif - mpcurious&#39;}, &#39;genre_groups_cols&#39;: [[&lt;GenreGroup: All Fiction&gt;, &lt;GenreGroup: All Non-fiction&gt;, &lt;GenreGroup: Biography, Memoir, Autobiography&gt;, &lt;GenreGroup: Business, Management, Leadership&gt;, &lt;GenreGroup: Classics&gt;, &lt;GenreGroup: Health, Food &amp; Drink&gt;, &lt;GenreGroup: History, Sociology, Politics, Economics&gt;, &lt;GenreGroup: Humor&gt;, &lt;GenreGroup: Inspirational, Spirituality, Self-help&gt;], [&lt;GenreGroup: Language, Media&gt;, &lt;GenreGroup: Mystery, Crime&gt;, &lt;GenreGroup: Philosophy, Science, Psychology&gt;, &lt;GenreGroup: Poetry, Play&gt;, &lt;GenreGroup: Romance, Chick Lit&gt;, &lt;GenreGroup: Science Fiction, Fantasy&gt;, &lt;GenreGroup: Travel, Adventure&gt;, &#39;sold&#39;]], &#39;book&#39;: &lt;Book: The Map of Love&gt;, &#39;related_books&#39;: [&lt;Book: Like Water for Chocolate&gt;, &lt;Book: Harnessing Peacocks&gt;, &lt;Book: Intimacy&gt;, &lt;Book: Rest Area&gt;, &lt;Book: Specimen Days&gt;, &lt;Book: I Know This Much Is True&gt;, &lt;Book: The Eye in the Door&gt;, &lt;Book: Water for Elephants&gt;, &lt;Book: Machete Season: The Killers in Rwanda Speak&gt;, &lt;Book: Wool&gt;, &lt;Book: The Postmistress&gt;, &lt;Book: Messenger of Truth: A Maisie Dobbs Novel&gt;], &#39;activenav&#39;: &#39;books&#39;}]</pre></td>
+</tr>
+<tr>
+<td>node</td>
+<td class="code"><pre>&lt;django.template.library.SimpleNode object at 0x105f62588&gt;</pre></td>
+</tr>
+<tr>
+<td>self</td>
+<td class="code"><pre>[&lt;django.template.library.SimpleNode object at 0x105f62588&gt;]</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="frame django">
+<code>/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/base.py</code> in <code>render_annotated</code>
+<div class="context" id="c4393548936">
+<ol start="954" class="pre-context" id="pre4393548936">
+<li onclick="toggle('pre4393548936', 'post4393548936')"><pre>        &quot;&quot;&quot;</pre></li>
+<li onclick="toggle('pre4393548936', 'post4393548936')"><pre>        Render the node. If debug is True and an exception occurs during</pre></li>
+<li onclick="toggle('pre4393548936', 'post4393548936')"><pre>        rendering, the exception is annotated with contextual line information</pre></li>
+<li onclick="toggle('pre4393548936', 'post4393548936')"><pre>        where it occurred in the template. For internal usage this method is</pre></li>
+<li onclick="toggle('pre4393548936', 'post4393548936')"><pre>        preferred over using the render method directly.</pre></li>
+<li onclick="toggle('pre4393548936', 'post4393548936')"><pre>        &quot;&quot;&quot;</pre></li>
+<li onclick="toggle('pre4393548936', 'post4393548936')"><pre>        try:</pre></li>
+</ol>
+<ol start="961" class="context-line">
+<li onclick="toggle('pre4393548936', 'post4393548936')"><pre>
+return self.render(context)</pre> <span>...</span></li></ol>
+<ol start='962' class="post-context" id="post4393548936">
+<li onclick="toggle('pre4393548936', 'post4393548936')"><pre>        except Exception as e:</pre></li>
+<li onclick="toggle('pre4393548936', 'post4393548936')"><pre>            if context.template.engine.debug and not hasattr(e, &#39;template_debug&#39;):</pre></li>
+<li onclick="toggle('pre4393548936', 'post4393548936')"><pre>                e.template_debug = context.template.get_exception_info(e, self.token)</pre></li>
+<li onclick="toggle('pre4393548936', 'post4393548936')"><pre>            raise</pre></li>
+<li onclick="toggle('pre4393548936', 'post4393548936')"><pre></pre></li>
+<li onclick="toggle('pre4393548936', 'post4393548936')"><pre>    def __iter__(self):</pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4393548936')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4393548936">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>context</td>
+<td class="code"><pre>[{&#39;None&#39;: None, &#39;False&#39;: False, &#39;True&#39;: True}, {}, {}, {&#39;meta&#39;: {&#39;canonical_url&#39;: &#39;www.mpcurious.com/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;, &#39;og_image&#39;: &#39;https://scontent.xx.fbcdn.net/v/t31.0-0/p480x480/14753945_1155190961214836_2357115047692261315_o.jpg?oh=f5b31e7d15d8b73f06bf89f842ef3447&amp;oe=596597E9&#39;, &#39;description&#39;: &#39;We sell affordable used books.&#39;, &#39;title&#39;: &#39;The Map of Love by Ahdaf Soueif - mpcurious&#39;}, &#39;genre_groups_cols&#39;: [[&lt;GenreGroup: All Fiction&gt;, &lt;GenreGroup: All Non-fiction&gt;, &lt;GenreGroup: Biography, Memoir, Autobiography&gt;, &lt;GenreGroup: Business, Management, Leadership&gt;, &lt;GenreGroup: Classics&gt;, &lt;GenreGroup: Health, Food &amp; Drink&gt;, &lt;GenreGroup: History, Sociology, Politics, Economics&gt;, &lt;GenreGroup: Humor&gt;, &lt;GenreGroup: Inspirational, Spirituality, Self-help&gt;], [&lt;GenreGroup: Language, Media&gt;, &lt;GenreGroup: Mystery, Crime&gt;, &lt;GenreGroup: Philosophy, Science, Psychology&gt;, &lt;GenreGroup: Poetry, Play&gt;, &lt;GenreGroup: Romance, Chick Lit&gt;, &lt;GenreGroup: Science Fiction, Fantasy&gt;, &lt;GenreGroup: Travel, Adventure&gt;, &#39;sold&#39;]], &#39;book&#39;: &lt;Book: The Map of Love&gt;, &#39;related_books&#39;: [&lt;Book: Like Water for Chocolate&gt;, &lt;Book: Harnessing Peacocks&gt;, &lt;Book: Intimacy&gt;, &lt;Book: Rest Area&gt;, &lt;Book: Specimen Days&gt;, &lt;Book: I Know This Much Is True&gt;, &lt;Book: The Eye in the Door&gt;, &lt;Book: Water for Elephants&gt;, &lt;Book: Machete Season: The Killers in Rwanda Speak&gt;, &lt;Book: Wool&gt;, &lt;Book: The Postmistress&gt;, &lt;Book: Messenger of Truth: A Maisie Dobbs Novel&gt;], &#39;activenav&#39;: &#39;books&#39;}]</pre></td>
+</tr>
+<tr>
+<td>self</td>
+<td class="code"><pre>&lt;django.template.library.SimpleNode object at 0x105f62588&gt;</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="frame django">
+<code>/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/library.py</code> in <code>render</code>
+<div class="context" id="c4393545928">
+<ol start="196" class="pre-context" id="pre4393545928">
+<li onclick="toggle('pre4393545928', 'post4393545928')"><pre></pre></li>
+<li onclick="toggle('pre4393545928', 'post4393545928')"><pre>    def __init__(self, func, takes_context, args, kwargs, target_var):</pre></li>
+<li onclick="toggle('pre4393545928', 'post4393545928')"><pre>        super(SimpleNode, self).__init__(func, takes_context, args, kwargs)</pre></li>
+<li onclick="toggle('pre4393545928', 'post4393545928')"><pre>        self.target_var = target_var</pre></li>
+<li onclick="toggle('pre4393545928', 'post4393545928')"><pre></pre></li>
+<li onclick="toggle('pre4393545928', 'post4393545928')"><pre>    def render(self, context):</pre></li>
+<li onclick="toggle('pre4393545928', 'post4393545928')"><pre>        resolved_args, resolved_kwargs = self.get_resolved_arguments(context)</pre></li>
+</ol>
+<ol start="203" class="context-line">
+<li onclick="toggle('pre4393545928', 'post4393545928')"><pre>
+output = self.func(*resolved_args, **resolved_kwargs)</pre> <span>...</span></li></ol>
+<ol start='204' class="post-context" id="post4393545928">
+<li onclick="toggle('pre4393545928', 'post4393545928')"><pre>        if self.target_var is not None:</pre></li>
+<li onclick="toggle('pre4393545928', 'post4393545928')"><pre>            context[self.target_var] = output</pre></li>
+<li onclick="toggle('pre4393545928', 'post4393545928')"><pre>            return &#39;&#39;</pre></li>
+<li onclick="toggle('pre4393545928', 'post4393545928')"><pre>        if context.autoescape:</pre></li>
+<li onclick="toggle('pre4393545928', 'post4393545928')"><pre>            output = conditional_escape(output)</pre></li>
+<li onclick="toggle('pre4393545928', 'post4393545928')"><pre>        return output</pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4393545928')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4393545928">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>context</td>
+<td class="code"><pre>[{&#39;None&#39;: None, &#39;False&#39;: False, &#39;True&#39;: True}, {}, {}, {&#39;meta&#39;: {&#39;canonical_url&#39;: &#39;www.mpcurious.com/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;, &#39;og_image&#39;: &#39;https://scontent.xx.fbcdn.net/v/t31.0-0/p480x480/14753945_1155190961214836_2357115047692261315_o.jpg?oh=f5b31e7d15d8b73f06bf89f842ef3447&amp;oe=596597E9&#39;, &#39;description&#39;: &#39;We sell affordable used books.&#39;, &#39;title&#39;: &#39;The Map of Love by Ahdaf Soueif - mpcurious&#39;}, &#39;genre_groups_cols&#39;: [[&lt;GenreGroup: All Fiction&gt;, &lt;GenreGroup: All Non-fiction&gt;, &lt;GenreGroup: Biography, Memoir, Autobiography&gt;, &lt;GenreGroup: Business, Management, Leadership&gt;, &lt;GenreGroup: Classics&gt;, &lt;GenreGroup: Health, Food &amp; Drink&gt;, &lt;GenreGroup: History, Sociology, Politics, Economics&gt;, &lt;GenreGroup: Humor&gt;, &lt;GenreGroup: Inspirational, Spirituality, Self-help&gt;], [&lt;GenreGroup: Language, Media&gt;, &lt;GenreGroup: Mystery, Crime&gt;, &lt;GenreGroup: Philosophy, Science, Psychology&gt;, &lt;GenreGroup: Poetry, Play&gt;, &lt;GenreGroup: Romance, Chick Lit&gt;, &lt;GenreGroup: Science Fiction, Fantasy&gt;, &lt;GenreGroup: Travel, Adventure&gt;, &#39;sold&#39;]], &#39;book&#39;: &lt;Book: The Map of Love&gt;, &#39;related_books&#39;: [&lt;Book: Like Water for Chocolate&gt;, &lt;Book: Harnessing Peacocks&gt;, &lt;Book: Intimacy&gt;, &lt;Book: Rest Area&gt;, &lt;Book: Specimen Days&gt;, &lt;Book: I Know This Much Is True&gt;, &lt;Book: The Eye in the Door&gt;, &lt;Book: Water for Elephants&gt;, &lt;Book: Machete Season: The Killers in Rwanda Speak&gt;, &lt;Book: Wool&gt;, &lt;Book: The Postmistress&gt;, &lt;Book: Messenger of Truth: A Maisie Dobbs Novel&gt;], &#39;activenav&#39;: &#39;books&#39;}]</pre></td>
+</tr>
+<tr>
+<td>resolved_args</td>
+<td class="code"><pre>[&#39;3,81&#39;]</pre></td>
+</tr>
+<tr>
+<td>resolved_kwargs</td>
+<td class="code"><pre>{}</pre></td>
+</tr>
+<tr>
+<td>self</td>
+<td class="code"><pre>&lt;django.template.library.SimpleNode object at 0x105f62588&gt;</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="frame user">
+<code>/Users/marvinmatias/AppDev/mpc/utils/templatetags/book_rating.py</code> in <code>render_book_rating</code>
+<div class="context" id="c4393548360">
+<ol start="1" class="pre-context" id="pre4393548360">
+<li onclick="toggle('pre4393548360', 'post4393548360')"><pre>from django import template</pre></li>
+<li onclick="toggle('pre4393548360', 'post4393548360')"><pre></pre></li>
+<li onclick="toggle('pre4393548360', 'post4393548360')"><pre>register = template.Library()</pre></li>
+<li onclick="toggle('pre4393548360', 'post4393548360')"><pre></pre></li>
+<li onclick="toggle('pre4393548360', 'post4393548360')"><pre></pre></li>
+<li onclick="toggle('pre4393548360', 'post4393548360')"><pre>@register.simple_tag</pre></li>
+<li onclick="toggle('pre4393548360', 'post4393548360')"><pre>def render_book_rating(rating_str):</pre></li>
+</ol>
+<ol start="8" class="context-line">
+<li onclick="toggle('pre4393548360', 'post4393548360')"><pre>
+floatval = float(rating_str)</pre> <span>...</span></li></ol>
+<ol start='9' class="post-context" id="post4393548360">
+<li onclick="toggle('pre4393548360', 'post4393548360')"><pre>    intval = int(floatval)</pre></li>
+<li onclick="toggle('pre4393548360', 'post4393548360')"><pre>    stars = [&#39;&lt;i class=&quot;fa fa-star&quot;&gt;&lt;/i&gt;&#39; for _ in range(intval)]</pre></li>
+<li onclick="toggle('pre4393548360', 'post4393548360')"><pre>    if floatval - intval &gt;= .45:</pre></li>
+<li onclick="toggle('pre4393548360', 'post4393548360')"><pre>        stars.append(&#39;&lt;i class=&quot;fa fa-star-half&quot;&gt;&lt;/i&gt;&#39;)</pre></li>
+<li onclick="toggle('pre4393548360', 'post4393548360')"><pre>    return &#39;&#39;.join(stars)</pre></li>
+</ol>
+</div>
+<div class="commands">
+<a href="#" onclick="return varToggle(this, '4393548360')"><span>&#x25b6;</span> Local vars</a>
+</div>
+<table class="vars" id="v4393548360">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rating_str</td>
+<td class="code"><pre>&#39;3,81&#39;</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+<form action="http://dpaste.com/" name="pasteform" id="pasteform" method="post">
+<div id="pastebinTraceback" class="pastebin">
+<input type="hidden" name="language" value="PythonConsole">
+<input type="hidden" name="title"
+value="ValueError at /books/the-map-of-love-soueif-ahdaf-1490863753521539">
+<input type="hidden" name="source" value="Django Dpaste Agent">
+<input type="hidden" name="poster" value="Django">
+<textarea name="content" id="traceback_area" cols="140" rows="25">
+Environment:
+Request Method: GET
+Request URL: http://localhost:8000/books/the-map-of-love-soueif-ahdaf-1490863753521539?user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36
+Django Version: 1.10.4
+Python Version: 3.5.1
+Installed Applications:
+[&#39;django.contrib.auth&#39;,
+&#39;django.contrib.contenttypes&#39;,
+&#39;django.contrib.sessions&#39;,
+&#39;django.contrib.messages&#39;,
+&#39;django.contrib.staticfiles&#39;,
+&#39;django_extensions&#39;,
+&#39;imagekit&#39;,
+&#39;utils&#39;,
+&#39;genres&#39;,
+&#39;books&#39;,
+&#39;book_fb_links&#39;,
+&#39;fb_albums_viewer&#39;,
+&#39;book_community_links&#39;,
+&#39;genre_groups&#39;,
+&#39;home_promotions&#39;,
+&#39;home&#39;,
+&#39;book_photos&#39;]
+Installed Middleware:
+[&#39;django.middleware.security.SecurityMiddleware&#39;,
+&#39;django.contrib.sessions.middleware.SessionMiddleware&#39;,
+&#39;django.middleware.common.CommonMiddleware&#39;,
+&#39;django.middleware.csrf.CsrfViewMiddleware&#39;,
+&#39;django.contrib.auth.middleware.AuthenticationMiddleware&#39;,
+&#39;django.contrib.auth.middleware.SessionAuthenticationMiddleware&#39;,
+&#39;django.contrib.messages.middleware.MessageMiddleware&#39;,
+&#39;django.middleware.clickjacking.XFrameOptionsMiddleware&#39;]
+Template error:
+In template /Users/marvinmatias/AppDev/mpc/templates/books/book_details.html, error at line 44
+could not convert string to float: &#39;3,81&#39;   34 :                 &lt;div class=&quot;action&quot;&gt;
+35 :                     &lt;a title=&quot;{% if book.availability|lower == &#39;available&#39; %}Comment &#39;mine&#39; to buy book.{% endif %}&quot; class=&quot;btn font3&quot; href=&quot;{{ book.fb_link.url }}&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-external-link&quot;&gt;&lt;/i&gt;&amp;nbsp;&lt;span&gt;VIEW ON FACEBOOK&lt;/span&gt;&lt;/a&gt;
+36 :                 &lt;/div&gt;
+37 : 
+38 :                 &lt;div class=&quot;community-links&quot;&gt;
+39 :                     {% for l in book.communitylinks %}
+40 :                         {% if l.rating %}
+41 :                             &lt;a href=&quot;{{ l.url }}&quot; class=&quot;font3&quot; target=&quot;_blank&quot; title=&quot;{{ l.rating }}&quot;&gt;
+42 :                                 &lt;i class=&quot;fa fa-external-link&quot;&gt;&lt;/i&gt;
+43 :                                 &lt;span&gt;{{ l.name }}: &lt;/span&gt;
+44 :                                 &lt;span&gt;{% autoescape off %} {% render_book_rating l.rating %} {% endautoescape %}&lt;/span&gt;
+45 :                             &lt;/a&gt;
+46 :                         {% endif %}
+47 :                     {% endfor %}
+48 :                 &lt;/div&gt;
+49 : 
+50 :                 {% include &#39;books/_book_other_photos.html&#39; with images=book.fb_link.other_images %}
+51 :             &lt;/div&gt;
+52 :         &lt;/div&gt;
+53 : 
+54 :         {% include &#39;books/_book_related_books.html&#39; with related_books=related_books %}
+Traceback:
+File "/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/core/handlers/exception.py" in inner
+39.             response = get_response(request)
+File "/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/core/handlers/base.py" in _get_response
+187.                 response = self.process_exception_by_middleware(e, request)
+File "/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/core/handlers/base.py" in _get_response
+185.                 response = wrapped_callback(request, *callback_args, **callback_kwargs)
+File "/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/views/generic/base.py" in view
+68.             return self.dispatch(request, *args, **kwargs)
+File "/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/views/generic/base.py" in dispatch
+88.         return handler(request, *args, **kwargs)
+File "/Users/marvinmatias/AppDev/mpc/books/views.py" in get
+104.             get_details_page_context(request, book)
+File "/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/shortcuts.py" in render
+30.     content = loader.render_to_string(template_name, context, request, using=using)
+File "/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/loader.py" in render_to_string
+68.     return template.render(context, request)
+File "/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/backends/django.py" in render
+66.             return self.template.render(context)
+File "/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/base.py" in render
+208.                     return self._render(context)
+File "/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/test/utils.py" in instrumented_test_render
+94.     return self.nodelist.render(context)
+File "/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/base.py" in render
+994.                 bit = node.render_annotated(context)
+File "/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/base.py" in render_annotated
+961.             return self.render(context)
+File "/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/loader_tags.py" in render
+174.         return compiled_parent._render(context)
+File "/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/test/utils.py" in instrumented_test_render
+94.     return self.nodelist.render(context)
+File "/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/base.py" in render
+994.                 bit = node.render_annotated(context)
+File "/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/base.py" in render_annotated
+961.             return self.render(context)
+File "/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/loader_tags.py" in render
+70.                 result = block.nodelist.render(context)
+File "/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/base.py" in render
+994.                 bit = node.render_annotated(context)
+File "/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/base.py" in render_annotated
+961.             return self.render(context)
+File "/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/defaulttags.py" in render
+209.                     nodelist.append(node.render_annotated(context))
+File "/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/base.py" in render_annotated
+961.             return self.render(context)
+File "/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/defaulttags.py" in render
+315.                 return nodelist.render(context)
+File "/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/base.py" in render
+994.                 bit = node.render_annotated(context)
+File "/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/base.py" in render_annotated
+961.             return self.render(context)
+File "/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/defaulttags.py" in render
+39.         output = self.nodelist.render(context)
+File "/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/base.py" in render
+994.                 bit = node.render_annotated(context)
+File "/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/base.py" in render_annotated
+961.             return self.render(context)
+File "/Users/marvinmatias/.virtualenvs/mpcurious/lib/python3.5/site-packages/django/template/library.py" in render
+203.         output = self.func(*resolved_args, **resolved_kwargs)
+File "/Users/marvinmatias/AppDev/mpc/utils/templatetags/book_rating.py" in render_book_rating
+8.     floatval = float(rating_str)
+Exception Type: ValueError at /books/the-map-of-love-soueif-ahdaf-1490863753521539
+Exception Value: could not convert string to float: &#39;3,81&#39;
+</textarea>
+<br><br>
+<input type="submit" value="Share this traceback on a public website">
+</div>
+</form>
+</div>
+<div id="requestinfo">
+<h2>Request information</h2>
+<h3 id="user-info">USER</h3>
+<p>AnonymousUser</p>
+<h3 id="get-info">GET</h3>
+<table class="req">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>user-agent</td>
+<td class="code"><pre>(&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, &#39;
+&#39;like Gecko) Chrome/56.0.2924.87 Safari/537.36&#39;)</pre></td>
+</tr>
+</tbody>
+</table>
+<h3 id="post-info">POST</h3>
+<p>No POST data</p>
+<h3 id="files-info">FILES</h3>
+<p>No FILES data</p>
+<h3 id="cookie-info">COOKIES</h3>
+<p>No cookie data</p>
+<h3 id="meta-info">META</h3>
+<table class="req">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apple_PubSub_Socket_Render</td>
+<td class="code"><pre>&#39;/private/tmp/com.apple.launchd.yomZcYfp5C/Render&#39;</pre></td>
+</tr>
+<tr>
+<td>CLICOLOR</td>
+<td class="code"><pre>&#39;1&#39;</pre></td>
+</tr>
+<tr>
+<td>COLORFGBG</td>
+<td class="code"><pre>&#39;15;0&#39;</pre></td>
+</tr>
+<tr>
+<td>COMMAND_MODE</td>
+<td class="code"><pre>&#39;unix2003&#39;</pre></td>
+</tr>
+<tr>
+<td>CONTENT_LENGTH</td>
+<td class="code"><pre>&#39;&#39;</pre></td>
+</tr>
+<tr>
+<td>CONTENT_TYPE</td>
+<td class="code"><pre>&#39;text/plain&#39;</pre></td>
+</tr>
+<tr>
+<td>DEV_DB_NAME</td>
+<td class="code"><pre>&#39;emr-ror-02_development&#39;</pre></td>
+</tr>
+<tr>
+<td>DEV_DB_PASS</td>
+<td class="code"><pre>&#39;&#39;</pre></td>
+</tr>
+<tr>
+<td>DEV_DB_USR</td>
+<td class="code"><pre>&#39;marvinmatias&#39;</pre></td>
+</tr>
+<tr>
+<td>DJANGO_SETTINGS_MODULE</td>
+<td class="code"><pre>&#39;mpc.settings&#39;</pre></td>
+</tr>
+<tr>
+<td>GATEWAY_INTERFACE</td>
+<td class="code"><pre>&#39;CGI/1.1&#39;</pre></td>
+</tr>
+<tr>
+<td>GOPATH</td>
+<td class="code"><pre>&#39;/Users/marvinmatias/go_workspace&#39;</pre></td>
+</tr>
+<tr>
+<td>GREP_OPTIONS</td>
+<td class="code"><pre>&#39;--color=auto&#39;</pre></td>
+</tr>
+<tr>
+<td>HOME</td>
+<td class="code"><pre>&#39;/Users/marvinmatias&#39;</pre></td>
+</tr>
+<tr>
+<td>HTTP_ACCEPT</td>
+<td class="code"><pre>&#39;*/*&#39;</pre></td>
+</tr>
+<tr>
+<td>HTTP_ACCEPT_ENCODING</td>
+<td class="code"><pre>&#39;gzip, deflate&#39;</pre></td>
+</tr>
+<tr>
+<td>HTTP_CONNECTION</td>
+<td class="code"><pre>&#39;keep-alive&#39;</pre></td>
+</tr>
+<tr>
+<td>HTTP_HOST</td>
+<td class="code"><pre>&#39;localhost:8000&#39;</pre></td>
+</tr>
+<tr>
+<td>HTTP_USER_AGENT</td>
+<td class="code"><pre>&#39;python-requests/2.13.0&#39;</pre></td>
+</tr>
+<tr>
+<td>ITERM_PROFILE</td>
+<td class="code"><pre>&#39;Default&#39;</pre></td>
+</tr>
+<tr>
+<td>ITERM_SESSION_ID</td>
+<td class="code"><pre>&#39;w0t0p0:7D6640F1-9D59-4696-B3CA-0EDEF81253D1&#39;</pre></td>
+</tr>
+<tr>
+<td>LANG</td>
+<td class="code"><pre>&#39;en_US.UTF-8&#39;</pre></td>
+</tr>
+<tr>
+<td>LC_ALL</td>
+<td class="code"><pre>&#39;en_US.UTF-8&#39;</pre></td>
+</tr>
+<tr>
+<td>LC_CTYPE</td>
+<td class="code"><pre>&#39;UTF-8&#39;</pre></td>
+</tr>
+<tr>
+<td>LOGNAME</td>
+<td class="code"><pre>&#39;marvinmatias&#39;</pre></td>
+</tr>
+<tr>
+<td>PATH</td>
+<td class="code"><pre>(&#39;/Users/marvinmatias/.virtualenvs/mpcurious/bin:/Users/marvinmatias/.rbenv/shims:/Library/Frameworks/Python.framework/Versions/3.5/bin:/Applications/Sublime &#39;
+&#39;Text.app/Contents/SharedSupport/bin:/Users/marvinmatias/.rbenv/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin&#39;)</pre></td>
+</tr>
+<tr>
+<td>PATH_INFO</td>
+<td class="code"><pre>&#39;/books/the-map-of-love-soueif-ahdaf-1490863753521539&#39;</pre></td>
+</tr>
+<tr>
+<td>PROMPT_COMMAND</td>
+<td class="code"><pre>&#39;echo -ne &quot;\\033]0;$PWD\\007&quot;&#39;</pre></td>
+</tr>
+<tr>
+<td>PS1</td>
+<td class="code"><pre>&#39;(mpcurious) \\h:\\W \\u\\$ &#39;</pre></td>
+</tr>
+<tr>
+<td>PWD</td>
+<td class="code"><pre>&#39;/Users/marvinmatias/AppDev/mpc&#39;</pre></td>
+</tr>
+<tr>
+<td>QUERY_STRING</td>
+<td class="code"><pre>&#39;user-agent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_10_5%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36&#39;</pre></td>
+</tr>
+<tr>
+<td>RAILS_SERVE_STATIC_FILES</td>
+<td class="code"><pre>&#39;true&#39;</pre></td>
+</tr>
+<tr>
+<td>RBENV_SHELL</td>
+<td class="code"><pre>&#39;bash&#39;</pre></td>
+</tr>
+<tr>
+<td>RDS_DB_NAME</td>
+<td class="code"><pre>&#39;emr-ror-02_production&#39;</pre></td>
+</tr>
+<tr>
+<td>RDS_HOSTNAME</td>
+<td class="code"><pre>&#39;localhost&#39;</pre></td>
+</tr>
+<tr>
+<td>RDS_PASSWORD</td>
+<td class="code"><pre>&#39;&#39;</pre></td>
+</tr>
+<tr>
+<td>RDS_PORT</td>
+<td class="code"><pre>&#39;5432&#39;</pre></td>
+</tr>
+<tr>
+<td>RDS_USERNAME</td>
+<td class="code"><pre>&#39;marvinmatias&#39;</pre></td>
+</tr>
+<tr>
+<td>REMOTE_ADDR</td>
+<td class="code"><pre>&#39;127.0.0.1&#39;</pre></td>
+</tr>
+<tr>
+<td>REMOTE_HOST</td>
+<td class="code"><pre>&#39;&#39;</pre></td>
+</tr>
+<tr>
+<td>REQUEST_METHOD</td>
+<td class="code"><pre>&#39;GET&#39;</pre></td>
+</tr>
+<tr>
+<td>RUN_MAIN</td>
+<td class="code"><pre>&#39;true&#39;</pre></td>
+</tr>
+<tr>
+<td>S3_ADMIN_ACCESS_KEY_ID</td>
+<td class="code"><pre>&#39;AKIAIDTJLHTQ6S7D7GCA&#39;</pre></td>
+</tr>
+<tr>
+<td>S3_ADMIN_SECRET_ACCESS_KEY</td>
+<td class="code"><pre>&#39;oFV4ubiLKtYl+8nVCkdm4wWLgy62woPCFn/qkQI+&#39;</pre></td>
+</tr>
+<tr>
+<td>SCRIPT_NAME</td>
+<td class="code"><pre>&#39;&#39;</pre></td>
+</tr>
+<tr>
+<td>SECRET_KEY_BASE</td>
+<td class="code"><pre>&#39;y30075fcc8148471545e3811a29ffa87f84e3ff084514273e494c3f90a2fa3ff8afe9221162267774f3c8f067315c738194f2a1dbb2462bc7ef246d8b4fca92y&#39;</pre></td>
+</tr>
+<tr>
+<td>SECRET_TOKEN</td>
+<td class="code"><pre>&#39;z30075fcc8148471545e3811a29ffa87f84e3ff084514273e490c3f90a2fa9ff8afe9221162267774f3c8f067315c738194f2a1dbb2462bc7ef246d8b4fca92z&#39;</pre></td>
+</tr>
+<tr>
+<td>SECURITYSESSIONID</td>
+<td class="code"><pre>&#39;186a6&#39;</pre></td>
+</tr>
+<tr>
+<td>SERVER_NAME</td>
+<td class="code"><pre>&#39;1.0.0.127.in-addr.arpa&#39;</pre></td>
+</tr>
+<tr>
+<td>SERVER_PORT</td>
+<td class="code"><pre>&#39;8000&#39;</pre></td>
+</tr>
+<tr>
+<td>SERVER_PROTOCOL</td>
+<td class="code"><pre>&#39;HTTP/1.1&#39;</pre></td>
+</tr>
+<tr>
+<td>SERVER_SOFTWARE</td>
+<td class="code"><pre>&#39;WSGIServer/0.2&#39;</pre></td>
+</tr>
+<tr>
+<td>SHELL</td>
+<td class="code"><pre>&#39;/bin/bash&#39;</pre></td>
+</tr>
+<tr>
+<td>SHLVL</td>
+<td class="code"><pre>&#39;1&#39;</pre></td>
+</tr>
+<tr>
+<td>SSH_AUTH_SOCK</td>
+<td class="code"><pre>&#39;/private/tmp/com.apple.launchd.cbplPuzFEf/Listeners&#39;</pre></td>
+</tr>
+<tr>
+<td>TERM</td>
+<td class="code"><pre>&#39;xterm-256color&#39;</pre></td>
+</tr>
+<tr>
+<td>TERM_PROGRAM</td>
+<td class="code"><pre>&#39;iTerm.app&#39;</pre></td>
+</tr>
+<tr>
+<td>TERM_PROGRAM_VERSION</td>
+<td class="code"><pre>&#39;3.0.15&#39;</pre></td>
+</tr>
+<tr>
+<td>TERM_SESSION_ID</td>
+<td class="code"><pre>&#39;w0t0p0:7D6640F1-9D59-4696-B3CA-0EDEF81253D1&#39;</pre></td>
+</tr>
+<tr>
+<td>TMPDIR</td>
+<td class="code"><pre>&#39;/var/folders/22/g5nh80_j7xq6dmgvktd80plm0000gn/T/&#39;</pre></td>
+</tr>
+<tr>
+<td>TZ</td>
+<td class="code"><pre>&#39;Asia/Manila&#39;</pre></td>
+</tr>
+<tr>
+<td>USER</td>
+<td class="code"><pre>&#39;marvinmatias&#39;</pre></td>
+</tr>
+<tr>
+<td>VIRTUAL_ENV</td>
+<td class="code"><pre>&#39;/Users/marvinmatias/.virtualenvs/mpcurious&#39;</pre></td>
+</tr>
+<tr>
+<td>XPC_FLAGS</td>
+<td class="code"><pre>&#39;0x0&#39;</pre></td>
+</tr>
+<tr>
+<td>XPC_SERVICE_NAME</td>
+<td class="code"><pre>&#39;0&#39;</pre></td>
+</tr>
+<tr>
+<td>_</td>
+<td class="code"><pre>&#39;./manage.py&#39;</pre></td>
+</tr>
+<tr>
+<td>__CF_USER_TEXT_ENCODING</td>
+<td class="code"><pre>&#39;0x1F5:0x0:0x0&#39;</pre></td>
+</tr>
+<tr>
+<td>__PYVENV_LAUNCHER__</td>
+<td class="code"><pre>&#39;/Users/marvinmatias/.virtualenvs/mpcurious/bin/python&#39;</pre></td>
+</tr>
+<tr>
+<td>wsgi.errors</td>
+<td class="code"><pre>&lt;_io.TextIOWrapper name=&#39;&lt;stderr&gt;&#39; mode=&#39;w&#39; encoding=&#39;UTF-8&#39;&gt;</pre></td>
+</tr>
+<tr>
+<td>wsgi.file_wrapper</td>
+<td class="code"><pre>&#39;&#39;</pre></td>
+</tr>
+<tr>
+<td>wsgi.input</td>
+<td class="code"><pre>&lt;_io.BufferedReader name=6&gt;</pre></td>
+</tr>
+<tr>
+<td>wsgi.multiprocess</td>
+<td class="code"><pre>False</pre></td>
+</tr>
+<tr>
+<td>wsgi.multithread</td>
+<td class="code"><pre>True</pre></td>
+</tr>
+<tr>
+<td>wsgi.run_once</td>
+<td class="code"><pre>False</pre></td>
+</tr>
+<tr>
+<td>wsgi.url_scheme</td>
+<td class="code"><pre>&#39;http&#39;</pre></td>
+</tr>
+<tr>
+<td>wsgi.version</td>
+<td class="code"><pre>(1, 0)</pre></td>
+</tr>
+</tbody>
+</table>
+<h3 id="settings-info">Settings</h3>
+<h4>Using settings module <code>mpc.settings</code></h4>
+<table class="req">
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ABSOLUTE_URL_OVERRIDES</td>
+<td class="code"><pre>{}</pre></td>
+</tr>
+<tr>
+<td>ADMINS</td>
+<td class="code"><pre>[]</pre></td>
+</tr>
+<tr>
+<td>ALLOWED_HOSTS</td>
+<td class="code"><pre>[]</pre></td>
+</tr>
+<tr>
+<td>APPEND_SLASH</td>
+<td class="code"><pre>True</pre></td>
+</tr>
+<tr>
+<td>AUTHENTICATION_BACKENDS</td>
+<td class="code"><pre>[&#39;django.contrib.auth.backends.ModelBackend&#39;]</pre></td>
+</tr>
+<tr>
+<td>AUTH_PASSWORD_VALIDATORS</td>
+<td class="code"><pre>&#39;********************&#39;</pre></td>
+</tr>
+<tr>
+<td>AUTH_USER_MODEL</td>
+<td class="code"><pre>&#39;auth.User&#39;</pre></td>
+</tr>
+<tr>
+<td>BASE_DIR</td>
+<td class="code"><pre>&#39;/Users/marvinmatias/AppDev/mpc&#39;</pre></td>
+</tr>
+<tr>
+<td>CACHES</td>
+<td class="code"><pre>{&#39;default&#39;: {&#39;BACKEND&#39;: &#39;django.core.cache.backends.locmem.LocMemCache&#39;}}</pre></td>
+</tr>
+<tr>
+<td>CACHE_MIDDLEWARE_ALIAS</td>
+<td class="code"><pre>&#39;default&#39;</pre></td>
+</tr>
+<tr>
+<td>CACHE_MIDDLEWARE_KEY_PREFIX</td>
+<td class="code"><pre>&#39;********************&#39;</pre></td>
+</tr>
+<tr>
+<td>CACHE_MIDDLEWARE_SECONDS</td>
+<td class="code"><pre>600</pre></td>
+</tr>
+<tr>
+<td>CSRF_COOKIE_AGE</td>
+<td class="code"><pre>31449600</pre></td>
+</tr>
+<tr>
+<td>CSRF_COOKIE_DOMAIN</td>
+<td class="code"><pre>None</pre></td>
+</tr>
+<tr>
+<td>CSRF_COOKIE_HTTPONLY</td>
+<td class="code"><pre>False</pre></td>
+</tr>
+<tr>
+<td>CSRF_COOKIE_NAME</td>
+<td class="code"><pre>&#39;csrftoken&#39;</pre></td>
+</tr>
+<tr>
+<td>CSRF_COOKIE_PATH</td>
+<td class="code"><pre>&#39;/&#39;</pre></td>
+</tr>
+<tr>
+<td>CSRF_COOKIE_SECURE</td>
+<td class="code"><pre>False</pre></td>
+</tr>
+<tr>
+<td>CSRF_FAILURE_VIEW</td>
+<td class="code"><pre>&#39;django.views.csrf.csrf_failure&#39;</pre></td>
+</tr>
+<tr>
+<td>CSRF_HEADER_NAME</td>
+<td class="code"><pre>&#39;HTTP_X_CSRFTOKEN&#39;</pre></td>
+</tr>
+<tr>
+<td>CSRF_TRUSTED_ORIGINS</td>
+<td class="code"><pre>[]</pre></td>
+</tr>
+<tr>
+<td>DATABASES</td>
+<td class="code"><pre>{&#39;default&#39;: {&#39;ATOMIC_REQUESTS&#39;: False,
+&#39;AUTOCOMMIT&#39;: True,
+&#39;CONN_MAX_AGE&#39;: 0,
+&#39;ENGINE&#39;: &#39;django.db.backends.postgresql&#39;,
+&#39;HOST&#39;: &#39;&#39;,
+&#39;NAME&#39;: &#39;mpc&#39;,
+&#39;OPTIONS&#39;: {},
+&#39;PASSWORD&#39;: &#39;********************&#39;,
+&#39;PORT&#39;: &#39;&#39;,
+&#39;TEST&#39;: {&#39;CHARSET&#39;: None,
+&#39;COLLATION&#39;: None,
+&#39;MIRROR&#39;: None,
+&#39;NAME&#39;: &#39;test_moc&#39;},
+&#39;TIME_ZONE&#39;: None,
+&#39;USER&#39;: &#39;marvinmatias&#39;}}</pre></td>
+</tr>
+<tr>
+<td>DATABASE_ROUTERS</td>
+<td class="code"><pre>[]</pre></td>
+</tr>
+<tr>
+<td>DATA_UPLOAD_MAX_MEMORY_SIZE</td>
+<td class="code"><pre>2621440</pre></td>
+</tr>
+<tr>
+<td>DATA_UPLOAD_MAX_NUMBER_FIELDS</td>
+<td class="code"><pre>1000</pre></td>
+</tr>
+<tr>
+<td>DATETIME_FORMAT</td>
+<td class="code"><pre>&#39;N j, Y, P&#39;</pre></td>
+</tr>
+<tr>
+<td>DATETIME_INPUT_FORMATS</td>
+<td class="code"><pre>[&#39;%Y-%m-%d %H:%M:%S&#39;,
+&#39;%Y-%m-%d %H:%M:%S.%f&#39;,
+&#39;%Y-%m-%d %H:%M&#39;,
+&#39;%Y-%m-%d&#39;,
+&#39;%m/%d/%Y %H:%M:%S&#39;,
+&#39;%m/%d/%Y %H:%M:%S.%f&#39;,
+&#39;%m/%d/%Y %H:%M&#39;,
+&#39;%m/%d/%Y&#39;,
+&#39;%m/%d/%y %H:%M:%S&#39;,
+&#39;%m/%d/%y %H:%M:%S.%f&#39;,
+&#39;%m/%d/%y %H:%M&#39;,
+&#39;%m/%d/%y&#39;]</pre></td>
+</tr>
+<tr>
+<td>DATE_FORMAT</td>
+<td class="code"><pre>&#39;N j, Y&#39;</pre></td>
+</tr>
+<tr>
+<td>DATE_INPUT_FORMATS</td>
+<td class="code"><pre>[&#39;%Y-%m-%d&#39;,
+&#39;%m/%d/%Y&#39;,
+&#39;%m/%d/%y&#39;,
+&#39;%b %d %Y&#39;,
+&#39;%b %d, %Y&#39;,
+&#39;%d %b %Y&#39;,
+&#39;%d %b, %Y&#39;,
+&#39;%B %d %Y&#39;,
+&#39;%B %d, %Y&#39;,
+&#39;%d %B %Y&#39;,
+&#39;%d %B, %Y&#39;]</pre></td>
+</tr>
+<tr>
+<td>DEBUG</td>
+<td class="code"><pre>True</pre></td>
+</tr>
+<tr>
+<td>DEBUG_PROPAGATE_EXCEPTIONS</td>
+<td class="code"><pre>False</pre></td>
+</tr>
+<tr>
+<td>DEBUG_TOOLBAR_CONFIG</td>
+<td class="code"><pre>{&#39;JQUERY_URL&#39;: &#39;&#39;}</pre></td>
+</tr>
+<tr>
+<td>DECIMAL_SEPARATOR</td>
+<td class="code"><pre>&#39;.&#39;</pre></td>
+</tr>
+<tr>
+<td>DEFAULT_CHARSET</td>
+<td class="code"><pre>&#39;utf-8&#39;</pre></td>
+</tr>
+<tr>
+<td>DEFAULT_CONTENT_TYPE</td>
+<td class="code"><pre>&#39;text/html&#39;</pre></td>
+</tr>
+<tr>
+<td>DEFAULT_EXCEPTION_REPORTER_FILTER</td>
+<td class="code"><pre>&#39;django.views.debug.SafeExceptionReporterFilter&#39;</pre></td>
+</tr>
+<tr>
+<td>DEFAULT_FILE_STORAGE</td>
+<td class="code"><pre>&#39;django.core.files.storage.FileSystemStorage&#39;</pre></td>
+</tr>
+<tr>
+<td>DEFAULT_FROM_EMAIL</td>
+<td class="code"><pre>&#39;webmaster@localhost&#39;</pre></td>
+</tr>
+<tr>
+<td>DEFAULT_INDEX_TABLESPACE</td>
+<td class="code"><pre>&#39;&#39;</pre></td>
+</tr>
+<tr>
+<td>DEFAULT_TABLESPACE</td>
+<td class="code"><pre>&#39;&#39;</pre></td>
+</tr>
+<tr>
+<td>DISALLOWED_USER_AGENTS</td>
+<td class="code"><pre>[]</pre></td>
+</tr>
+<tr>
+<td>EMAIL_BACKEND</td>
+<td class="code"><pre>&#39;django.core.mail.backends.smtp.EmailBackend&#39;</pre></td>
+</tr>
+<tr>
+<td>EMAIL_HOST</td>
+<td class="code"><pre>&#39;localhost&#39;</pre></td>
+</tr>
+<tr>
+<td>EMAIL_HOST_PASSWORD</td>
+<td class="code"><pre>&#39;********************&#39;</pre></td>
+</tr>
+<tr>
+<td>EMAIL_HOST_USER</td>
+<td class="code"><pre>&#39;&#39;</pre></td>
+</tr>
+<tr>
+<td>EMAIL_PORT</td>
+<td class="code"><pre>25</pre></td>
+</tr>
+<tr>
+<td>EMAIL_SSL_CERTFILE</td>
+<td class="code"><pre>None</pre></td>
+</tr>
+<tr>
+<td>EMAIL_SSL_KEYFILE</td>
+<td class="code"><pre>&#39;********************&#39;</pre></td>
+</tr>
+<tr>
+<td>EMAIL_SUBJECT_PREFIX</td>
+<td class="code"><pre>&#39;[Django] &#39;</pre></td>
+</tr>
+<tr>
+<td>EMAIL_TIMEOUT</td>
+<td class="code"><pre>None</pre></td>
+</tr>
+<tr>
+<td>EMAIL_USE_SSL</td>
+<td class="code"><pre>False</pre></td>
+</tr>
+<tr>
+<td>EMAIL_USE_TLS</td>
+<td class="code"><pre>False</pre></td>
+</tr>
+<tr>
+<td>FILE_CHARSET</td>
+<td class="code"><pre>&#39;utf-8&#39;</pre></td>
+</tr>
+<tr>
+<td>FILE_UPLOAD_DIRECTORY_PERMISSIONS</td>
+<td class="code"><pre>None</pre></td>
+</tr>
+<tr>
+<td>FILE_UPLOAD_HANDLERS</td>
+<td class="code"><pre>[&#39;django.core.files.uploadhandler.MemoryFileUploadHandler&#39;,
+&#39;django.core.files.uploadhandler.TemporaryFileUploadHandler&#39;]</pre></td>
+</tr>
+<tr>
+<td>FILE_UPLOAD_MAX_MEMORY_SIZE</td>
+<td class="code"><pre>2621440</pre></td>
+</tr>
+<tr>
+<td>FILE_UPLOAD_PERMISSIONS</td>
+<td class="code"><pre>None</pre></td>
+</tr>
+<tr>
+<td>FILE_UPLOAD_TEMP_DIR</td>
+<td class="code"><pre>None</pre></td>
+</tr>
+<tr>
+<td>FIRST_DAY_OF_WEEK</td>
+<td class="code"><pre>0</pre></td>
+</tr>
+<tr>
+<td>FIXTURE_DIRS</td>
+<td class="code"><pre>[]</pre></td>
+</tr>
+<tr>
+<td>FORCE_SCRIPT_NAME</td>
+<td class="code"><pre>None</pre></td>
+</tr>
+<tr>
+<td>FORMAT_MODULE_PATH</td>
+<td class="code"><pre>None</pre></td>
+</tr>
+<tr>
+<td>IGNORABLE_404_URLS</td>
+<td class="code"><pre>[]</pre></td>
+</tr>
+<tr>
+<td>IMAGEKIT_CACHEFILE_DIR</td>
+<td class="code"><pre>&#39;CACHE/img&#39;</pre></td>
+</tr>
+<tr>
+<td>IMAGEKIT_CACHEFILE_NAMER</td>
+<td class="code"><pre>&#39;imagekit.cachefiles.namers.hash&#39;</pre></td>
+</tr>
+<tr>
+<td>IMAGEKIT_CACHE_BACKEND</td>
+<td class="code"><pre>&#39;default&#39;</pre></td>
+</tr>
+<tr>
+<td>IMAGEKIT_CACHE_PREFIX</td>
+<td class="code"><pre>&#39;imagekit:&#39;</pre></td>
+</tr>
+<tr>
+<td>IMAGEKIT_DEFAULT_CACHEFILE_BACKEND</td>
+<td class="code"><pre>&#39;imagekit.cachefiles.backends.Simple&#39;</pre></td>
+</tr>
+<tr>
+<td>IMAGEKIT_DEFAULT_CACHEFILE_STRATEGY</td>
+<td class="code"><pre>&#39;imagekit.cachefiles.strategies.JustInTime&#39;</pre></td>
+</tr>
+<tr>
+<td>IMAGEKIT_DEFAULT_FILE_STORAGE</td>
+<td class="code"><pre>&#39;django.core.files.storage.FileSystemStorage&#39;</pre></td>
+</tr>
+<tr>
+<td>IMAGEKIT_SPEC_CACHEFILE_NAMER</td>
+<td class="code"><pre>&#39;imagekit.cachefiles.namers.source_name_as_path&#39;</pre></td>
+</tr>
+<tr>
+<td>IMAGEKIT_USE_MEMCACHED_SAFE_CACHE_KEY</td>
+<td class="code"><pre>&#39;********************&#39;</pre></td>
+</tr>
+<tr>
+<td>INSTALLED_APPS</td>
+<td class="code"><pre>[&#39;django.contrib.auth&#39;,
+&#39;django.contrib.contenttypes&#39;,
+&#39;django.contrib.sessions&#39;,
+&#39;django.contrib.messages&#39;,
+&#39;django.contrib.staticfiles&#39;,
+&#39;django_extensions&#39;,
+&#39;imagekit&#39;,
+&#39;utils&#39;,
+&#39;genres&#39;,
+&#39;books&#39;,
+&#39;book_fb_links&#39;,
+&#39;fb_albums_viewer&#39;,
+&#39;book_community_links&#39;,
+&#39;genre_groups&#39;,
+&#39;home_promotions&#39;,
+&#39;home&#39;,
+&#39;book_photos&#39;]</pre></td>
+</tr>
+<tr>
+<td>INTERNAL_IPS</td>
+<td class="code"><pre>(&#39;127.0.0.1&#39;, &#39;0.0.0.0&#39;)</pre></td>
+</tr>
+<tr>
+<td>IS_STATIC_SITE_ENV</td>
+<td class="code"><pre>True</pre></td>
+</tr>
+<tr>
+<td>LANGUAGES</td>
+<td class="code"><pre>[(&#39;af&#39;, &#39;Afrikaans&#39;),
+(&#39;ar&#39;, &#39;Arabic&#39;),
+(&#39;ast&#39;, &#39;Asturian&#39;),
+(&#39;az&#39;, &#39;Azerbaijani&#39;),
+(&#39;bg&#39;, &#39;Bulgarian&#39;),
+(&#39;be&#39;, &#39;Belarusian&#39;),
+(&#39;bn&#39;, &#39;Bengali&#39;),
+(&#39;br&#39;, &#39;Breton&#39;),
+(&#39;bs&#39;, &#39;Bosnian&#39;),
+(&#39;ca&#39;, &#39;Catalan&#39;),
+(&#39;cs&#39;, &#39;Czech&#39;),
+(&#39;cy&#39;, &#39;Welsh&#39;),
+(&#39;da&#39;, &#39;Danish&#39;),
+(&#39;de&#39;, &#39;German&#39;),
+(&#39;dsb&#39;, &#39;Lower Sorbian&#39;),
+(&#39;el&#39;, &#39;Greek&#39;),
+(&#39;en&#39;, &#39;English&#39;),
+(&#39;en-au&#39;, &#39;Australian English&#39;),
+(&#39;en-gb&#39;, &#39;British English&#39;),
+(&#39;eo&#39;, &#39;Esperanto&#39;),
+(&#39;es&#39;, &#39;Spanish&#39;),
+(&#39;es-ar&#39;, &#39;Argentinian Spanish&#39;),
+(&#39;es-co&#39;, &#39;Colombian Spanish&#39;),
+(&#39;es-mx&#39;, &#39;Mexican Spanish&#39;),
+(&#39;es-ni&#39;, &#39;Nicaraguan Spanish&#39;),
+(&#39;es-ve&#39;, &#39;Venezuelan Spanish&#39;),
+(&#39;et&#39;, &#39;Estonian&#39;),
+(&#39;eu&#39;, &#39;Basque&#39;),
+(&#39;fa&#39;, &#39;Persian&#39;),
+(&#39;fi&#39;, &#39;Finnish&#39;),
+(&#39;fr&#39;, &#39;French&#39;),
+(&#39;fy&#39;, &#39;Frisian&#39;),
+(&#39;ga&#39;, &#39;Irish&#39;),
+(&#39;gd&#39;, &#39;Scottish Gaelic&#39;),
+(&#39;gl&#39;, &#39;Galician&#39;),
+(&#39;he&#39;, &#39;Hebrew&#39;),
+(&#39;hi&#39;, &#39;Hindi&#39;),
+(&#39;hr&#39;, &#39;Croatian&#39;),
+(&#39;hsb&#39;, &#39;Upper Sorbian&#39;),
+(&#39;hu&#39;, &#39;Hungarian&#39;),
+(&#39;ia&#39;, &#39;Interlingua&#39;),
+(&#39;id&#39;, &#39;Indonesian&#39;),
+(&#39;io&#39;, &#39;Ido&#39;),
+(&#39;is&#39;, &#39;Icelandic&#39;),
+(&#39;it&#39;, &#39;Italian&#39;),
+(&#39;ja&#39;, &#39;Japanese&#39;),
+(&#39;ka&#39;, &#39;Georgian&#39;),
+(&#39;kk&#39;, &#39;Kazakh&#39;),
+(&#39;km&#39;, &#39;Khmer&#39;),
+(&#39;kn&#39;, &#39;Kannada&#39;),
+(&#39;ko&#39;, &#39;Korean&#39;),
+(&#39;lb&#39;, &#39;Luxembourgish&#39;),
+(&#39;lt&#39;, &#39;Lithuanian&#39;),
+(&#39;lv&#39;, &#39;Latvian&#39;),
+(&#39;mk&#39;, &#39;Macedonian&#39;),
+(&#39;ml&#39;, &#39;Malayalam&#39;),
+(&#39;mn&#39;, &#39;Mongolian&#39;),
+(&#39;mr&#39;, &#39;Marathi&#39;),
+(&#39;my&#39;, &#39;Burmese&#39;),
+(&#39;nb&#39;, &#39;Norwegian BokmÃ¥l&#39;),
+(&#39;ne&#39;, &#39;Nepali&#39;),
+(&#39;nl&#39;, &#39;Dutch&#39;),
+(&#39;nn&#39;, &#39;Norwegian Nynorsk&#39;),
+(&#39;os&#39;, &#39;Ossetic&#39;),
+(&#39;pa&#39;, &#39;Punjabi&#39;),
+(&#39;pl&#39;, &#39;Polish&#39;),
+(&#39;pt&#39;, &#39;Portuguese&#39;),
+(&#39;pt-br&#39;, &#39;Brazilian Portuguese&#39;),
+(&#39;ro&#39;, &#39;Romanian&#39;),
+(&#39;ru&#39;, &#39;Russian&#39;),
+(&#39;sk&#39;, &#39;Slovak&#39;),
+(&#39;sl&#39;, &#39;Slovenian&#39;),
+(&#39;sq&#39;, &#39;Albanian&#39;),
+(&#39;sr&#39;, &#39;Serbian&#39;),
+(&#39;sr-latn&#39;, &#39;Serbian Latin&#39;),
+(&#39;sv&#39;, &#39;Swedish&#39;),
+(&#39;sw&#39;, &#39;Swahili&#39;),
+(&#39;ta&#39;, &#39;Tamil&#39;),
+(&#39;te&#39;, &#39;Telugu&#39;),
+(&#39;th&#39;, &#39;Thai&#39;),
+(&#39;tr&#39;, &#39;Turkish&#39;),
+(&#39;tt&#39;, &#39;Tatar&#39;),
+(&#39;udm&#39;, &#39;Udmurt&#39;),
+(&#39;uk&#39;, &#39;Ukrainian&#39;),
+(&#39;ur&#39;, &#39;Urdu&#39;),
+(&#39;vi&#39;, &#39;Vietnamese&#39;),
+(&#39;zh-hans&#39;, &#39;Simplified Chinese&#39;),
+(&#39;zh-hant&#39;, &#39;Traditional Chinese&#39;)]</pre></td>
+</tr>
+<tr>
+<td>LANGUAGES_BIDI</td>
+<td class="code"><pre>[&#39;he&#39;, &#39;ar&#39;, &#39;fa&#39;, &#39;ur&#39;]</pre></td>
+</tr>
+<tr>
+<td>LANGUAGE_CODE</td>
+<td class="code"><pre>&#39;en-us&#39;</pre></td>
+</tr>
+<tr>
+<td>LANGUAGE_COOKIE_AGE</td>
+<td class="code"><pre>None</pre></td>
+</tr>
+<tr>
+<td>LANGUAGE_COOKIE_DOMAIN</td>
+<td class="code"><pre>None</pre></td>
+</tr>
+<tr>
+<td>LANGUAGE_COOKIE_NAME</td>
+<td class="code"><pre>&#39;django_language&#39;</pre></td>
+</tr>
+<tr>
+<td>LANGUAGE_COOKIE_PATH</td>
+<td class="code"><pre>&#39;/&#39;</pre></td>
+</tr>
+<tr>
+<td>LOCALE_PATHS</td>
+<td class="code"><pre>[]</pre></td>
+</tr>
+<tr>
+<td>LOGGING</td>
+<td class="code"><pre>{}</pre></td>
+</tr>
+<tr>
+<td>LOGGING_CONFIG</td>
+<td class="code"><pre>&#39;logging.config.dictConfig&#39;</pre></td>
+</tr>
+<tr>
+<td>LOGIN_REDIRECT_URL</td>
+<td class="code"><pre>&#39;/accounts/profile/&#39;</pre></td>
+</tr>
+<tr>
+<td>LOGIN_URL</td>
+<td class="code"><pre>&#39;/sign_in/&#39;</pre></td>
+</tr>
+<tr>
+<td>LOGOUT_REDIRECT_URL</td>
+<td class="code"><pre>None</pre></td>
+</tr>
+<tr>
+<td>MANAGERS</td>
+<td class="code"><pre>[]</pre></td>
+</tr>
+<tr>
+<td>MEDIA_ROOT</td>
+<td class="code"><pre>&#39;/Users/marvinmatias/AppDev/mpc/media&#39;</pre></td>
+</tr>
+<tr>
+<td>MEDIA_URL</td>
+<td class="code"><pre>&#39;/media/&#39;</pre></td>
+</tr>
+<tr>
+<td>MESSAGE_STORAGE</td>
+<td class="code"><pre>&#39;django.contrib.messages.storage.fallback.FallbackStorage&#39;</pre></td>
+</tr>
+<tr>
+<td>MIDDLEWARE</td>
+<td class="code"><pre>[&#39;django.middleware.security.SecurityMiddleware&#39;,
+&#39;django.contrib.sessions.middleware.SessionMiddleware&#39;,
+&#39;django.middleware.common.CommonMiddleware&#39;,
+&#39;django.middleware.csrf.CsrfViewMiddleware&#39;,
+&#39;django.contrib.auth.middleware.AuthenticationMiddleware&#39;,
+&#39;django.contrib.auth.middleware.SessionAuthenticationMiddleware&#39;,
+&#39;django.contrib.messages.middleware.MessageMiddleware&#39;,
+&#39;django.middleware.clickjacking.XFrameOptionsMiddleware&#39;]</pre></td>
+</tr>
+<tr>
+<td>MIDDLEWARE_CLASSES</td>
+<td class="code"><pre>[&#39;django.middleware.common.CommonMiddleware&#39;,
+&#39;django.middleware.csrf.CsrfViewMiddleware&#39;]</pre></td>
+</tr>
+<tr>
+<td>MIGRATION_MODULES</td>
+<td class="code"><pre>{}</pre></td>
+</tr>
+<tr>
+<td>MONTH_DAY_FORMAT</td>
+<td class="code"><pre>&#39;F j&#39;</pre></td>
+</tr>
+<tr>
+<td>NUMBER_GROUPING</td>
+<td class="code"><pre>0</pre></td>
+</tr>
+<tr>
+<td>PASSWORD_HASHERS</td>
+<td class="code"><pre>&#39;********************&#39;</pre></td>
+</tr>
+<tr>
+<td>PASSWORD_RESET_TIMEOUT_DAYS</td>
+<td class="code"><pre>&#39;********************&#39;</pre></td>
+</tr>
+<tr>
+<td>PREPEND_WWW</td>
+<td class="code"><pre>False</pre></td>
+</tr>
+<tr>
+<td>ROOT_URLCONF</td>
+<td class="code"><pre>&#39;mpc.urls&#39;</pre></td>
+</tr>
+<tr>
+<td>SECRET_KEY</td>
+<td class="code"><pre>&#39;********************&#39;</pre></td>
+</tr>
+<tr>
+<td>SECURE_BROWSER_XSS_FILTER</td>
+<td class="code"><pre>False</pre></td>
+</tr>
+<tr>
+<td>SECURE_CONTENT_TYPE_NOSNIFF</td>
+<td class="code"><pre>False</pre></td>
+</tr>
+<tr>
+<td>SECURE_HSTS_INCLUDE_SUBDOMAINS</td>
+<td class="code"><pre>False</pre></td>
+</tr>
+<tr>
+<td>SECURE_HSTS_SECONDS</td>
+<td class="code"><pre>0</pre></td>
+</tr>
+<tr>
+<td>SECURE_PROXY_SSL_HEADER</td>
+<td class="code"><pre>None</pre></td>
+</tr>
+<tr>
+<td>SECURE_REDIRECT_EXEMPT</td>
+<td class="code"><pre>[]</pre></td>
+</tr>
+<tr>
+<td>SECURE_SSL_HOST</td>
+<td class="code"><pre>None</pre></td>
+</tr>
+<tr>
+<td>SECURE_SSL_REDIRECT</td>
+<td class="code"><pre>False</pre></td>
+</tr>
+<tr>
+<td>SERVER_EMAIL</td>
+<td class="code"><pre>&#39;root@localhost&#39;</pre></td>
+</tr>
+<tr>
+<td>SESSION_CACHE_ALIAS</td>
+<td class="code"><pre>&#39;default&#39;</pre></td>
+</tr>
+<tr>
+<td>SESSION_COOKIE_AGE</td>
+<td class="code"><pre>1209600</pre></td>
+</tr>
+<tr>
+<td>SESSION_COOKIE_DOMAIN</td>
+<td class="code"><pre>None</pre></td>
+</tr>
+<tr>
+<td>SESSION_COOKIE_HTTPONLY</td>
+<td class="code"><pre>True</pre></td>
+</tr>
+<tr>
+<td>SESSION_COOKIE_NAME</td>
+<td class="code"><pre>&#39;sessionid&#39;</pre></td>
+</tr>
+<tr>
+<td>SESSION_COOKIE_PATH</td>
+<td class="code"><pre>&#39;/&#39;</pre></td>
+</tr>
+<tr>
+<td>SESSION_COOKIE_SECURE</td>
+<td class="code"><pre>False</pre></td>
+</tr>
+<tr>
+<td>SESSION_ENGINE</td>
+<td class="code"><pre>&#39;django.contrib.sessions.backends.db&#39;</pre></td>
+</tr>
+<tr>
+<td>SESSION_EXPIRE_AT_BROWSER_CLOSE</td>
+<td class="code"><pre>False</pre></td>
+</tr>
+<tr>
+<td>SESSION_FILE_PATH</td>
+<td class="code"><pre>None</pre></td>
+</tr>
+<tr>
+<td>SESSION_SAVE_EVERY_REQUEST</td>
+<td class="code"><pre>False</pre></td>
+</tr>
+<tr>
+<td>SESSION_SERIALIZER</td>
+<td class="code"><pre>&#39;django.contrib.sessions.serializers.JSONSerializer&#39;</pre></td>
+</tr>
+<tr>
+<td>SETTINGS_MODULE</td>
+<td class="code"><pre>&#39;mpc.settings&#39;</pre></td>
+</tr>
+<tr>
+<td>SHORT_DATETIME_FORMAT</td>
+<td class="code"><pre>&#39;m/d/Y P&#39;</pre></td>
+</tr>
+<tr>
+<td>SHORT_DATE_FORMAT</td>
+<td class="code"><pre>&#39;m/d/Y&#39;</pre></td>
+</tr>
+<tr>
+<td>SIGNING_BACKEND</td>
+<td class="code"><pre>&#39;django.core.signing.TimestampSigner&#39;</pre></td>
+</tr>
+<tr>
+<td>SILENCED_SYSTEM_CHECKS</td>
+<td class="code"><pre>[]</pre></td>
+</tr>
+<tr>
+<td>STATICFILES_DIRS</td>
+<td class="code"><pre>[&#39;/Users/marvinmatias/AppDev/mpc/static&#39;]</pre></td>
+</tr>
+<tr>
+<td>STATICFILES_FINDERS</td>
+<td class="code"><pre>[&#39;django.contrib.staticfiles.finders.FileSystemFinder&#39;,
+&#39;django.contrib.staticfiles.finders.AppDirectoriesFinder&#39;]</pre></td>
+</tr>
+<tr>
+<td>STATICFILES_STORAGE</td>
+<td class="code"><pre>&#39;django.contrib.staticfiles.storage.StaticFilesStorage&#39;</pre></td>
+</tr>
+<tr>
+<td>STATIC_ROOT</td>
+<td class="code"><pre>None</pre></td>
+</tr>
+<tr>
+<td>STATIC_URL</td>
+<td class="code"><pre>&#39;/static/&#39;</pre></td>
+</tr>
+<tr>
+<td>TEMPLATES</td>
+<td class="code"><pre>[{&#39;APP_DIRS&#39;: True,
+&#39;BACKEND&#39;: &#39;django.template.backends.django.DjangoTemplates&#39;,
+&#39;DIRS&#39;: [&#39;/Users/marvinmatias/AppDev/mpc/templates&#39;],
+&#39;OPTIONS&#39;: {&#39;context_processors&#39;: [&#39;django.template.context_processors.debug&#39;,
+&#39;django.template.context_processors.request&#39;,
+&#39;django.contrib.auth.context_processors.auth&#39;,
+&#39;django.contrib.messages.context_processors.messages&#39;]}}]</pre></td>
+</tr>
+<tr>
+<td>TEST_NON_SERIALIZED_APPS</td>
+<td class="code"><pre>[]</pre></td>
+</tr>
+<tr>
+<td>TEST_RUNNER</td>
+<td class="code"><pre>&#39;django.test.runner.DiscoverRunner&#39;</pre></td>
+</tr>
+<tr>
+<td>THOUSAND_SEPARATOR</td>
+<td class="code"><pre>&#39;,&#39;</pre></td>
+</tr>
+<tr>
+<td>TIME_FORMAT</td>
+<td class="code"><pre>&#39;P&#39;</pre></td>
+</tr>
+<tr>
+<td>TIME_INPUT_FORMATS</td>
+<td class="code"><pre>[&#39;%H:%M:%S&#39;, &#39;%H:%M:%S.%f&#39;, &#39;%H:%M&#39;]</pre></td>
+</tr>
+<tr>
+<td>TIME_ZONE</td>
+<td class="code"><pre>&#39;Asia/Manila&#39;</pre></td>
+</tr>
+<tr>
+<td>USE_ETAGS</td>
+<td class="code"><pre>False</pre></td>
+</tr>
+<tr>
+<td>USE_I18N</td>
+<td class="code"><pre>True</pre></td>
+</tr>
+<tr>
+<td>USE_L10N</td>
+<td class="code"><pre>True</pre></td>
+</tr>
+<tr>
+<td>USE_THOUSAND_SEPARATOR</td>
+<td class="code"><pre>False</pre></td>
+</tr>
+<tr>
+<td>USE_TZ</td>
+<td class="code"><pre>True</pre></td>
+</tr>
+<tr>
+<td>USE_X_FORWARDED_HOST</td>
+<td class="code"><pre>False</pre></td>
+</tr>
+<tr>
+<td>USE_X_FORWARDED_PORT</td>
+<td class="code"><pre>False</pre></td>
+</tr>
+<tr>
+<td>WSGI_APPLICATION</td>
+<td class="code"><pre>&#39;mpc.wsgi.application&#39;</pre></td>
+</tr>
+<tr>
+<td>X_FRAME_OPTIONS</td>
+<td class="code"><pre>&#39;SAMEORIGIN&#39;</pre></td>
+</tr>
+<tr>
+<td>YEAR_MONTH_FORMAT</td>
+<td class="code"><pre>&#39;F Y&#39;</pre></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="explanation">
+<p>
+You're seeing this error because you have <code>DEBUG = True</code> in your
+Django settings file. Change that to <code>False</code>, and Django will
+display a standard page generated by the handler for this status code.
+</p>
+</div>
+</body>
+</html>
